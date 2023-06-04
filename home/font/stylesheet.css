@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Agane`';
+    src: url('Agan75.woff2') format('woff2'),
+        url('Agan75.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agane`';
+    src: url('Agan65.woff2') format('woff2'),
+        url('Agan65.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agane` S';
+    src: url('AganS75.woff2') format('woff2'),
+        url('AganS75.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agane`';
+    src: url('Aan55.woff2') format('woff2'),
+        url('Aan55.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agane`';
+    src: url('Agan45.woff2') format('woff2'),
+        url('Agan45.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agane` S';
+    src: url('AganS55.woff2') format('woff2'),
+        url('AganS55.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agane` S';
+    src: url('AganS65.woff2') format('woff2'),
+        url('AganS65.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Harting';
+    src: url('HartingPlain.woff2') format('woff2'),
+        url('HartingPlain.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
