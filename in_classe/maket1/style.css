@@ -1,0 +1,39 @@
+ {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+}
+.clearfix{
+    clear: both;
+}
+.header {
+  margin-top: 50px;
+}
+.conteiner {
+  width: 1920px;
+}
+.h_logo {
+  float: left;
+}
+.h_bg_logo {
+  width: 145px;
+  height: 33px;
+  padding: 1px;
+  background: #003d6e;
+  color: cornsilk;
+  font-size: 30px;
+  letter-spacing: 1px;
+  vertical-align: bottom;
+}
+.h_list {
+  float: right;
+}
+.polygon {
+  vertical-align: middle;
+}
+.bn {
+  margin-right: 20px;
+  background: #003d6e;
+  color: cornsilk;
+  padding: 20px;
+}
