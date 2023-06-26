@@ -6,29 +6,27 @@
 .content {
   padding: 0 10px;
   vertical-align: top;
+  background: url("../image/base_5/1s.gif") repeat-y top right;
 }
 .image {
   float: left;
   margin: 10px;
 }
-.bg_or {
-  background: orange;
-}
+
 .h_content {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  padding-top: 10px;
 }
 .h_menu {
-  padding: 10px 0 0 10px;
+  padding-left: 10px;
   font-weight: bold;
 }
 .blue {
   padding: 10px;
   background-color: rgb(220, 242, 245);
   color: blue;
-  font:bold 20px arial;
+  font: bold 20px arial;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
