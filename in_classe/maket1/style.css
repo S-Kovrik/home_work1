@@ -7,8 +7,13 @@
   border-bottom: 1px solid gray;
 }
 .conteiner {
-  margin-left: auto;
-  margin-right: auto;
+  width: 1920px;
+  margin: auto;
+}
+
+.conteiner_inner {
+  width: 1420px;
+  margin: auto;
 }
 
 .h_logo {
@@ -113,9 +118,129 @@
 }
 
 .bg_image_general {
-  background: url("/image/maket1/XXL2.jpg") no-repeat;
-  background-size: cover;
+  background: url("/image/maket1/XXL2.jpg") no-repeat center 250%;
 }
 .conteiner_title {
   padding: 0 100px 100px 230px;
+}
+
+.main_1_list li {
+  float: left;
+  padding: 0 0 40px 60px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+.main_1_list {
+  margin-left: 1290px;
+}
+
+.block_statistics {
+  margin: 140px 0;
+}
+
+.statistics_list li {
+  float: left;
+}
+
+.cont_in_title {
+  padding-bottom: 40px;
+  color: #003b77;
+  font-size: 52px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  line-height: 140%;
+}
+
+.title_white {
+  color: #fff;
+}
+
+.statistics_list .first {
+  color: #111827;
+  font-size: 22px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.statistics_list .second {
+  color: #003b77;
+  font-size: 80px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.statistics_list li {
+  padding-right: 70px;
+}
+
+.statistics_list span {
+  font-size: 40px;
+}
+
+.block_about_us p {
+  margin: 0 0 20px 400px;
+  color: #111827;
+  font-size: 24px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  line-height: 140%;
+}
+
+.block_map {
+  margin: 70px 0;
+}
+
+.block_map a {
+  font-size: 18px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 140%;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.block_map img {
+  vertical-align: text-top;
+}
+
+.block_services{
+background:url('/image/maket1/XXL\ 2.jpg') no-repeat center -25%;
+}
+
+.block_in_services {
+  color: #fff;
+  font-size: 24px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  line-height: 140%;
+}
+
+.block_services_link a {
+  color: #fff;
+  font-size: 18px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 140%;
+  text-decoration-line: underline;
+  text-transform: uppercase;
 }
