@@ -2,17 +2,17 @@
   clear: both;
 }
 .main {
-  background: url("/home_work1/image/base_5/Vector2.png") left top repeat-y;
+  background: url("/image/base_5/123.jpeg") left top repeat-y;
+  background-size: 200px auto;
 }
 .menu {
   float: left;
   width: 200px;
-  background:burlywood;
 }
 .content {
   margin-left: 200px;
   padding: 0 10px;
-  background: url("/home_work1/image/base_5/1s.gif") repeat-y top right;
+  background: url("/image/base_5/1s.gif") repeat-y top right;
 }
 .image {
   float: left;
