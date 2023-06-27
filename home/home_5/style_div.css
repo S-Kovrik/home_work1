@@ -2,7 +2,7 @@
   clear: both;
 }
 .main {
-  background: url("/image/base_5/Vector_1.png") left top repeat-y;
+  background: url("/home_work1/image/base_5/Vector_1.png") left top repeat-y;
 }
 .menu {
   float: left;
@@ -14,7 +14,7 @@
   margin-left: 200px;
   padding: 0 10px;
   vertical-align: top;
-  background: url("/image/base_5/1s.gif") repeat-y top right;
+  background: url("/home_work1/image/base_5/1s.gif") repeat-y top right;
 }
 .image {
   float: left;
