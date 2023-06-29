@@ -7,11 +7,6 @@
   border-bottom: 1px solid gray;
 }
 .conteiner {
-  width: 1920px;
-  margin: auto;
-}
-
-.conteiner_inner {
   width: 1420px;
   margin: auto;
 }
@@ -118,15 +113,19 @@
 }
 
 .bg_image_general {
-  background: url("/image/maket1/XXL2.jpg") no-repeat center 250%;
+  background: url("/image/maket1/XXL2.jpg") no-repeat center 230%;
 }
 .conteiner_title {
   padding: 0 100px 100px 230px;
 }
 
+.main_1_list {
+  margin-left: 1000px;
+}
+
 .main_1_list li {
   float: left;
-  padding: 0 0 40px 60px;
+  padding: 0 30px 50px 0;
   color: #fff;
   font-size: 16px;
   font-family: "Righteous", cursive;
@@ -135,9 +134,6 @@
   font-weight: 600;
   line-height: 140%;
   text-transform: uppercase;
-}
-.main_1_list {
-  margin-left: 1290px;
 }
 
 .block_statistics {
@@ -220,8 +216,8 @@
   vertical-align: text-top;
 }
 
-.block_services{
-background:url('/image/maket1/XXL\ 2.jpg') no-repeat center -25%;
+.block_services {
+  background: url("/image/maket1/XXL\ 2.jpg") no-repeat center -25%;
 }
 
 .block_in_services {
@@ -243,4 +239,43 @@ background:url('/image/maket1/XXL\ 2.jpg') no-repeat center -25%;
   line-height: 140%;
   text-decoration-line: underline;
   text-transform: uppercase;
+}
+.block_services_link img {
+  vertical-align: middle;
+}
+
+.block_services_link {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.services_first {
+  background: url("/image/maket1/Image (1).png");
+}
+
+.services_second {
+  background: url("/image/maket1/Card Transportation (2).png");
+}
+
+.services_third {
+  background: url("/image/maket1/Rectangle (1).png");
+}
+
+.block_services_slides div {
+  display: inline-block;
+  margin: 50px 10px 70px 0;
+  width: 457px;
+  height: 349px;
+}
+
+.block_services_slides p {
+  margin: 229px 0px 0px 13px;
+  color: #fff;
+  font-size: 22px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
 }
