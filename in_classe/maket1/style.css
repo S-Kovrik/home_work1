@@ -2,6 +2,10 @@
   clear: both;
 }
 
+.bg_white{
+  background: white;
+}
+
 .header {
   padding: 0 50px;
   border-bottom: 1px solid gray;
@@ -278,4 +282,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+}
+
+.block_advantages_bg  {
+  background: #09325b;
+  width: 472px;
+  height: 472px;
 }
