@@ -1,0 +1,56 @@
+body div ul li :nth-child(1) {
+  color: red;
+}
+
+body div ul li span :nth-child(1) {
+  color: green;
+}
+
+body div ul li em :nth-child(1) {
+  color: blue;
+}
+
+body div p em :nth-child(1) {
+  color: yellow;
+}
+
+body div span em :nth-child(1) {
+  color: black;
+}
+
+body ul li :nth-child(1){
+    color: orange;
+}
+
+body ul li span :nth-child(1){
+color: rosybrown;
+}
+
+body ul li em :nth-child(1){
+    color: violet;
+}
+
+body ul li p em :nth-child(1){
+    color: aqua;
+}
+
+body ul li div ul li :nth-child(1){
+color: indigo;
+}
+
+body ul li div ul li em  :nth-child(1){
+    color: chocolate;
+}
+
+body ul li div ul li span  :nth-child(1){
+color: brown;
+}
+
+body ul li div p :nth-child(1){
+    background: blue;
+    color: white;
+}
+
+body p em :nth-child(1){
+    color: gray;
+}
