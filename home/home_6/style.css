@@ -1,0 +1,80 @@
+.menu a:hover {
+  color: red;
+}
+
+.menu_first a {
+  float: left;
+  display: block;
+  padding: 5px 20px;
+  border-right: 3px solid red;
+}
+
+.menu_first a:last-child {
+  border: none;
+}
+
+.menu_first::after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: "";
+  visibility: hidden;
+}
+
+.menu_second a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.menu_second a:after {
+  content: "|";
+  color: red;
+  font-size: 40px;
+  font-weight: 900;
+  padding: 5px 10px;
+}
+
+.menu_second a:nth-child(3)::after {
+  content: none;
+}
+
+.menu_third a {
+  padding: 5px 10px;
+}
+
+.menu_third a[href*="https://www.onliner.by/"]
+{
+  border-right: 3px solid red;
+}
+
+.menu_fourth a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-right: 3px solid red;
+}
+
+.menu_fourth a:not([href*="https://www.onliner.by/"])
+{
+  border: none;
+}
+
+.menu_fifth a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-right: 3px solid red;
+}
+
+.menu_fifth a:nth-of-type(3) {
+  border: none;
+}
+
+.menu_sixth a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-right: 3px solid red;
+}
+
+.menu_sixth a:last-of-type{
+    border: none;
+}
