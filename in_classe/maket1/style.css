@@ -1,8 +1,12 @@
-.clearfix {
+.clearfix::after{
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
   clear: both;
 }
 
-.bg_white{
+.bg_white {
   background: white;
 }
 
@@ -221,7 +225,7 @@
 }
 
 .block_services {
-  background: url("/image/maket1/XXL\ 2.jpg") no-repeat center -25%;
+  background: url("/image/maket1/XXL\ 2.jpg") no-repeat center -1500%;
 }
 
 .block_in_services {
@@ -284,8 +288,46 @@
   line-height: 140%;
 }
 
-.block_advantages_bg  {
+.block_advantages_bg {
+  float: left;
   background: #09325b;
   width: 472px;
   height: 472px;
+  margin: 10px;
+}
+
+.block_advantages_bg > p {
+  color: #fff;
+  font-size: 22px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.block_advantages_bg:nth-child(3) {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  margin-top: 50px;
+}
+
+.block_advantages_bg:nth-child(4){
+  margin-top: -30px;
+}
+
+.block_advantages_bg:nth-child(3) > p {
+  color: #111827;
+}
+
+.block_advantages_bg:nth-child(3) > p + p {
+  color: #111827;
+  font-size: 16px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
