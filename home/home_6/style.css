@@ -4,7 +4,6 @@
 
 .menu_first a {
   float: left;
-  display: block;
   padding: 5px 20px;
   border-right: 3px solid red;
 }
@@ -75,6 +74,26 @@
   border-right: 3px solid red;
 }
 
-.menu_sixth a:last-of-type{
-    border: none;
+.menu_sixth a:last-of-type {
+  border: none;
+}
+
+.menu_seven a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-right: 3px solid red;
+}
+
+.menu_seven a[href*="kufar"] {
+  border-right: none;
+}
+
+.menu_eight a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-right: 3px solid red;
+}
+
+.menu_eight a[align="center"] {
+  border-right: none;
 }
