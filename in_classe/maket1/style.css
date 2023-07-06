@@ -10,6 +10,20 @@
   background: white;
 }
 
+.cont_in_title {
+  padding: 70px 0 40px 0;
+  color: #003b77;
+  font-size: 52px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  line-height: 140%;
+}
+
+.title_white {
+  color: #fff;
+}
+
 .header {
   padding: 0 50px;
   border-bottom: 1px solid gray;
@@ -121,7 +135,7 @@
 }
 
 .bg_image_general {
-  background: url("/image/maket1/XXL2.jpg") no-repeat center 230%;
+  background: url("../maket1/image/XXL2.jpg") no-repeat center 230%;
 }
 .conteiner_title {
   padding: 0 100px 100px 230px;
@@ -150,20 +164,6 @@
 
 .statistics_list li {
   float: left;
-}
-
-.cont_in_title {
-  padding-bottom: 40px;
-  color: #003b77;
-  font-size: 52px;
-  font-family: "Righteous", cursive;
-  font-family: "Roboto", sans-serif;
-  font-family: "Montserrat", sans-serif;
-  line-height: 140%;
-}
-
-.title_white {
-  color: #fff;
 }
 
 .statistics_list .first {
@@ -225,7 +225,7 @@
 }
 
 .block_services {
-  background: url("/image/maket1/XXL\ 2.jpg") no-repeat center -1500%;
+  background: url("../maket1/image/XXL\ 2.jpg") no-repeat center 230%;
 }
 
 .block_in_services {
@@ -258,15 +258,15 @@
 }
 
 .services_first {
-  background: url("/image/maket1/Image (1).png");
+  background: url("../maket1/image/Image (1).png");
 }
 
 .services_second {
-  background: url("/image/maket1/Card Transportation (2).png");
+  background: url("../maket1/image/Card Transportation (2).png");
 }
 
 .services_third {
-  background: url("/image/maket1/Rectangle (1).png");
+  background: url("../maket1/image/Rectangle (1).png");
 }
 
 .block_services_slides div {
@@ -307,21 +307,21 @@
   line-height: 140%;
 }
 
-.block_advantages_bg:nth-child(3) {
+.block_advantages_bg:nth-child(2) {
   background-color: #fff;
   border: 1px solid #d1d5db;
   margin-top: 50px;
 }
 
-.block_advantages_bg:nth-child(4){
+.block_advantages_bg:nth-child(3){
   margin-top: -30px;
 }
 
-.block_advantages_bg:nth-child(3) > p {
+.block_advantages_bg:nth-child(2) > p {
   color: #111827;
 }
 
-.block_advantages_bg:nth-child(3) > p + p {
+.block_advantages_bg:nth-child(2) > p + p {
   color: #111827;
   font-size: 16px;
   font-family: "Righteous", cursive;
@@ -331,3 +331,10 @@
   font-weight: 400;
   line-height: 140%;
 }
+
+.general_bl_advantages{
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+}
+
