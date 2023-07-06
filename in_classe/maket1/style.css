@@ -1,4 +1,4 @@
-.clearfix::after{
+.clearfix::after {
   content: "";
   visibility: hidden;
   display: block;
@@ -135,7 +135,7 @@
 }
 
 .bg_image_general {
-  background: url("../maket1/image/XXL2.jpg") no-repeat center 230%;
+  background: url("../maket1/image/XXL2.jpg") no-repeat center 155%;
 }
 .conteiner_title {
   padding: 0 100px 100px 230px;
@@ -313,7 +313,7 @@
   margin-top: 50px;
 }
 
-.block_advantages_bg:nth-child(3){
+.block_advantages_bg:nth-child(3) {
   margin-top: -30px;
 }
 
@@ -332,9 +332,29 @@
   line-height: 140%;
 }
 
-.general_bl_advantages{
+.general_bl_advantages {
   width: 1000px;
   height: 1000px;
   margin: auto;
 }
 
+.bk_link_cards div {
+  display: inline-block;
+  background-color: #f3f3f3;
+}
+
+.bk_link_cards div:nth-child(n + 2):nth-child(-n + 4) {
+  width: 300px;
+  height: 300px;
+}
+
+.bk_link_cards div:nth-child(5){
+width: 620px;
+height: 300px;
+}
+
+.bk_link_cards div:nth-child(6){
+  width: 300px;
+  height: 300px;
+  background-color: #9F9;
+}
