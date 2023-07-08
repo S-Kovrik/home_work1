@@ -289,6 +289,7 @@
 }
 
 .block_advantages_bg {
+  position: relative;
   float: left;
   background: #09325b;
   width: 472px;
@@ -296,7 +297,15 @@
   margin: 10px;
 }
 
+.block_advantages_bg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .block_advantages_bg > p {
+  padding: 30px 200px 20px 30px;
   color: #fff;
   font-size: 22px;
   font-family: "Righteous", cursive;
@@ -305,6 +314,18 @@
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
+}
+
+.block_advantages_bg p:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .block_advantages_bg:nth-child(2) {
@@ -322,6 +343,8 @@
 }
 
 .block_advantages_bg:nth-child(2) > p + p {
+  position: static;
+  transform: none;
   color: #111827;
   font-size: 16px;
   font-family: "Righteous", cursive;
@@ -338,23 +361,99 @@
   margin: auto;
 }
 
+.bc_partners p {
+  padding-left: 350px;
+  color: #111827;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.bc_partners ul {
+  margin: 40px 0;
+}
+
+.bc_partners ul li a {
+  float: left;
+  padding: 0 37px 0 10px;
+  color: #6b7280;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  text-decoration: none;
+}
+
+.bc_partners ul li:last-child a{
+  padding: 0;
+} 
+
+
 .bk_link_cards div {
   display: inline-block;
+  position: relative;
   background-color: #f3f3f3;
+  margin: 10px;
+  vertical-align: bottom;
 }
 
 .bk_link_cards div:nth-child(n + 2):nth-child(-n + 4) {
-  width: 300px;
-  height: 300px;
+  width: 310px;
+  height: 350px;
 }
 
-.bk_link_cards div:nth-child(5){
-width: 620px;
-height: 300px;
+.bk_link_cards div:nth-child(n + 2):nth-child(-n + 4) img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.bk_link_cards div:nth-child(6){
-  width: 300px;
-  height: 300px;
-  background-color: #9F9;
+.bk_link_cards div:nth-child(5) {
+  width: 718px;
+  height: 350px;
+}
+
+.bk_link_cards div:nth-child(5) img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bk_link_cards div:nth-child(6) {
+  position: relative;
+  width: 310px;
+  height: 350px;
+  background-color: #9f9;
+}
+
+.bk_link_cards a{
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  
+}
+
+.bk_link_cards div span img{
+vertical-align:text-top;
+}
+
+.bk_link_cards div span{
+  position: absolute;
+  top: 85%;
+  left: 25%;
 }
