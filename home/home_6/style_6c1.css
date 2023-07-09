@@ -1,0 +1,19 @@
+.header {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .green {
+    color: green;
+  }
+  .red {
+    font-weight: bold;
+    color: red;
+  }
+  .blue {
+    font-style: italic;
+    color: blue;
+  }
+  
+  p + a:before{
+content: url("../home_6/image/extref.png");
+  }
