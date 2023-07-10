@@ -1,0 +1,22 @@
+body{
+    float: left;
+}
+
+div {
+  float: right;
+  width: 76px;
+  height: 82px;
+  background: url("../home_6/image/star1.png") no-repeat;
+}
+
+div:before {
+  content: url("../home_6/image/star0.png");
+}
+
+div:hover:before {
+  content: none;
+}
+
+div:hover ~ div:before {
+  content: none;
+}
