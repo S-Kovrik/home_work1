@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6.1</title>
+  </head>
+  <body>
+    <picture>
+      <source
+        type="image/avif"
+        srcset="
+          ../extra_6.1/image/tree1x.avif 1x,
+          ../extra_6.1/image/tree2x.avif 2x
+        "
+      />
+      <source
+        type="image/webp"
+        srcset="
+          ../extra_6.1/image/tree1x.webp 1x,
+          ../extra_6.1/image/tree2x.webp 2x
+        "
+      />
+
+      <img
+        src="../extra_6.1/image/tree1x.jpg"
+        alt="#"
+        srcset="../extra_6.1/image/tree2x.jpg 2x"
+      />
+    </picture>
+    <!--1)В firefox кратность изображения меняется в зависимости тип устройства и 
+        размера экрана;
+        2)В microsoft edge avif не поддерживается. Тег sourse и атрибут type позволяет отобразить webp;
+    -->
+  </body>
+</html>
