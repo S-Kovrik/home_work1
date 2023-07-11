@@ -8,11 +8,17 @@
   <body>
     <picture>
       <source
+        srcset="../extra_6.1/image/tree1x!.jpg 1x"
+        type="image/jpg"
+        media="(min-width:768px)"
+      />
+      <source
         type="image/avif"
         srcset="
           ../extra_6.1/image/tree1x.avif 1x,
           ../extra_6.1/image/tree2x.avif 2x
         "
+        media="(max-width:768px)"
       />
       <source
         type="image/webp"
@@ -20,6 +26,7 @@
           ../extra_6.1/image/tree1x.webp 1x,
           ../extra_6.1/image/tree2x.webp 2x
         "
+        media="(max-width:768px)"
       />
 
       <img
@@ -30,10 +37,11 @@
         srcset="../extra_6.1/image/tree2x.jpg 2x"
       />
     </picture>
-    <!--1)В firefox кратность изображения меняется в зависимости от типа устройства и 
-        размера экрана;
+
+    <!--1)В браузерах кратность изображения меняется в зависимости от DPR устройства,  
+          изменении масштаба или размера экрана;
         2)В microsoft edge avif не поддерживается. Тег sourse и атрибут type позволяет
-         отобразить следующий по очереди формат webp;
+          отобразить следующий по очереди формат webp;
     -->
   </body>
 </html>
