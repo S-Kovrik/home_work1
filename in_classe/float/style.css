@@ -1,0 +1,35 @@
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.header {
+  background: greenyellow;
+  height: 50px;
+}
+
+.menu {
+  float: left;
+  background: yellow;
+  height: 200px;
+  width: 200px;
+}
+
+.baner {
+  float: right;
+  background: red;
+  height: 200px;
+  width: 200px;
+}
+
+.content {
+  background: blue;
+}
+
+.footer {
+  background: green;
+  height: 50px;
+}

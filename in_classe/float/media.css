@@ -1,0 +1,11 @@
+@media screen and (max-width: 624px) {
+  .baner {
+    float: none;
+    width: auto;
+  }
+
+  .menu {
+    float: none;
+    width: auto;
+  }
+}
