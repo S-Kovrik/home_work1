@@ -378,7 +378,7 @@
 }
 
 .bc_partners ul li a {
-   float: left;
+  float: left;
   padding: 0 37px 0 10px;
   color: #6b7280;
   font-family: "Righteous", cursive;
@@ -391,10 +391,9 @@
   text-decoration: none;
 }
 
-.bc_partners ul li:last-child a{
+.bc_partners ul li:last-child a {
   padding: 0;
-} 
-
+}
 
 .bk_link_cards div {
   display: inline-block;
@@ -435,7 +434,7 @@
   background-color: #9f9;
 }
 
-.bk_link_cards a{
+.bk_link_cards a {
   font-family: "Righteous", cursive;
   font-family: "Roboto", sans-serif;
   font-family: "Montserrat", sans-serif;
@@ -445,15 +444,30 @@
   line-height: 140%;
   text-decoration-line: underline;
   text-transform: uppercase;
-  
 }
 
-.bk_link_cards div span img{
-vertical-align:text-top;
+.bk_link_cards div span img {
+  vertical-align: text-top;
 }
 
-.bk_link_cards div span{
+.bk_link_cards div span {
   position: absolute;
   top: 85%;
   left: 25%;
+}
+
+.block_news {
+  background: url("../maket1/image/XXL\ 2.jpg");
+}
+
+.block_news ul li a {
+  color:#FFF ;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-decoration: none;
 }
