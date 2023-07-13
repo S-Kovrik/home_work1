@@ -1,6 +1,11 @@
 .clearfix {
     clear: both;
   }
+
+  *{
+    margin: 0;
+  }
+
   .main {
     background: url("/image/base_5/123.jpeg") left top repeat-y;
     background-size: 200px auto;
