@@ -7,7 +7,7 @@
   }
 
   .main {
-    background: url("../image/base_5/123.jpeg") left top repeat-y;
+    background: url("./image/base_5/123.jpeg") left top repeat-y;
     background-size: 200px auto;
   }
   .menu {
@@ -17,7 +17,7 @@
   .content {
     margin-left: 200px;
     padding: 0 10px;
-    background: url("../image/base_5/1s.gif") repeat-y top right;
+    background: url("./image/base_5/1s.gif") repeat-y top right;
   }
   .image {
     float: left;
