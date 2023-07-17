@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../home_8a/reset.css" />
+    <link rel="stylesheet" href="../home_8a/normalize.css" />
+    <link rel="stylesheet" href="../home_8a/media.css" />
+
+    <title>maket_form</title>
+  </head>
+  <body>
+    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+      <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+      <p>Название статьи:</p>
+      <div><input type="text" name="title_article" /></div>
+      <p>Рубрика:</p>
+      <div>
+        <select name="rubric">
+          <option value="rubric1">Компьютерная техника</option>
+          <option value="rubric2">Графика и дизайн</option>
+          <option value="rubric3">Программирование</option>
+        </select>
+      </div>
+      <p>Публикация:</p>
+      <div>
+        <div class="button_radio">
+          <input
+            id="publication1"
+            type="radio"
+            name="publication"
+            value="website"
+          />
+          <label for="publication1">на сайте</label>
+        </div>
+        <div class="button_radio">
+          <input
+            id="publication2"
+            type="radio"
+            name="publication"
+            value="journal"
+          />
+          <label for="publication2">в журнале</label>
+        </div>
+        <div class="button_radio">
+          <input
+            id="publication3"
+            type="radio"
+            name="publication"
+            value="website and journal"
+          />
+          <label for="publication3">на сайте и в журнале</label>
+        </div>
+      </div>
+      <div class="allow_comments clearfix">
+        <p>Разрешить комментарии:</p>
+        <div><input type="checkbox" name="comments" /></div>
+      </div>
+      <p>Текст статьи:</p>
+      <textarea class="all_width" name="article" cols="30" rows="2"></textarea>
+      <br />
+      <input type="submit" value="опубликовать" />
+    </form>
+  </body>
+</html>

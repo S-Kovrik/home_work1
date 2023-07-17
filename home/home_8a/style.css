@@ -1,0 +1,68 @@
+body {
+  margin: 5px;
+}
+
+form {
+  border: 3px double red;
+  padding: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+input,
+textarea,
+select {
+  border: 1px black solid;
+}
+
+textarea {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+form p {
+  float: left;
+}
+
+form p:nth-child(1) {
+  float: none;
+  margin: 10px 0 20px 0;
+}
+
+p + div {
+  padding-left: 200px;
+  margin: 3px 0;
+}
+
+div label + input {
+  margin: 0 20px 0 5px;
+}
+
+div.allow_comments > p {
+  float: left;
+  margin: 0;
+}
+
+input[type="submit"] {
+  background-color: rgb(212, 208, 208);
+  padding: 0 5px;
+}
+
+.button_radio {
+  display: inline-block;
+}
+
+.button_radio input{
+    vertical-align: text-bottom;
+}

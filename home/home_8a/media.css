@@ -1,0 +1,15 @@
+@import "style.css";
+
+@media all and (max-width: 647px) {
+  form p {
+    float: none;
+  }
+
+  p + div {
+    padding-left: 0;
+  }
+
+  .button_radio {
+    display: block;
+  }
+}
