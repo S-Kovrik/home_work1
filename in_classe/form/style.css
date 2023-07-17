@@ -1,0 +1,23 @@
+.conteiner {
+  width: 600px;
+  margin: auto;
+}
+
+.fill:after {
+  content: "*";
+  color: red;
+}
+ label {
+    width: 100px;
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.information input, select{
+    width: 250px;
+}
+
+fieldset{
+    margin-bottom: 20px;
+}
