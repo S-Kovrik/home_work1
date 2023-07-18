@@ -1,0 +1,47 @@
+.block {
+  width: 300px;
+  height: 220px;
+  margin: auto;
+  position: relative;
+}
+
+.block div:nth-child(1) {
+  position: absolute;
+  top: 145px;
+  left: 55px;
+}
+
+.block div:nth-child(2) {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+}
+
+.block div:nth-child(3) {
+  position: absolute;
+  top: -25px;
+  left: -75px;
+}
+
+.block div:nth-child(4) {
+  position: relative;
+  text-align: center;
+}
+
+.block + p {
+  margin-top: 150px;
+}
+
+body p:first-child {
+  margin-bottom: 50px;
+}
+
+.block div:nth-child(1):hover {
+  z-index: 1;
+}
+.block div:nth-child(2):hover {
+  z-index: 1;
+}
+.block div:nth-child(3):hover {
+  z-index: 1;
+}
