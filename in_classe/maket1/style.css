@@ -461,20 +461,19 @@
   background: url("../maket1/image/XXL\ 2.jpg");
 }
 
-.block_news ul{
+.block_news ul {
   float: left;
   padding-right: 60px;
 }
 
-.block_news ul li{
+.block_news ul li {
   padding: 40px 0;
-  border-bottom: 1px solid #FFF;
-
+  border-bottom: 1px solid #fff;
 }
 
 .block_news ul li a {
   margin-right: 90px;
-  color:#FFF ;
+  color: #fff;
   font-family: "Righteous", cursive;
   font-family: "Roboto", sans-serif;
   font-family: "Montserrat", sans-serif;
@@ -485,23 +484,54 @@
   text-decoration: none;
 }
 
-.block_news ul li:last-child a{
+.block_news ul li:last-child a {
   margin-right: 5px;
 }
 
-.block_news ul li img{
+.block_news ul li img {
   vertical-align: text-bottom;
 }
 
-.block_news .cont_in_title{
-padding-top: 0;
-}
-
-.block_news ul li:first-child{
+.block_news .cont_in_title {
   padding-top: 0;
 }
 
-.block_news ul li:last-child{
+.block_news ul li:first-child {
+  padding-top: 0;
+}
+
+.block_news ul li:last-child {
   border-bottom: none;
+}
+
+.block_asked ul li {
+  position: relative;
+  margin: 10px;
+  padding: 40px;
+  background-color: #f3f3f3;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.block_asked p {
+  padding: 30px;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.block_asked img{
+  position: absolute;
+  right: 30px;
+  top: 45px;
 }
 
