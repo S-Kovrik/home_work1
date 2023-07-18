@@ -12,10 +12,21 @@
   left: 40px;
 }
 
-.block div:nth-child(2) {
+.block div:nth-child(2),
+div:nth-child(3) {
   width: 550px;
   height: 550px;
   position: absolute;
   top: 40px;
+  left: 40px;
+}
+
+.block:hover div:nth-child(2){
+  display: none;
+}
+
+.block:hover div:nth-child(3) {
+  position: absolute;
+  top: 208px;
   left: 40px;
 }
