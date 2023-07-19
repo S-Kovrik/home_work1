@@ -1,9 +1,25 @@
-.clearfix::after {
+.clearfix::after,
+.clearfix::before {
   content: "";
   visibility: hidden;
   display: block;
   height: 0;
   clear: both;
+}
+
+.block_contact form input,
+select,
+textarea,
+button a,
+p {
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #b3bccc;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
 
 .bg_white {
@@ -166,6 +182,10 @@
   float: left;
 }
 
+.statistics_list li:last-child{
+  padding-right: 0;
+}
+
 .statistics_list .first {
   color: #111827;
   font-size: 22px;
@@ -188,7 +208,7 @@
 }
 
 .statistics_list li {
-  padding-right: 70px;
+  padding-right: 120px;
 }
 
 .statistics_list span {
@@ -235,6 +255,12 @@
   font-family: "Roboto", sans-serif;
   font-family: "Montserrat", sans-serif;
   line-height: 140%;
+}
+
+.block_in_services h4+p{
+  margin-left: 375px;
+  color: #fff;
+  font-size: 24px;
 }
 
 .block_services_link a {
@@ -518,7 +544,12 @@
   line-height: 140%;
 }
 
+.block_asked ul{
+  margin-bottom: 100px;
+}
+
 .block_asked p {
+  color: #111827;
   padding: 30px;
   font-family: "Righteous", cursive;
   font-family: "Roboto", sans-serif;
@@ -529,9 +560,134 @@
   line-height: 140%;
 }
 
-.block_asked img{
+.block_asked img {
   position: absolute;
   right: 30px;
   top: 45px;
 }
 
+.block_contact {
+  background-image: url("../maket1/image/XXL 2.jpg");
+}
+
+.block_bg_contact {
+  background-image: url("../maket1/image/img_block_contact.png");
+}
+
+.block_contact h6 {
+  float: left;
+  width: 600px;
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.block_contact h6 span {
+  color: #9f9;
+}
+
+.block_contact form legend {
+  font-size: 12px;
+  color: #b3bccc;
+}
+
+.block_contact form input,
+select,
+textarea,
+button a {
+  width: 300px;
+  margin: 0 10px 30px 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.block_contact form select {
+  color: #fff;
+}
+
+.block_contact form textarea {
+  border-bottom: 1px solid #b3bccc;
+  width: 93%;
+  resize: none;
+}
+
+.block_contact form {
+  float: right;
+  width: 675px;
+  margin-bottom: 100px;
+}
+
+.block_contact form fieldset {
+  display: inline;
+  vertical-align: sub;
+}
+
+.block_contact select {
+  padding-top: 10px;
+  margin: 10px 20px 10px 0;
+}
+
+.block_contact button a {
+  border-bottom: none;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.block_contact form textarea + div {
+  text-align: right;
+}
+
+.block_contact button {
+  margin-right: 35px;
+}
+
+.block_contact li > button {
+  margin-right: 0;
+}
+
+.block_contact ul li {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.block_contact ul li p:first-child {
+  color: #9f9;
+  font-size: 18px;
+}
+
+.block_contact ul li p:last-child {
+  font-size: 24px;
+}
+
+.block_contact ul li:first-child p {
+  text-align: left;
+}
+
+.block_contact ul li:last-child p {
+  text-align: right;
+}
+
+.block_contact div.logo p:first-child,
+.block_contact div.logo p:last-child {
+  float: left;
+  font-size: 18px;
+  color: #fff;
+}
+
+.block_contact div.logo p:last-child {
+  float: right;
+}
+
+.block_contact .logo {
+  background: url("../maket1/image/img_bg_block_contact_down.png")no-repeat 0% -140%;
+  border-top: 1px solid #b3bccc;
+  padding: 30px 0;
+  margin-top: 30px;
+}
