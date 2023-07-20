@@ -1,0 +1,58 @@
+.clearfix {
+    clear: both;
+  }
+
+  *{
+    margin: 0;
+  }
+
+  .main {
+    background: url("/home_work1/image/base_5/123.jpeg") left top repeat-y;
+    background-size: 200px auto;
+  }
+  .menu {
+    float: left;
+    width: 200px;
+  }
+  .content {
+    margin-left: 200px;
+    padding: 0 10px;
+    background: url("/home_work1/image/base_5/1s.gif") repeat-y top right;
+  }
+  .image {
+    float: left;
+    margin: 10px;
+  }
+  
+  .h_content {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .h_menu {
+    padding: 10px 0 10px 5px;
+    font-size: 15px;
+  }
+  
+  .blue {
+    padding: 10px;
+    background-color: rgb(220, 242, 245);
+    color: blue;
+    font: bold 20px arial;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  button{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: green;
+    padding: 30px 10px;
+    text-decoration: underline;
+  }
+  

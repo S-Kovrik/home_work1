@@ -1,0 +1,42 @@
+@import "style.css";
+
+@media all and (max-width: 560px) {
+  .main {
+    background: none;
+  }
+
+  .menu {
+    float: none;
+    width: auto;
+    padding: 20px;
+    background-color: bisque;
+  }
+
+  .menu ul {
+    margin: 0;
+  }
+
+  .menu ul li {
+    float: left;
+    list-style: none;
+    padding: 10px 20px 10px 10px;
+  }
+
+  .menu h3 {
+    margin: 0;
+  }
+
+  .content {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .content img {
+    width: 80%;
+  }
+
+  .image {
+    float: none;
+    margin: 10px;
+  }
+}
