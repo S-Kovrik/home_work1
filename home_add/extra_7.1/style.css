@@ -1,0 +1,25 @@
+
+@media print { 
+  a[href^=https]:before{
+    content:"ссылка "
+    }
+ 
+  a[href^=https]:after {content:" на <" attr(href) ">"
+  }}
+
+.header {
+  font-size: 30px;
+  font-weight: bold;
+}
+.green {
+  color: green;
+}
+.red {
+  font-weight: bold;
+  color: red;
+}
+.blue {
+  font-style: italic;
+  color: blue;
+}
+
