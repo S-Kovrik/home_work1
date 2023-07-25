@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      input#aaa {
+        display: none;
+      }
+
+      input#aaa:checked {
+        width: 10px;
+        height: 10px;
+      }
+
+      input#aaa + label {
+        background-color: red;
+      }
+
+      input#aaa:checked + label {
+        background-color: blue;
+      }
+
+      label[for="aaa"] {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        user-select: none;
+        background: url(1.jpg) no-repeat -26px -4.6px;
+        background-size: 47px;
+      }
+
+      input#aaa:checked + label {
+        background-position: -3px -4.6px;
+      }
+
+      #bbb {
+        display: none;
+      }
+
+      [for="bbb"] {
+        position: relative;
+        display: inline-block;
+        user-select: none;
+        width: 30px;
+        height: 16px;
+        border-radius: 20px;
+        background-color: rgb(153, 153, 153);
+        transition: 0.5s;
+      }
+
+      [for="bbb"]::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        transition: 0.5s;
+      }
+      #bbb:checked + [for="bbb"] {
+        background-color: rgb(28, 151, 28);
+      }
+      #bbb:checked + [for="bbb"]::before {
+        left: 16px;
+        top: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="checkbox" id="aaa" />
+    <label for="aaa"></label>
+
+    <hr />
+
+    <input type="checkbox" id="bbb" />
+    <label for="bbb"></label>
+  </body>
+</html>
