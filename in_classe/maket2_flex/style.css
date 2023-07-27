@@ -5,15 +5,16 @@
 
 header > ul {
   padding: 15px 0;
+  border-bottom: 1px solid gray;
+}
+header > ul > li:last-child {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #ec1b2e;
 }
 header > ul > li:first-child {
   width: 250px;
   color: #ec1b2e;
-  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
   letter-spacing: 0.28px;
   text-transform: uppercase;
 }
@@ -22,21 +23,36 @@ header ul {
   align-items: center;
   justify-content: space-between;
 }
-header ul li:nth-child(2) li {
+header li:nth-child(2) li {
   padding: 0 30px;
 }
-header ul li:nth-child(2) li:nth-last-of-type(1):before {
+header li:nth-child(2) li:nth-last-of-type(1):before {
   margin-right: 20px;
   content: url("../maket2_flex/image/carbon_phone-filled.svg");
   vertical-align: middle;
 }
-header ul li:nth-child(2) li:nth-last-of-type(2):before {
+header li:nth-child(2) li:nth-last-of-type(2):before {
   margin-right: 20px;
   content: url("../maket2_flex/image/ci_location.svg");
   vertical-align: middle;
 }
-header ul li:nth-child(2) li:nth-last-of-type(3):before {
+header li:nth-child(2) li:nth-last-of-type(3):before {
   margin-right: 20px;
   content: url("../maket2_flex/image/fluent_mail-16-filled.svg");
   vertical-align: middle;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav > menu {
+  display: flex;
+  justify-content: space-between;
+}
+header nav > menu > li {
+  padding: 20px 0 20px 20px;
+}
+header nav > a {
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

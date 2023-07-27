@@ -1,6 +1,11 @@
-$color-red: #ec1b2e;
+$bgc-red: #ec1b2e;
+$main_color: #333;
 $mainfont-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat",
   sans-serif;
+
+@mixin main_font($font_size, $font_weight) {
+  font: normal 700 14px/140% $mainfont-family;
+}
 
 .conteiner {
   width: 1296px;
@@ -10,51 +15,68 @@ $mainfont-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat",
 header {
   & > ul {
     padding: 15px 0;
+    border-bottom: 1px solid gray;
 
+    & > li:last-child {
+      padding: 10px 20px;
+      color: #fff;
+      background-color: $bgc-red;
+    }
     & > li {
       &:first-child {
         width: 250px;
-        color: $color-red;
-        font-family: $mainfont-family;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 140%;
+        color: #ec1b2e;
         letter-spacing: 0.28px;
         text-transform: uppercase;
       }
     }
   }
-
   ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
 
-    li {
-      &:nth-child(2) {
-        li {
-          padding: 0 30px;
-        }
-
-        li:nth-last-of-type(1):before {
-          margin-right: 20px;
-          content: url("../maket2_flex/image/carbon_phone-filled.svg");
-          vertical-align: middle;
-        }
-
-        li:nth-last-of-type(2):before {
-          margin-right: 20px;
-          content: url("../maket2_flex/image/ci_location.svg");
-          vertical-align: middle;
-        }
-
-        li:nth-last-of-type(3):before {
-          margin-right: 20px;
-          content: url("../maket2_flex/image/fluent_mail-16-filled.svg");
-          vertical-align: middle;
-        }
+  li {
+    &:nth-child(2) {
+      li {
+        padding: 0 30px;
       }
+
+      li:nth-last-of-type(1):before {
+        margin-right: 20px;
+        content: url("../maket2_flex/image/carbon_phone-filled.svg");
+        vertical-align: middle;
+      }
+
+      li:nth-last-of-type(2):before {
+        margin-right: 20px;
+        content: url("../maket2_flex/image/ci_location.svg");
+        vertical-align: middle;
+      }
+
+      li:nth-last-of-type(3):before {
+        margin-right: 20px;
+        content: url("../maket2_flex/image/fluent_mail-16-filled.svg");
+        vertical-align: middle;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > menu {
+      display: flex;
+      justify-content: space-between;
+
+      & > li {
+        padding: 20px 0 20px 20px;
+      }
+    }
+
+    & > a {
+      display: inline-block;
     }
   }
 }

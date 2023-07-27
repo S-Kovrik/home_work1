@@ -30,9 +30,11 @@ p {
   font-weight: inherit;
 }
 
+menu,
 ul,
 ul li {
   list-style: none;
+  list-style-type: none;
 }
 
 img {
