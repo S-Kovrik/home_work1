@@ -1,0 +1,44 @@
+input#a {
+  width: 23px;
+  height: 26px;
+}
+
+label[for="a"] {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("../input/image/checkbox.png") no-repeat;
+  background-size: contain;
+}
+
+input#a:checked {
+  display: none;
+}
+
+input#b {
+  display: none;
+}
+
+label[for="b"] {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  background: gray;
+  border-radius: 20px;
+}
+label[for="b"]::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  background: wheat;
+}
+
+#b:checked + [for="b"]::before {
+  left: 13px;
+  top: 2px;
+}
