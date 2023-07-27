@@ -3,8 +3,12 @@ $main_color: #333;
 $mainfont-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat",
   sans-serif;
 
-@mixin main_font($font_size, $font_weight) {
-  font: normal 700 14px/140% $mainfont-family;
+@mixin main_font($font_size, $font_weight){
+    font-family:$mainfont-family;
+    font-size: $font_size;
+    font-style: normal;
+    font-weight: $font_weight;
+    line-height: 140%
 }
 
 .conteiner {
@@ -26,6 +30,7 @@ header {
       &:first-child {
         width: 250px;
         color: #ec1b2e;
+        @include main_font($font_size:14px, $font_weight:700);
         letter-spacing: 0.28px;
         text-transform: uppercase;
       }
@@ -41,6 +46,8 @@ header {
     &:nth-child(2) {
       li {
         padding: 0 30px;
+        color: $main_color;
+        @include main_font($font_size:14px, $font_weight:400);
       }
 
       li:nth-last-of-type(1):before {
@@ -72,6 +79,7 @@ header {
 
       & > li {
         padding: 20px 0 20px 20px;
+        @include main_font($font_size:14px, $font_weight:700);
       }
     }
 

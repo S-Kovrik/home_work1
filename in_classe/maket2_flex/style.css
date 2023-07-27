@@ -15,6 +15,11 @@ header > ul > li:last-child {
 header > ul > li:first-child {
   width: 250px;
   color: #ec1b2e;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
   letter-spacing: 0.28px;
   text-transform: uppercase;
 }
@@ -25,6 +30,12 @@ header ul {
 }
 header li:nth-child(2) li {
   padding: 0 30px;
+  color: #333;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
 }
 header li:nth-child(2) li:nth-last-of-type(1):before {
   margin-right: 20px;
@@ -52,6 +63,11 @@ header nav > menu {
 }
 header nav > menu > li {
   padding: 20px 0 20px 20px;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
 }
 header nav > a {
   display: inline-block;
