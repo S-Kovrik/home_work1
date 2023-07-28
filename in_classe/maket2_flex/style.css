@@ -88,12 +88,21 @@ header.conteiner nav > a {
   padding: 0.1px;
   height: 700px;
 }
-.slide > div > div {
+.slide div button {
+  padding: 20px;
+  background-color: #ec1b2e;
+}
+.slide div div + button:nth-child(2) {
+  position: relative;
+  left: 300px;
+  top: 300px;
+}
+.slide div > div {
   position: relative;
   top: 200px;
   left: 200px;
 }
-.slide > div > div > p {
+.slide div > div > p {
   color: #fff;
   font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
   font-size: 40px;
@@ -104,9 +113,9 @@ header.conteiner nav > a {
   padding: 15px 30px;
   background-color: rgba(51, 51, 51, 0.5);
 }
-.slide > div > div button {
+.slide div > div button {
   margin-top: 40px;
-  padding: 10px 20px;
+  padding: 15px 30px;
   color: #fff;
   font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
   font-size: 14px;
