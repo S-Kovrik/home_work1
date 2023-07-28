@@ -3,16 +3,24 @@
   margin: auto;
 }
 
-header > ul {
+header.conteiner {
+  margin-bottom: 20px;
+}
+header.conteiner > ul {
   padding: 15px 0;
   border-bottom: 1px solid gray;
 }
-header > ul > li:last-child {
+header.conteiner > ul > li:last-child {
   padding: 10px 20px;
   color: #fff;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
   background-color: #ec1b2e;
 }
-header > ul > li:first-child {
+header.conteiner > ul > li:first-child {
   width: 250px;
   color: #ec1b2e;
   font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
@@ -23,12 +31,12 @@ header > ul > li:first-child {
   letter-spacing: 0.28px;
   text-transform: uppercase;
 }
-header ul {
+header.conteiner ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header li:nth-child(2) li {
+header.conteiner li:nth-child(2) li {
   padding: 0 30px;
   color: #333;
   font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
@@ -37,38 +45,73 @@ header li:nth-child(2) li {
   font-weight: 400;
   line-height: 140%;
 }
-header li:nth-child(2) li:nth-last-of-type(1):before {
+header.conteiner li:nth-child(2) li:nth-last-of-type(1):before {
   margin-right: 20px;
   content: url("../maket2_flex/image/carbon_phone-filled.svg");
   vertical-align: middle;
 }
-header li:nth-child(2) li:nth-last-of-type(2):before {
+header.conteiner li:nth-child(2) li:nth-last-of-type(2):before {
   margin-right: 20px;
   content: url("../maket2_flex/image/ci_location.svg");
   vertical-align: middle;
 }
-header li:nth-child(2) li:nth-last-of-type(3):before {
+header.conteiner li:nth-child(2) li:nth-last-of-type(3):before {
   margin-right: 20px;
   content: url("../maket2_flex/image/fluent_mail-16-filled.svg");
   vertical-align: middle;
 }
-header nav {
+header.conteiner nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header nav > menu {
+header.conteiner nav > menu {
   display: flex;
   justify-content: space-between;
 }
-header nav > menu > li {
+header.conteiner nav > menu > li {
   padding: 20px 0 20px 20px;
+  color: #333;
   font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
 }
-header nav > a {
+header.conteiner nav > a {
   display: inline-block;
+}
+
+.slide {
+  background: url("./image/img_slide_bg.jpg") no-repeat;
+  background-size: cover;
+  padding: 0.1px;
+  height: 700px;
+}
+.slide > div > div {
+  position: relative;
+  top: 200px;
+  left: 200px;
+}
+.slide > div > div > p {
+  color: #fff;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%;
+  width: 526px;
+  padding: 15px 30px;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.slide > div > div button {
+  margin-top: 40px;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  background-color: #ec1b2e;
 }/*# sourceMappingURL=style.css.map */

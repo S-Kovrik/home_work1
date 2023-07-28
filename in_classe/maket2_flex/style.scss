@@ -3,12 +3,13 @@ $main_color: #333;
 $mainfont-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat",
   sans-serif;
 
-@mixin main_font($font_size, $font_weight){
-    font-family:$mainfont-family;
-    font-size: $font_size;
-    font-style: normal;
-    font-weight: $font_weight;
-    line-height: 140%
+@mixin main_font($font_size, $font_weight, $color) {
+  color: $color;
+  font-family: $mainfont-family;
+  font-size: $font_size;
+  font-style: normal;
+  font-weight: $font_weight;
+  line-height: 140%;
 }
 
 .conteiner {
@@ -16,21 +17,26 @@ $mainfont-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat",
   margin: auto;
 }
 
-header {
+header.conteiner {
+  margin-bottom: 20px;
+
   & > ul {
     padding: 15px 0;
     border-bottom: 1px solid gray;
 
     & > li:last-child {
       padding: 10px 20px;
-      color: #fff;
+      @include main_font($font_size: 14px, $font_weight: 700, $color: #fff);
       background-color: $bgc-red;
     }
     & > li {
       &:first-child {
         width: 250px;
-        color: #ec1b2e;
-        @include main_font($font_size:14px, $font_weight:700);
+        @include main_font(
+          $font_size: 14px,
+          $font_weight: 700,
+          $color: #ec1b2e
+        );
         letter-spacing: 0.28px;
         text-transform: uppercase;
       }
@@ -46,8 +52,11 @@ header {
     &:nth-child(2) {
       li {
         padding: 0 30px;
-        color: $main_color;
-        @include main_font($font_size:14px, $font_weight:400);
+        @include main_font(
+          $font_size: 14px,
+          $font_weight: 400,
+          $color: $main_color
+        );
       }
 
       li:nth-last-of-type(1):before {
@@ -79,12 +88,42 @@ header {
 
       & > li {
         padding: 20px 0 20px 20px;
-        @include main_font($font_size:14px, $font_weight:700);
+        @include main_font(
+          $font_size: 14px,
+          $font_weight: 700,
+          $color: $main_color
+        );
       }
     }
 
     & > a {
       display: inline-block;
+    }
+  }
+}
+
+.slide {
+  background: url("./image/img_slide_bg.jpg") no-repeat;
+  background-size: cover;
+  padding: 0.1px;
+  height: 700px;
+
+  & > div > div {
+    position: relative;
+    top: 200px;
+    left: 200px;
+    & > p {
+      @include main_font($font_size: 40px, $font_weight: 800, $color: #fff);
+      width: 526px;
+      padding: 15px 30px;
+      background-color: rgba(51, 51, 51, 0.5);
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 10px 20px;
+      @include main_font($font_size: 14px, $font_weight: 700, $color: #fff);
+      background-color: $bgc-red;
     }
   }
 }
