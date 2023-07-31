@@ -92,10 +92,15 @@ header.conteiner nav > a {
   padding: 20px;
   background-color: #ec1b2e;
 }
-.slide div div + button:nth-child(2) {
+.slide div button:nth-child(2) {
   position: relative;
-  left: 300px;
-  top: 300px;
+  left: -100px;
+  top: 0;
+}
+.slide div button:nth-child(3) {
+  position: relative;
+  left: 1275px;
+  top: 0;
 }
 .slide div > div {
   position: relative;

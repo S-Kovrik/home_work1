@@ -113,13 +113,17 @@ header.conteiner {
       background-color: $bgc-red;
     }
 
-    & div + button:nth-child(2)  {
+    & button:nth-child(2)  {
       position: relative;
-      left: 300px;
-      top: 300px;
+      left: -100px;
+      top: 0;
     }
 
-
+    & button:nth-child(3)  {
+      position: relative;
+      left: 1275px;
+      top: 0;
+    }
 
     & > div {
       position: relative;
