@@ -484,7 +484,7 @@ p {
 
 .block_news {
   padding: 120px;
-  background: url("../maket1/image/XXL\ 2.jpg");
+  background: url("../maket1/image/XXL\ 2.jpg") no-repeat center;
 }
 
 .block_news ul {
@@ -571,7 +571,7 @@ p {
 }
 
 .block_bg_contact {
-  background-image: url("../maket1/image/img_block_contact.png");
+  background: url("../maket1/image/img_block_contact.png") no-repeat center ;
 }
 
 .block_contact h6 {
