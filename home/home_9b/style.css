@@ -1,0 +1,25 @@
+div {
+  width: 1000px;
+  margin: 300px auto;
+  text-align: center;
+}
+
+rect:nth-of-type(1):hover {
+  fill: yellow;
+  stroke: green;
+  stroke-width: 10;
+  transition: all 350ms;
+  width: 380px;
+  x: 3px;
+}
+
+g:hover .path2,
+g:not(:hover) .path1 {
+  display: none;
+}
+
+.path1 {
+  fill: yellow;
+  stroke: green;
+  stroke-width: 10;
+}
