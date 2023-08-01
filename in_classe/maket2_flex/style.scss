@@ -1,16 +1,5 @@
-$bgc-red: #ec1b2e;
-$main_color: #333;
-$mainfont-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat",
-  sans-serif;
-
-@mixin main_font($font_size, $font_weight, $color) {
-  color: $color;
-  font-family: $mainfont-family;
-  font-size: $font_size;
-  font-style: normal;
-  font-weight: $font_weight;
-  line-height: 140%;
-}
+@import "./variables.scss";
+@import "./mixin.scss";
 
 .conteiner {
   width: 1296px;
@@ -147,7 +136,7 @@ header.conteiner {
 }
 
 main {
-  section {
+  section.school {
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
@@ -179,5 +168,17 @@ main {
         );
       }
     }
+  }
+
+  section.prices {
+    h3 {
+      text-align: center;
+      @include main_font(
+        $font_size: 48px,
+        $font_weight: 800,
+        $color: $main_color
+      );
+    }
+
   }
 }

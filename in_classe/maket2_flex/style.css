@@ -130,16 +130,16 @@ header.conteiner nav > a {
   background-color: #ec1b2e;
 }
 
-main section {
+main section.school {
   margin-top: 100px;
   display: flex;
   justify-content: space-around;
 }
-main section article:nth-of-type(1) {
+main section.school article:nth-of-type(1) {
   border: 10px solid var(--accent, #ec1b2e);
   position: relative;
 }
-main section article:nth-of-type(1) h3 {
+main section.school article:nth-of-type(1) h3 {
   position: absolute;
   top: -40px;
   left: 50px;
@@ -152,7 +152,7 @@ main section article:nth-of-type(1) h3 {
   font-weight: 800;
   line-height: 140%;
 }
-main section article:nth-of-type(1) p {
+main section.school article:nth-of-type(1) p {
   width: 600px;
   padding: 75px 70px 40px;
   color: #333;
@@ -160,5 +160,14 @@ main section article:nth-of-type(1) p {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  line-height: 140%;
+}
+main section.prices h3 {
+  text-align: center;
+  color: #333;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
   line-height: 140%;
 }/*# sourceMappingURL=style.css.map */

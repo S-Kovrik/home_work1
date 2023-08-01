@@ -1,0 +1,14 @@
+@mixin main_font($font_size, $font_weight, $color) {
+  color: $color;
+  font-family: $mainfont-family;
+  font-size: $font_size;
+  font-style: normal;
+  font-weight: $font_weight;
+  line-height: 140%;
+}
+
+@mixin red_button($padding_button, $bgc-red, $mg_btn) {
+  padding: $padding_button;
+  background-color: $bgc-red;
+  margin: $mg_btn;
+}
