@@ -1,0 +1,38 @@
+section {
+  display: flex;
+  justify-content: space-around;
+  transition-duration: 3s;
+}
+
+svg:nth-of-type(1) {
+  background-color: red;
+}
+
+section:hover svg:nth-of-type(1) {
+  transition-duration: 3s;
+  width: 300px;
+}
+
+svg:nth-of-type(2) {
+  transition-duration: 3s;
+  background-color: blue;
+}
+section:hover svg:nth-of-type(2) {
+  border-radius: 100px;
+}
+svg:nth-of-type(3) {
+  transition-duration: 3s;
+  background-color: aqua;
+}
+
+section:hover svg:nth-of-type(3) {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #f95959;
+}
+
+svg:nth-of-type(4) {
+  background-color: black;
+}
