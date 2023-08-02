@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "./mixin.scss";
+@import "./extend.scss";
 
 .conteiner {
   width: 1296px;
@@ -14,10 +15,10 @@ header.conteiner {
     border-bottom: 1px solid gray;
 
     & > li:last-child {
-      padding: 10px 20px;
       @include main_font($font_size: 14px, $font_weight: 700, $color: #fff);
-      background-color: $bgc-red;
+      @include red_button($bgc-red, $mg_btn-red: 0, $pd-btn-red: 10px 20px);
     }
+
     & > li {
       &:first-child {
         width: 250px;
@@ -126,10 +127,12 @@ header.conteiner {
       }
 
       button {
-        margin-top: 40px;
-        padding: 15px 30px;
         @include main_font($font_size: 14px, $font_weight: 700, $color: #fff);
-        background-color: $bgc-red;
+        @include red_button(
+          $bgc-red,
+          $mg_btn-red: 40px 0 0 0,
+          $pd-btn-red: 15px 30px
+        );
       }
     }
   }
@@ -172,6 +175,7 @@ main {
 
   section.prices {
     h3 {
+      margin-top: 100px;
       text-align: center;
       @include main_font(
         $font_size: 48px,
@@ -179,6 +183,67 @@ main {
         $color: $main_color
       );
     }
+    menu.first_menu {
+      @extend %block-top-indent;
+      li {
+        padding-left: 162px;
+        button {
+          width: 200px;
+          @include main_font($font_size: 16px, $font_weight: 400, $color: #fff);
+          @include red_button($bgc-red, $mg_btn-red: 0, $pd-btn-red: 12px 20px);
+        }
+      }
+    }
 
+    menu.second_menu {
+      li:first-child button {
+        color: $bgc-red;
+      }
+      @extend %block-top-indent;
+      button {
+        @include main_font($font_size: 24px, $font_weight: 700, $color: #333);
+        @include red_button(
+          $bgc-transparent,
+          $mg_btn-red: 0,
+          $pd-btn-red: 12px 20px
+        );
+      }
+    }
+  }
+  .table_prices {
+    @extend %block-top-indent;
+    flex-direction: column;
+    div {
+      border-bottom: 1px solid gray;
+      & > ul:last-child > li > span {
+        @include main_font($font_size: 18px, $font_weight: 400, $color: #fff);
+        @include red_button($bgc-red, $mg_btn-red: 0, $pd-btn-red: 2px);
+      }
+      ul {
+        padding: 20px 0;
+      }
+      @include block_flex($justify-content);
+      li {
+        padding: 10px 0;
+      }
+    }
+    div:first-child {
+      @include block_flex($justify-content);
+      margin: 0;
+      padding-right: 645px;
+      background-color: rgba(51, 51, 51, 0.05);
+      border-bottom: none;
+
+      & > p {
+        padding: 10px 0;
+        @include main_font($font_size: 20px, $font_weight: 700, $color: #333);
+      }
+      & > p:nth-child(2) {
+        margin-right: 80px;
+      }
+    }
+    &>div:last-child{
+      border-bottom: none;
+    }
   }
 }

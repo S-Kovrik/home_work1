@@ -1,3 +1,8 @@
+main .table_prices div:first-child, main .table_prices div, main .table_prices, main section.prices menu.second_menu, main section.prices menu.first_menu {
+  display: flex;
+  margin-top: 50px;
+}
+
 .conteiner {
   width: 1296px;
   margin: auto;
@@ -11,7 +16,6 @@ header.conteiner > ul {
   border-bottom: 1px solid gray;
 }
 header.conteiner > ul > li:last-child {
-  padding: 10px 20px;
   color: #fff;
   font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
   font-size: 14px;
@@ -19,6 +23,8 @@ header.conteiner > ul > li:last-child {
   font-weight: 700;
   line-height: 140%;
   background-color: #ec1b2e;
+  margin: 0;
+  padding: 10px 20px;
 }
 header.conteiner > ul > li:first-child {
   width: 250px;
@@ -119,8 +125,6 @@ header.conteiner nav > a {
   background-color: rgba(51, 51, 51, 0.5);
 }
 .slide div > div button {
-  margin-top: 40px;
-  padding: 15px 30px;
   color: #fff;
   font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
   font-size: 14px;
@@ -128,6 +132,8 @@ header.conteiner nav > a {
   font-weight: 700;
   line-height: 140%;
   background-color: #ec1b2e;
+  margin: 40px 0 0 0;
+  padding: 15px 30px;
 }
 
 main section.school {
@@ -163,6 +169,7 @@ main section.school article:nth-of-type(1) p {
   line-height: 140%;
 }
 main section.prices h3 {
+  margin-top: 100px;
   text-align: center;
   color: #333;
   font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
@@ -170,4 +177,79 @@ main section.prices h3 {
   font-style: normal;
   font-weight: 800;
   line-height: 140%;
+}
+main section.prices menu.first_menu li {
+  padding-left: 162px;
+}
+main section.prices menu.first_menu li button {
+  width: 200px;
+  color: #fff;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  background-color: #ec1b2e;
+  margin: 0;
+  padding: 12px 20px;
+}
+main section.prices menu.second_menu li:first-child button {
+  color: #ec1b2e;
+}
+main section.prices menu.second_menu button {
+  color: #333;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  background-color: rgba(236, 27, 44, 0);
+  margin: 0;
+  padding: 12px 20px;
+}
+main .table_prices {
+  flex-direction: column;
+}
+main .table_prices div {
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+}
+main .table_prices div > ul:last-child > li > span {
+  color: #fff;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  background-color: #ec1b2e;
+  margin: 0;
+  padding: 2px;
+}
+main .table_prices div ul {
+  padding: 20px 0;
+}
+main .table_prices div li {
+  padding: 10px 0;
+}
+main .table_prices div:first-child {
+  justify-content: space-between;
+  margin: 0;
+  padding-right: 645px;
+  background-color: rgba(51, 51, 51, 0.05);
+  border-bottom: none;
+}
+main .table_prices div:first-child > p {
+  padding: 10px 0;
+  color: #333;
+  font-family: "Righteous", cursive, "Roboto", sans-serif, "Montserrat", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+main .table_prices div:first-child > p:nth-child(2) {
+  margin-right: 80px;
+}
+main .table_prices > div:last-child {
+  border-bottom: none;
 }/*# sourceMappingURL=style.css.map */

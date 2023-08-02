@@ -7,8 +7,13 @@
   line-height: 140%;
 }
 
-@mixin red_button($padding_button, $bgc-red, $mg_btn) {
-  padding: $padding_button;
+@mixin red_button($bgc-red, $mg_btn-red, $pd-btn-red) {
   background-color: $bgc-red;
-  margin: $mg_btn;
+  margin: $mg_btn-red;
+  padding: $pd-btn-red;
+}
+
+@mixin block_flex($justify-content){
+  @extend %block-top-indent;
+  justify-content: $justify-content;
 }
