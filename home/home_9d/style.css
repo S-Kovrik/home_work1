@@ -28,11 +28,46 @@ svg:nth-of-type(3) {
 section:hover svg:nth-of-type(3) {
   width: 0;
   height: 0;
+  transform: rotate(180deg);
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
   border-bottom: 200px solid #f95959;
+  background-color: rgba(0, 255, 255, 0);
 }
 
-svg:nth-of-type(4) {
-  background-color: black;
+section > div:last-child {
+  display: flex;
+  position: relative;
+  animation: anim-run 3s infinite alternate;
+}
+
+section > div:last-child > svg.anim_run {
+  width: 50px;
+  height: 60px;
+  align-self: center;
+  animation: anim 1s steps(8) infinite;
+}
+@keyframes anim {
+  0% {
+    background: url("./image/anim.jpg") no-repeat 0 0;
+  }
+  50% {
+    background: url("./image/anim.jpg") no-repeat -395px 0;
+  }
+
+  75% {
+    background: url("./image/anim.jpg") no-repeat -395px 60px ;
+  }
+  100% {
+    background: url("./image/anim.jpg") no-repeat 0 60px;
+  }
+}
+
+@keyframes anim-run {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
 }
