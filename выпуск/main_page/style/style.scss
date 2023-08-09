@@ -1,0 +1,29 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./extend.scss";
+
+.container {
+  width: 480px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  background-color: #0060fc;
+
+  svg {
+    position: relative;
+  }
+
+  svg:nth-of-type(2) {
+    position: absolute;
+    top: 8px;
+    left: 22px;
+  }
+
+  button {
+    text-align: center;
+    @include main_font($font_size:16px, $font_weight:500, $color:#fff);
+    @include button($bgc: $bgc-red, $mg_btn: 0, $pd-btn: 3px 5px 4px, $br-rs: 17px);
+  }
+}

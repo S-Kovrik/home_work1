@@ -1,0 +1,31 @@
+.container {
+  width: 480px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  background-color: #0060fc;
+}
+header svg {
+  position: relative;
+}
+header svg:nth-of-type(2) {
+  position: absolute;
+  top: 8px;
+  left: 22px;
+}
+header button {
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto",
+    sans-serif, "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: #f2111e;
+  margin: 0;
+  padding: 3px 5px 4px;
+  border-radius: 17px;
+} /*# sourceMappingURL=style.css.map */
