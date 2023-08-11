@@ -3,27 +3,38 @@
 @import "./extend.scss";
 
 .container {
-  width: 480px;
+  max-width: 480px;
   margin: auto;
 }
 
 header {
   display: flex;
+  justify-content: space-around;
+  align-items: end;
+  padding: 7px 40px 22px 40px;
   background-color: #0060fc;
 
-  svg {
-    position: relative;
-  }
-
-  svg:nth-of-type(2) {
-    position: absolute;
-    top: 8px;
-    left: 22px;
-  }
-
   button {
-    text-align: center;
-    @include main_font($font_size:16px, $font_weight:500, $color:#fff);
-    @include button($bgc: $bgc-red, $mg_btn: 0, $pd-btn: 3px 5px 4px, $br-rs: 17px);
+    height: 27px;
+    @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
+    @include button($bgc: $bgc-red, $mg_btn: 0, $pd-btn: 3px, $br-rs: 20px);
+  }
+
+  & > button:nth-child(3) {
+    align-self: flex-start;
+    background-color: #0060fc;
+    padding: 0.1px;
+  }
+}
+
+.block_languages {
+  width: 482px;
+  height: 206px;
+  background: url("../image/bd_block_languages.jpg") no-repeat;
+
+  div {
+    p {
+      @include main_font($font_size: 21px, $font_weight: 700, $color: #fff);
+    }
   }
 }

@@ -11,10 +11,10 @@
   background-color: $bgc;
   margin: $mg_btn;
   padding: $pd-btn;
-  border-radius:$br-rs;
+  border-radius: $br-rs;
 }
 
-@mixin block_flex($justify-content){
+@mixin block_flex($justify-content) {
   @extend %block-top-indent;
   justify-content: $justify-content;
 }
