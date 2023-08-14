@@ -14,7 +14,6 @@
   border-radius: $br-rs;
 }
 
-@mixin block_flex($justify-content) {
+@mixin block_flex() {
   @extend %block-top-indent;
-  justify-content: $justify-content;
 }
