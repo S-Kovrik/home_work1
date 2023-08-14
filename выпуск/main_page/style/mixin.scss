@@ -17,3 +17,6 @@
 @mixin block_flex() {
   @extend %block-top-indent;
 }
+@mixin block_flex-cn() {
+  @extend%block_flex_cn;
+}
