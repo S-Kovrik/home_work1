@@ -82,8 +82,10 @@ header {
   }
 }
 
-
 .test_free {
+  @include block_flex();
+  margin-top: 50px;
+
   h3 {
     @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
     margin-bottom: 20px;
@@ -112,4 +114,49 @@ header {
     @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
     margin-bottom: 20px;
   }
+
+  iframe {
+    align-self: center;
+  }
+
+  h3:nth-of-type(2) {
+    margin-top: 20px;
+    @include main_font($font_size: 21px, $font_weight: 700, $color: #000);
+  }
+
+  button:nth-of-type(1) {
+    width: 223px;
+    align-self: center;
+    border: 1.328px solid #f2111e;
+    @include main_font($font_size: 16px, $font_weight: 500, $color: #f2111e);
+    @include button($bgc: #fff, $mg_btn: 0, $pd-btn: 5px 4px, $br-rs: 16.602px);
+  }
+  button:nth-of-type(2) {
+    width: 223px;
+    align-self: center;
+    @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
+    @include button(
+      $bgc: $main-bl,
+      $mg_btn: 30px 0 0 0,
+      $pd-btn: 5px 4px,
+      $br-rs: 16.602px
+    );
+  }
 }
+
+.direction_block {
+  @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
+  margin-top: 30px;
+
+  div {
+    display: grid;
+      ul {
+        margin-top: 20px;
+        padding: 20px 0;
+        border-bottom: 1px solid #000;
+        border-top: 1px solid #000;
+        @extend %block_flex_row;
+      }
+    }
+  }
+
