@@ -12,6 +12,12 @@
   margin: auto;
 }
 
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 header {
   background-color: #0060fc;
 
@@ -152,7 +158,6 @@ header {
 
   div.direction_block_layout {
     & > div {
-      width: 100%;
       margin-top: 20px;
       border-bottom: 1px solid #000;
       border-top: 1px solid #000;
@@ -311,32 +316,58 @@ header {
 
   h3 {
     @include main_font($font_size: 19px, $font_weight: 600, $color: #fff);
+    margin: 30px 0;
   }
 
-  & > div {
-    & > div {
-      p {
+  & > div > div {
+    @extend%block_flex_cn;
+  }
+
+  & > div > div > div {
+    position: relative;
+
+    img {
+      float: left;
+      margin: 25px 12px 0 0;
+    }
+
+    ul {
+      margin: 25px;
+      li {
         @include main_font(
           $font_size: 17.225px,
           $font_weight: 500,
-          $color: #000
+          $color: #fff
         );
-        border-radius: 4.306px;
-        background: #fff;
+        margin-bottom: 5px;
       }
+      & > li:nth-of-type(2) {
+        font-weight: 400;
+      }
+    }
 
-      ul {
-        li {
-          @include main_font(
-            $font_size: 17.225px,
-            $font_weight: 500,
-            $color: #fff
-          );
-        }
-        & > li:nth-of-type(2) {
-          font-weight: 400;
-        }
-      }
+    p {
+      @include main_font($font_size: 17.225px, $font_weight: 500, $color: #000);
+      border-radius: 4.306px;
+      background: #fff;
+      margin-top: 25px;
+      padding: 3px 5px;
+    }
+
+    svg {
+      position: absolute;
+      top: 110px;
+      left: 20px;
+    }
+  }
+}
+
+footer {
+  nav {
+    @extend%block_flex_cn;
+  }
+  div {
+    menu {
     }
   }
 }

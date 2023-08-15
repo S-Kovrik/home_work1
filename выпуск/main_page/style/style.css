@@ -9,7 +9,7 @@
   justify-content: space-between;
 }
 
-.block_advantages > div > div > div, .block_advantages > div > div, .direction_block .cards {
+footer nav, .block_reviews > div > div, .block_advantages > div > div > div, .block_advantages > div > div, .direction_block .cards {
   display: flex;
   flex-direction: column;
 }
@@ -22,6 +22,12 @@
 .inner-container {
   max-width: 360px;
   margin: auto;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 header {
@@ -190,7 +196,6 @@ header div .block_header > button:nth-child(3) {
   margin-top: 30px;
 }
 .direction_block div.direction_block_layout > div {
-  width: 100%;
   margin-top: 20px;
   border-bottom: 1px solid #000;
   border-top: 1px solid #000;
@@ -365,8 +370,31 @@ header div .block_header > button:nth-child(3) {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin: 30px 0;
 }
-.block_reviews > div > div p {
+.block_reviews > div > div > div {
+  position: relative;
+}
+.block_reviews > div > div > div img {
+  float: left;
+  margin: 25px 12px 0 0;
+}
+.block_reviews > div > div > div ul {
+  margin: 25px;
+}
+.block_reviews > div > div > div ul li {
+  color: #fff;
+  font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+  font-size: 17.225px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+.block_reviews > div > div > div ul > li:nth-of-type(2) {
+  font-weight: 400;
+}
+.block_reviews > div > div > div p {
   color: #000;
   font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
   font-size: 17.225px;
@@ -375,15 +403,11 @@ header div .block_header > button:nth-child(3) {
   line-height: normal;
   border-radius: 4.306px;
   background: #fff;
+  margin-top: 25px;
+  padding: 3px 5px;
 }
-.block_reviews > div > div ul li {
-  color: #fff;
-  font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-  font-size: 17.225px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.block_reviews > div > div ul > li:nth-of-type(2) {
-  font-weight: 400;
+.block_reviews > div > div > div svg {
+  position: absolute;
+  top: 110px;
+  left: 20px;
 }/*# sourceMappingURL=style.css.map */
