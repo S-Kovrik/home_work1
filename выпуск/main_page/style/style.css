@@ -361,7 +361,7 @@ header div .block_header > button:nth-child(3) {
 
 .block_reviews {
   background: #0060FC;
-  padding-top: 20px;
+  padding: 50px;
 }
 .block_reviews h3 {
   color: #fff;
@@ -370,7 +370,7 @@ header div .block_header > button:nth-child(3) {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin: 30px 0;
+  margin-top: 30px;
 }
 .block_reviews > div > div > div {
   position: relative;
@@ -410,4 +410,28 @@ header div .block_header > button:nth-child(3) {
   position: absolute;
   top: 110px;
   left: 20px;
+}
+
+footer nav {
+  align-items: center;
+}
+footer nav > div:nth-of-type(3) {
+  border-bottom: none;
+}
+footer nav > div {
+  border-bottom: 1px solid #808080;
+  width: 100%;
+}
+footer nav > div menu {
+  margin: 30px 0;
+}
+footer nav > div menu li {
+  color: #000;
+  font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */
