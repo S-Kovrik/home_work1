@@ -16,8 +16,8 @@
     <title>Engl</title>
   </head>
   <body>
-    <header class="container">
-      <div class="inner-container">
+    <header class="container cr_dp">
+      <div class="inner-container ir-cr_dp">
         <div class="block_header">
           <img
             src="./image/logo_header.svg"
@@ -26,8 +26,16 @@
             height="42"
             aria-grabbed=""
           />
-
-          <button>Купить уроки</button>
+          <div>
+            <button>Бесплатный урок</button>
+            <button>Купить уроки</button>
+            <svg height="36" width="36">
+              <use xlink:href="./image/svg_sprites.svg#notification"></use>
+            </svg>
+            <svg height="40" width="40">
+              <use xlink:href="./image/svg_sprites.svg#profile"></use>
+            </svg>
+          </div>
           <button>
             <img
               src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iOTYuMDAwMDAwcHQiIGhlaWdodD0iOTYuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCA5Ni4wMDAwMDAgOTYuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCw5Ni4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiNGRkYiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik05NCA3MDUgYy00IC04IC00IC0yMiAwIC0zMCA1IC0xMyA1NCAtMTUgMzg4IC0xMyBsMzgzIDMgMCAyNSAwIDI1Ci0zODMgMyBjLTMzNCAyIC0zODMgMCAtMzg4IC0xM3oiLz4KPHBhdGggZD0iTTk0IDQ5NSBjLTQgLTggLTQgLTIyIDAgLTMwIDUgLTEzIDU0IC0xNSAzODggLTEzIGwzODMgMyAwIDI1IDAgMjUKLTM4MyAzIGMtMzM0IDIgLTM4MyAwIC0zODggLTEzeiIvPgo8cGF0aCBkPSJNOTQgMjg1IGMtNCAtOCAtNCAtMjIgMCAtMzAgNSAtMTMgNTQgLTE1IDM4OCAtMTMgbDM4MyAzIDAgMjUgMCAyNQotMzgzIDMgYy0zMzQgMiAtMzgzIDAgLTM4OCAtMTN6Ii8+CjwvZz4KPC9zdmc+Cg=="
@@ -38,13 +46,37 @@
           </button>
         </div>
       </div>
+      <nav>
+        <menu class="ir-cr_dp"
+          ><li>
+            Уроки<svg height="10" width="20">
+              <use xlink:href="./image/svg_sprites.svg#dropdown_lessons"></use>
+            </svg>
+          </li>
+          <li>Курсы</li>
+          <li>Телеканалы</li>
+          <li>Видео</li>
+          <li>Книги</li>
+          <li>Радио</li></menu
+        >
+      </nav>
     </header>
     <section class="block_languages">
-      <div class="container">
-        <div class="inner-container">
-          <h1>Выберите язык обучения</h1>
-          <button><div></div></button><button><div></div></button
-          ><button><div></div></button><button><div></div></button>
+      <div class="container cr_dp">
+        <div class="inner-container ir-cr_dp">
+          <div>
+          <h3>Выберите язык обучения</h3>
+          <div>
+            <button><div></div></button><button><div></div></button
+            ><button><div></div></button><button><div></div></button>
+          </div>
+          <div>
+            <form>
+              <button type="submit"></button>
+            <input type="text" placeholder="Search">
+            </form>
+          </div>
+        </div>
         </div>
       </div>
     </section>
