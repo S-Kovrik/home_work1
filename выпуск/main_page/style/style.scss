@@ -304,6 +304,7 @@ header {
 }
 
 .block_advantages {
+  margin-top: 40px;
   background: $main-bl;
   padding: 0.1px;
 
@@ -652,29 +653,30 @@ footer {
   .direction_block {
     position: relative;
     margin-top: 70px;
+    background: url("../image/direction_block_bg.svg") no-repeat center 92%;
     border-top: 1px solid #808080;
+    padding-bottom: 250px;
     h3 {
       position: absolute;
-      top: -15px;
+      top: -20px;
       left: 114px;
-      @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
+      font-size: 28px;
       margin-top: 0;
       background-color: #fff;
-      padding:  0 5px;
+      padding: 0 5px;
     }
 
     div.direction_block_layout {
       & > div {
-        margin-top: 20px;
+        margin-top: 50px;
         border: 1px solid #000;
       }
       ul {
-        padding: 20px 0;
-        @extend %block_flex_row;
+        padding: 20px 100px;
+        justify-content: space-around;
 
         button {
-          @include main_font($font_size: 16px, $font_weight: 500, $color: #000);
-          padding: 10px;
+          font-size: 22px;
         }
 
         button:active {
@@ -691,99 +693,110 @@ footer {
     }
 
     .cards {
-     flex-direction: row;
-     justify-content: space-between;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .block_advantages {
+    background: $main-bl;
+    padding: 0.1px;
+
+    h3 {
+      @include main_font($font_size: 19px, $font_weight: 600, $color: #fff);
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    & > div > div {
+      @extend%block_flex_cn;
 
       & > div {
-        position: relative;
+        @extend%block_flex_cn;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
         margin: 30px 0;
-        width: 297px;
-        display: grid;
-        grid-template: repeat(10, 40px) / repeat(2, 1fr);
-        border-radius: 15px;
-        border: 1px solid #000;
+      }
 
-        p {
-          margin-bottom: 0;
-        }
+      p {
+        @include main_font($font_size: 16px, $font_weight: 400, $color: #fff);
+        text-align: center;
+      }
 
-        p:nth-of-type(1) {
-          padding-left: 10px;
-          grid-area: 1/1/4/5;
-          @include main_font($font_size: 58px, $font_weight: 600, $color: #fff);
-          background: url("../image/Ellipse_cards.svg") no-repeat;
-        }
-        p:nth-of-type(2) {
-          grid-area: 1/2/4/4;
-          margin: 25px 0 0 -45px;
-          @include main_font($font_size: 28px, $font_weight: 500, $color: #000);
-        }
-        p:nth-of-type(3) {
-          grid-area: 4/1/4/5;
-          padding: 6px;
-          text-align: center;
-          @include main_font($font_size: 23px, $font_weight: 500, $color: #fff);
-          background: $main-bl;
-        }
-        button:nth-of-type(1) {
-          border-right: 1px solid #000;
-          padding-bottom: 200px;
-          grid-area: 7/1/6/2;
-        }
+      button {
+        @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
+        @include button(
+          $bgc: $bgc-red,
+          $mg_btn: 0,
+          $pd-btn: 10px 55px,
+          $br-rs: 17.097px
+        );
+      }
+    }
+  }
 
-        button:nth-of-type(2) {
-          grid-area: 7/2/6/6;
-        }
+  .block_advantages {
+    margin-top: 40px;
+    background: $main-bl;
+    padding: 0.1px;
 
-        button:active {
-          @include button(
-            $bgc: $main-bl,
-            $mg_btn: -15px 0 0 0,
-            $pd-btn: 0 0 215px 0,
-            $br-rs: 15px
-          );
-        }
+    h3 {
+      @include main_font($font_size: 19px, $font_weight: 600, $color: #fff);
+      text-align: center;
+      margin: 50px 0;
+    }
 
-        button:nth-of-type(1):active {
-          border-radius: 0px 15px 0px 14px;
-        }
+    & > div > div {
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+      grid-gap: 98px 55px;
+      margin-bottom: 84px;
 
-        button:nth-of-type(2):active {
-          border-radius: 15px 0px 14px 0px;
-        }
+      & > div {
+        @extend%block_flex_cn;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin: 0;
+      }
 
-        button:active ul > li {
-          color: #fff;
-          margin: 15px 0 35px 0;
-        }
+      & > div:nth-of-type(1) {
+        order: 1;
+      }
 
-        button:nth-of-type(3) {
-          position: absolute;
-          top: 360px;
-          left: 78px;
-          @include button(
-            $bgc: $bgc-red,
-            $mg_btn: 0,
-            $pd-btn: 5px 20px,
-            $br-rs: 25px
-          );
-          @include main_font($font_size: 20px, $font_weight: 500, $color: #fff);
-        }
+      & > div:nth-of-type(2) {
+        order: 2;
+      }
 
-        button {
-          ul {
-            margin-top: -15px;
-            padding-left: 0;
-            li {
-              @include main_font(
-                $font_size: 17px,
-                $font_weight: 400,
-                $color: #000
-              );
-              margin: 5px 0 35px 0;
-            }
-          }
-        }
+      & > div:nth-of-type(3) {
+        order: 3;
+      }
+      & > div:nth-of-type(4) {
+        order: 5;
+      }
+
+      & > div:nth-of-type(5) {
+        order: 4;
+      }
+
+      & > div:nth-of-type(6) {
+        order: 4;
+      }
+
+      p {
+        @include main_font($font_size: 16px, $font_weight: 400, $color: #fff);
+        text-align: center;
+      }
+
+      button {
+        @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
+        @include button(
+          $bgc: $bgc-red,
+          $mg_btn: 0,
+          $pd-btn: 10px 55px,
+          $br-rs: 17.097px
+        );
       }
     }
   }

@@ -336,6 +336,7 @@ header nav {
 }
 
 .block_advantages {
+  margin-top: 40px;
   background: #0060FC;
   padding: 0.1px;
 }
@@ -682,37 +683,29 @@ footer nav > div menu li {
   .direction_block {
     position: relative;
     margin-top: 70px;
+    background: url("../image/direction_block_bg.svg") no-repeat center 92%;
     border-top: 1px solid #808080;
+    padding-bottom: 250px;
   }
   .direction_block h3 {
     position: absolute;
-    top: -15px;
+    top: -20px;
     left: 114px;
-    color: #000;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-size: 28px;
     margin-top: 0;
     background-color: #fff;
     padding: 0 5px;
   }
   .direction_block div.direction_block_layout > div {
-    margin-top: 20px;
+    margin-top: 50px;
     border: 1px solid #000;
   }
   .direction_block div.direction_block_layout ul {
-    padding: 20px 0;
+    padding: 20px 100px;
+    justify-content: space-around;
   }
   .direction_block div.direction_block_layout ul button {
-    color: #000;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding: 10px;
+    font-size: 22px;
   }
   .direction_block div.direction_block_layout ul button:active {
     background-color: #fff;
@@ -726,101 +719,111 @@ footer nav > div menu li {
     flex-direction: row;
     justify-content: space-between;
   }
-  .direction_block .cards > div {
-    position: relative;
-    margin: 30px 0;
-    width: 297px;
-    display: grid;
-    grid-template: repeat(10, 40px)/repeat(2, 1fr);
-    border-radius: 15px;
-    border: 1px solid #000;
+  .block_advantages {
+    background: #0060FC;
+    padding: 0.1px;
   }
-  .direction_block .cards > div p {
-    margin-bottom: 0;
-  }
-  .direction_block .cards > div p:nth-of-type(1) {
-    padding-left: 10px;
-    grid-area: 1/1/4/5;
+  .block_advantages h3 {
     color: #fff;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 58px;
+    font-size: 19px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    background: url("../image/Ellipse_cards.svg") no-repeat;
-  }
-  .direction_block .cards > div p:nth-of-type(2) {
-    grid-area: 1/2/4/4;
-    margin: 25px 0 0 -45px;
-    color: #000;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  .direction_block .cards > div p:nth-of-type(3) {
-    grid-area: 4/1/4/5;
-    padding: 6px;
     text-align: center;
+    margin-top: 50px;
+  }
+  .block_advantages > div > div > div {
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 30px 0;
+  }
+  .block_advantages > div > div p {
     color: #fff;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 23px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    background: #0060FC;
-  }
-  .direction_block .cards > div button:nth-of-type(1) {
-    border-right: 1px solid #000;
-    padding-bottom: 200px;
-    grid-area: 7/1/6/2;
-  }
-  .direction_block .cards > div button:nth-of-type(2) {
-    grid-area: 7/2/6/6;
-  }
-  .direction_block .cards > div button:active {
-    background-color: #0060FC;
-    margin: -15px 0 0 0;
-    padding: 0 0 215px 0;
-    border-radius: 15px;
-  }
-  .direction_block .cards > div button:nth-of-type(1):active {
-    border-radius: 0px 15px 0px 14px;
-  }
-  .direction_block .cards > div button:nth-of-type(2):active {
-    border-radius: 15px 0px 14px 0px;
-  }
-  .direction_block .cards > div button:active ul > li {
-    color: #fff;
-    margin: 15px 0 35px 0;
-  }
-  .direction_block .cards > div button:nth-of-type(3) {
-    position: absolute;
-    top: 360px;
-    left: 78px;
-    background-color: #f2111e;
-    margin: 0;
-    padding: 5px 20px;
-    border-radius: 25px;
-    color: #fff;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  .direction_block .cards > div button ul {
-    margin-top: -15px;
-    padding-left: 0;
-  }
-  .direction_block .cards > div button ul li {
-    color: #000;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: 5px 0 35px 0;
+    text-align: center;
+  }
+  .block_advantages > div > div button {
+    color: #fff;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #f2111e;
+    margin: 0;
+    padding: 10px 55px;
+    border-radius: 17.097px;
+  }
+  .block_advantages {
+    margin-top: 40px;
+    background: #0060FC;
+    padding: 0.1px;
+  }
+  .block_advantages h3 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin: 50px 0;
+  }
+  .block_advantages > div > div {
+    display: grid;
+    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+    grid-gap: 98px 55px;
+    margin-bottom: 84px;
+  }
+  .block_advantages > div > div > div {
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+  }
+  .block_advantages > div > div > div:nth-of-type(1) {
+    order: 1;
+  }
+  .block_advantages > div > div > div:nth-of-type(2) {
+    order: 2;
+  }
+  .block_advantages > div > div > div:nth-of-type(3) {
+    order: 3;
+  }
+  .block_advantages > div > div > div:nth-of-type(4) {
+    order: 5;
+  }
+  .block_advantages > div > div > div:nth-of-type(5) {
+    order: 4;
+  }
+  .block_advantages > div > div > div:nth-of-type(6) {
+    order: 4;
+  }
+  .block_advantages > div > div p {
+    color: #fff;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+  }
+  .block_advantages > div > div button {
+    color: #fff;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #f2111e;
+    margin: 0;
+    padding: 10px 55px;
+    border-radius: 17.097px;
   }
 }/*# sourceMappingURL=style.css.map */
