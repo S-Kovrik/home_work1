@@ -1,0 +1,262 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./extend.scss";
+
+.container {
+  max-width: 480px;
+  margin: auto;
+}
+
+.inner-container {
+  max-width: 360px;
+  margin: auto;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+header {
+  background-color: #0060fc;
+
+  div {
+    .block_header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 7px 0 22px 0;
+      & > div {
+        button {
+          height: 27px;
+          @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
+          @include button(
+            $bgc: $bgc-red,
+            $mg_btn: 0,
+            $pd-btn: 3px,
+            $br-rs: 20px
+          );
+        }
+
+        & > button:nth-child(1) {
+          display: none;
+        }
+
+        & > button:nth-child(4) {
+          align-self: flex-start;
+          background-color: #0060fc;
+          padding: 0.1px;
+        }
+        svg {
+          display: none;
+        }
+      }
+    }
+  }
+  nav {
+    display: none;
+  }
+}
+
+footer {
+  nav {
+    @extend%block_flex_cn;
+    align-items: center;
+    & > div:nth-of-type(3) {
+      border-bottom: none;
+    }
+    & > div {
+      border-bottom: 1px solid #808080;
+      width: 100%;
+      menu {
+        margin: 30px 0;
+
+        li {
+          @include main_font($font_size: 16px, $font_weight: 500, $color: #000);
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 481px) {
+  .cr_dp {
+    max-width: 1920px;
+    margin: auto;
+  }
+
+  .ir-cr_dp {
+    max-width: 1278px;
+    margin: auto;
+  }
+
+  header {
+    background-color: #0060fc;
+
+    div {
+      .block_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 3px 0;
+
+        & > div {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+
+          button {
+            height: 27px;
+            @include main_font(
+              $font_size: 16px,
+              $font_weight: 500,
+              $color: #fff
+            );
+            @include button(
+              $bgc: $bgc-red,
+              $mg_btn: 0,
+              $pd-btn: 5px 20px,
+              $br-rs: 20px
+            );
+          }
+          & > button:nth-child(1) {
+            display: block;
+          }
+
+          & > button:nth-child(2) {
+            padding: 5px;
+          }
+
+          & > svg:nth-of-type(1) {
+            margin-left: 50px;
+          }
+          & > svg {
+            display: block;
+          }
+        }
+        & > button:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+
+    nav {
+      display: block;
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      menu {
+        display: flex;
+        justify-content: space-between;
+        li {
+          @include main_font($font_size: 169x, $font_weight: 500, $color: #fff);
+          padding: 6px 0;
+          svg {
+            transform: scale(0.5);
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+.widget_right {
+display: flex;
+justify-content: end;
+}
+
+  .block_my-lessons {
+    form {
+      position: relative;
+
+      ul {
+        display: flex;
+        li {
+          button {
+            width: 243px;
+            height: 49px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+          }
+
+          button:before {
+            content: url("../image/block_languages_search.svg");
+          }
+
+          input {
+            width: 100%;
+            height: 42px;
+            padding-left: 50px;
+            border: 2px solid #7ba7ab;
+            border-radius: 25px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.38);
+            color: #9e9c9c;
+          }
+        }
+
+        li:nth-of-type(1) {
+          button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+          }
+        }
+
+        li:nth-of-type(2) {
+          button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+          }
+        }
+
+        li:nth-of-type(3) {
+          button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+          }
+        }
+      }
+    }
+
+    footer {
+      background: $main-bl;
+      nav {
+        flex-direction: row;
+
+        & > div:nth-of-type(1) {
+          flex: 13% 1 0;
+          padding-left: 95px;
+        }
+
+        & > div:nth-of-type(2) {
+          flex: 14% 1 0;
+          padding: 0 70px;
+          border-right: 1px solid #fff;
+          border-left: 1px solid #fff;
+        }
+
+        & > div:nth-of-type(3) {
+          flex: 25% 1 0;
+          padding-right: 40px;
+        }
+
+        & > div {
+          border-bottom: none;
+
+          menu {
+            li {
+              color: #fff;
+              font-size: 19px;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
