@@ -699,6 +699,7 @@ footer {
   }
 
   .block_advantages {
+    margin-top: 20px;
     background: $main-bl;
     padding: 0.1px;
 
@@ -709,49 +710,9 @@ footer {
     }
 
     & > div > div {
-      @extend%block_flex_cn;
-
-      & > div {
-        @extend%block_flex_cn;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-        margin: 30px 0;
-      }
-
-      p {
-        @include main_font($font_size: 16px, $font_weight: 400, $color: #fff);
-        text-align: center;
-      }
-
-      button {
-        @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
-        @include button(
-          $bgc: $bgc-red,
-          $mg_btn: 0,
-          $pd-btn: 10px 55px,
-          $br-rs: 17.097px
-        );
-      }
-    }
-  }
-
-  .block_advantages {
-    margin-top: 40px;
-    background: $main-bl;
-    padding: 0.1px;
-
-    h3 {
-      @include main_font($font_size: 19px, $font_weight: 600, $color: #fff);
-      text-align: center;
-      margin: 50px 0;
-    }
-
-    & > div > div {
       display: grid;
       grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-      grid-gap: 98px 55px;
-      margin-bottom: 84px;
+      grid-gap: 50px 55px;
 
       & > div {
         @extend%block_flex_cn;
@@ -773,11 +734,13 @@ footer {
         order: 3;
       }
       & > div:nth-of-type(4) {
+        padding-bottom: 60px;
         order: 5;
       }
 
       & > div:nth-of-type(5) {
         order: 4;
+        padding-bottom: 60px;
       }
 
       & > div:nth-of-type(6) {
@@ -797,6 +760,86 @@ footer {
           $pd-btn: 10px 55px,
           $br-rs: 17.097px
         );
+      }
+    }
+  }
+
+  .block_reviews {
+    background: url("../image/bg_reviews.svg") no-repeat center;
+    padding: 80px 0;
+    margin-top: 80px;
+
+    h3 {
+      font-size: 32px;
+      margin: 30px 0;
+    }
+
+    & > div > div {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    & > div > div > div {
+      position: relative;
+      flex-basis: 30%;
+
+      img {
+        transform: scale(1.2);
+      }
+
+      ul {
+        li {
+          font-size: 20px;
+        }
+      }
+
+      p {
+        height: 120px;
+        overflow-y: scroll;
+        font-size: 20px;
+        border-radius: 5px;
+      }
+
+      svg {
+        top: 117px;
+      }
+    }
+  }
+
+  footer {
+    background: $main-bl;
+    nav {
+      flex-direction: row;
+
+      & > div:nth-of-type(1) {
+        flex: 13% 1 0;
+        padding-left: 95px;
+      }
+
+      & > div:nth-of-type(2) {
+        flex: 14% 1 0;
+        padding: 0 70px;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+      }
+
+      & > div:nth-of-type(3) {
+        flex: 25% 1 0;
+        padding-right: 40px;
+      }
+
+      & > div {
+        border-bottom: none;
+        
+        menu {
+          
+          li {
+            color: #fff;
+            font-size: 19px;
+            text-align: left;
+          }
+        }
       }
     }
   }

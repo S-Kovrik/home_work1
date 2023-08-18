@@ -720,6 +720,7 @@ footer nav > div menu li {
     justify-content: space-between;
   }
   .block_advantages {
+    margin-top: 20px;
     background: #0060FC;
     padding: 0.1px;
   }
@@ -733,53 +734,10 @@ footer nav > div menu li {
     text-align: center;
     margin-top: 50px;
   }
-  .block_advantages > div > div > div {
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin: 30px 0;
-  }
-  .block_advantages > div > div p {
-    color: #fff;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-  }
-  .block_advantages > div > div button {
-    color: #fff;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    background-color: #f2111e;
-    margin: 0;
-    padding: 10px 55px;
-    border-radius: 17.097px;
-  }
-  .block_advantages {
-    margin-top: 40px;
-    background: #0060FC;
-    padding: 0.1px;
-  }
-  .block_advantages h3 {
-    color: #fff;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-align: center;
-    margin: 50px 0;
-  }
   .block_advantages > div > div {
     display: grid;
     grid-template: repeat(2, 1fr)/repeat(3, 1fr);
-    grid-gap: 98px 55px;
-    margin-bottom: 84px;
+    grid-gap: 50px 55px;
   }
   .block_advantages > div > div > div {
     align-items: center;
@@ -797,10 +755,12 @@ footer nav > div menu li {
     order: 3;
   }
   .block_advantages > div > div > div:nth-of-type(4) {
+    padding-bottom: 60px;
     order: 5;
   }
   .block_advantages > div > div > div:nth-of-type(5) {
     order: 4;
+    padding-bottom: 60px;
   }
   .block_advantages > div > div > div:nth-of-type(6) {
     order: 4;
@@ -825,5 +785,66 @@ footer nav > div menu li {
     margin: 0;
     padding: 10px 55px;
     border-radius: 17.097px;
+  }
+  .block_reviews {
+    background: url("../image/bg_reviews.svg") no-repeat center;
+    padding: 80px 0;
+    margin-top: 80px;
+  }
+  .block_reviews h3 {
+    font-size: 32px;
+    margin: 30px 0;
+  }
+  .block_reviews > div > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .block_reviews > div > div > div {
+    position: relative;
+    flex-basis: 30%;
+  }
+  .block_reviews > div > div > div img {
+    transform: scale(1.2);
+  }
+  .block_reviews > div > div > div ul li {
+    font-size: 20px;
+  }
+  .block_reviews > div > div > div p {
+    height: 120px;
+    overflow-y: scroll;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+  .block_reviews > div > div > div svg {
+    top: 117px;
+  }
+  footer {
+    background: #0060FC;
+  }
+  footer nav {
+    flex-direction: row;
+  }
+  footer nav > div:nth-of-type(1) {
+    flex: 13% 1 0;
+    padding-left: 95px;
+  }
+  footer nav > div:nth-of-type(2) {
+    flex: 14% 1 0;
+    padding: 0 70px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
+  footer nav > div:nth-of-type(3) {
+    flex: 25% 1 0;
+    padding-right: 40px;
+  }
+  footer nav > div {
+    border-bottom: none;
+  }
+  footer nav > div menu li {
+    color: #fff;
+    font-size: 19px;
+    text-align: left;
   }
 }/*# sourceMappingURL=style.css.map */
