@@ -152,75 +152,104 @@ footer nav > div menu li {
     transform: scale(0.5);
     vertical-align: middle;
   }
-  .widget_right {
-    display: flex;
-    justify-content: end;
+  .block_my-lessons .widget_right {
+    margin-top: 50px;
+  }
+  .block_my-lessons .widget_right h1 {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
   .block_my-lessons form {
-    position: relative;
+    position: fixed;
+    top: 127px;
+    left: 510px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    background: #0060FC;
+    border-radius: 20px 0 0 20px;
   }
   .block_my-lessons form ul {
     display: flex;
   }
+  .block_my-lessons form ul li {
+    position: relative;
+    margin-right: 70px;
+  }
   .block_my-lessons form ul li button {
-    width: 243px;
+    width: 42px;
     height: 49px;
     border: none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
   }
-  .block_my-lessons form ul li button:before {
-    content: url("../image/block_languages_search.svg");
-  }
   .block_my-lessons form ul li input {
-    width: 100%;
+    width: 232px;
     height: 42px;
     padding-left: 50px;
     border: 2px solid #7ba7ab;
     border-radius: 25px;
     outline: none;
-    background: rgba(255, 255, 255, 0.38);
+    background: rgba(255, 255, 255, 0.96);
     color: #9e9c9c;
   }
   .block_my-lessons form ul li:nth-of-type(1) button {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 5px;
+  }
+  .block_my-lessons form ul li:nth-of-type(1) input {
+    background: rgba(255, 255, 255, 0.89);
   }
   .block_my-lessons form ul li:nth-of-type(2) button {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 5px;
+  }
+  .block_my-lessons form ul li:nth-of-type(2) button + button {
+    position: absolute;
+    top: 0;
+    left: 185px;
   }
   .block_my-lessons form ul li:nth-of-type(3) button {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0;
+    left: 5px;
   }
-  .block_my-lessons footer {
+  .block_my-lessons form ul li:nth-of-type(3) button + button {
+    position: absolute;
+    top: 0;
+    left: 185px;
+  }
+  footer {
     background: #0060FC;
   }
-  .block_my-lessons footer nav {
+  footer nav {
     flex-direction: row;
   }
-  .block_my-lessons footer nav > div:nth-of-type(1) {
+  footer nav > div:nth-of-type(1) {
     flex: 13% 1 0;
     padding-left: 95px;
   }
-  .block_my-lessons footer nav > div:nth-of-type(2) {
+  footer nav > div:nth-of-type(2) {
     flex: 14% 1 0;
     padding: 0 70px;
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
   }
-  .block_my-lessons footer nav > div:nth-of-type(3) {
+  footer nav > div:nth-of-type(3) {
     flex: 25% 1 0;
     padding-right: 40px;
   }
-  .block_my-lessons footer nav > div {
+  footer nav > div {
     border-bottom: none;
   }
-  .block_my-lessons footer nav > div menu li {
+  footer nav > div menu li {
     color: #fff;
     font-size: 19px;
     text-align: left;

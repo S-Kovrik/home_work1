@@ -161,38 +161,46 @@ footer {
     }
   }
 
-.widget_right {
-display: flex;
-justify-content: end;
-}
-
   .block_my-lessons {
-    form {
-      position: relative;
+    .widget_right {
+      margin-top: 50px;
 
+      h1 {
+        @include main_font($font_size: 52px, $font_weight: 700, $color:#000);
+      }
+    }
+
+    form {
+      position: fixed;
+      top: 127px;
+      left: 510px;
+      right: 0px;
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      background: $main-bl;
+      border-radius: 20px 0 0 20px;
       ul {
         display: flex;
         li {
+          position: relative;
+          margin-right: 70px;
           button {
-            width: 243px;
+            width: 42px;
             height: 49px;
             border: none;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
           }
 
-          button:before {
-            content: url("../image/block_languages_search.svg");
-          }
-
           input {
-            width: 100%;
+            width: 232px;
             height: 42px;
             padding-left: 50px;
             border: 2px solid #7ba7ab;
             border-radius: 25px;
             outline: none;
-            background: rgba(255, 255, 255, 0.38);
+            background: rgba(255, 255, 255, 0.96);
             color: #9e9c9c;
           }
         }
@@ -200,60 +208,75 @@ justify-content: end;
         li:nth-of-type(1) {
           button {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 0;
+            left: 5px;
+          }
+
+          input {
+            background: rgba(255, 255, 255, 0.89);
           }
         }
 
         li:nth-of-type(2) {
           button {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 0;
+            left: 5px;
+          }
+          button + button {
+            position: absolute;
+            top: 0;
+            left: 185px;
           }
         }
 
         li:nth-of-type(3) {
           button {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 0;
+            left: 5px;
+          }
+
+          button + button {
+            position: absolute;
+            top: 0;
+            left: 185px;
           }
         }
       }
     }
+  }
 
-    footer {
-      background: $main-bl;
-      nav {
-        flex-direction: row;
+  footer {
+    background: $main-bl;
+    nav {
+      flex-direction: row;
 
-        & > div:nth-of-type(1) {
-          flex: 13% 1 0;
-          padding-left: 95px;
-        }
+      & > div:nth-of-type(1) {
+        flex: 13% 1 0;
+        padding-left: 95px;
+      }
 
-        & > div:nth-of-type(2) {
-          flex: 14% 1 0;
-          padding: 0 70px;
-          border-right: 1px solid #fff;
-          border-left: 1px solid #fff;
-        }
+      & > div:nth-of-type(2) {
+        flex: 14% 1 0;
+        padding: 0 70px;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+      }
 
-        & > div:nth-of-type(3) {
-          flex: 25% 1 0;
-          padding-right: 40px;
-        }
+      & > div:nth-of-type(3) {
+        flex: 25% 1 0;
+        padding-right: 40px;
+      }
 
-        & > div {
-          border-bottom: none;
+      & > div {
+        border-bottom: none;
 
-          menu {
-            li {
-              color: #fff;
-              font-size: 19px;
-              text-align: left;
-            }
+        menu {
+          li {
+            color: #fff;
+            font-size: 19px;
+            text-align: left;
           }
         }
       }
