@@ -59,6 +59,359 @@ header {
   }
 }
 
+.block_my-lessons {
+  h1 {
+    @include main_font($font_size: 21px, $font_weight: 700, $color: #000);
+    margin-top: 30px;
+  }
+  .widget_right {
+    margin-top: 10px;
+    background: $main-bl;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-radius: 20px 0 0 20px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+
+      li {
+        position: relative;
+        button {
+          width: 42px;
+          height: 49px;
+          border: none;
+          border-radius: 0 5px 5px 0;
+          cursor: pointer;
+        }
+
+        input {
+          width: 169px;
+          height: 42px;
+          padding-left: 40px;
+          border: 2px solid #7ba7ab;
+          border-radius: 25px;
+          outline: none;
+          background: rgba(255, 255, 255, 0.96);
+          @include main_font(
+            $font_size: 16px,
+            $font_weight: 500,
+            $color: #9e9c9c
+          );
+        }
+      }
+
+      li:nth-of-type(1) {
+        order: 2;
+        button {
+          position: absolute;
+          top: 0;
+          left: 5px;
+        }
+
+        input {
+          width: 360px;
+          background: rgba(255, 255, 255, 0.89);
+        }
+      }
+
+      li:nth-of-type(2) {
+        order: 1;
+        button {
+          position: absolute;
+          top: 0;
+          left: 5px;
+        }
+        button + button {
+          position: absolute;
+          top: 0;
+          left: 131px;
+        }
+      }
+
+      li:nth-of-type(3) {
+        order: 1;
+        button {
+          position: absolute;
+          top: 0;
+          left: 5px;
+        }
+
+        button + button {
+          position: absolute;
+          top: 0;
+          left: 129px;
+        }
+      }
+    }
+  }
+
+  .lessons {
+    margin-bottom: 30px;
+
+    & > div > div {
+      display: grid;
+      grid-template-areas:
+        "a a a a"
+        "b b b b"
+        "c c c d"
+        "e e e f"
+        "g g g g";
+
+      place-items: center;
+      grid-gap: 20px;
+      width: 360px;
+      border-radius: 15px;
+      border: 1px solid #000;
+
+      & > div {
+        grid-area: a;
+      }
+
+      & > ul:nth-of-type(1) {
+        display: flex;
+        grid-area: g;
+        li:first-child {
+          order: 0;
+        }
+        li:last-child {
+          order: -1;
+        }
+      }
+
+      & > p {
+        grid-area: b;
+      }
+
+      & > ul:nth-of-type(2) {
+        grid-area: c;
+        justify-self: right;
+      }
+
+      & > ul:nth-of-type(3) {
+        grid-area: e;
+      }
+
+      & > ul:nth-of-type(4) {
+        grid-area: d;
+      }
+
+      & > ul:nth-of-type(5) {
+        grid-area: f;
+      }
+
+      & > ul:nth-of-type(6) {
+        grid-area: h;
+      }
+
+      & > div ~ ul {
+        li:nth-child(1) {
+          @include main_font($font_size: 16px, $font_weight: 400, $color: #000);
+          margin-bottom: 10px;
+
+          span {
+            margin-right: 5px;
+            vertical-align: text-top;
+          }
+        }
+        li:nth-child(2) {
+          @include main_font(
+            $font_size: 14px,
+            $font_weight: 400,
+            $color: rgba(0, 0, 0, 0.66)
+          );
+        }
+      }
+
+      & > div:nth-of-type(1) {
+        display: grid;
+        width: 100%;
+
+        svg {
+          transform: scale(0.7);
+        }
+
+        & > ul {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          grid-area: 1/2/2/6;
+
+          li:nth-child(2) {
+            margin-right: 40px;
+          }
+        }
+      }
+
+      & > ul:nth-of-type(1) {
+        li:nth-child(1) {
+          button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 1px solid #0060fc;
+            @include button(
+              $bgc: #fff,
+              $mg_btn: 0,
+              $pd-btn: 8px 20px 0 0,
+              $br-rs: 25px
+            );
+
+            li {
+              @include main_font(
+                $font_size: 16px,
+                $font_weight: 500,
+                $color: #000
+              );
+              letter-spacing: 0.54px;
+            }
+            svg {
+              margin: 0 0 5px 5px;
+            }
+          }
+        }
+        li:nth-of-type(2) {
+          margin-left: 0;
+        }
+      }
+
+      p {
+        @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
+        grid-area: 2/1/3/6;
+        padding: 10px 0;
+      }
+    }
+
+    .comment {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-radius: 0 0 36px 36px;
+      background: #e4dfdf;
+
+      ul:first-child {
+        flex: 65% 1 0;
+        li:first-child {
+          @include main_font($font_size: 20px, $font_weight: 500, $color: #000);
+          margin-bottom: 5px;
+        }
+        li:last-child {
+          p {
+            padding: 5px 10px;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            @include main_font(
+              $font_size: 17px,
+              $font_weight: 300,
+              $color: #000
+            );
+          }
+        }
+      }
+      ul:last-child {
+        flex: 15% 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        li {
+          @include main_font($font_size: 20px, $font_weight: 500, $color: #000);
+        }
+        li:first-child {
+          margin-bottom: 10px;
+        }
+
+        li:last-child {
+          button {
+            color: #fff;
+            @include button(
+              $bgc: $bgc-red,
+              $mg_btn: 0,
+              $pd-btn: 10px 8px,
+              $br-rs: 25px
+            );
+          }
+        }
+      }
+    }
+  }
+
+  div:nth-of-type(3) {
+    & > div > div > div {
+      justify-self: flex-start;
+      position: relative;
+
+      svg {
+        margin-left: 5px;
+      }
+      ul {
+        position: absolute;
+        top: -9px;
+        left: 76px;
+      }
+    }
+
+    ul:nth-of-type(1) {
+      align-self: flex-start;
+      margin-top: 2px;
+    }
+  }
+
+  div:nth-of-type(4) {
+    & > div > div > div > div {
+      width: 55px;
+      height: 55px;
+      border-radius: 38px;
+      background: #dcff04;
+    }
+  }
+
+  div:nth-of-type(4) {
+    & > div > div > div {
+      justify-self: flex-start;
+      position: relative;
+
+      div {
+        margin-left: 5px;
+      }
+      ul {
+        position: absolute;
+        top: -9px;
+        left: 76px;
+      }
+    }
+
+    ul:nth-of-type(1) {
+      align-self: flex-start;
+      margin-top: 2px;
+      order: 0;
+    }
+  }
+
+  & > div:nth-of-type(6) {
+    & > div > div > div {
+      justify-self: left;
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+  & > div:nth-of-type(8) {
+    margin-bottom: 100px;
+    & > div > div > div {
+      justify-self: left;
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
 footer {
   nav {
     @extend%block_flex_cn;
@@ -162,17 +515,17 @@ footer {
   }
 
   .block_my-lessons {
+    h1 {
+      @include main_font($font_size: 52px, $font_weight: 700, $color: #000);
+      margin-top: 50px;
+    }
     .widget_right {
       margin-top: 50px;
-
-      h1 {
-        @include main_font($font_size: 52px, $font_weight: 700, $color: #000);
-      }
     }
 
     form {
       position: fixed;
-      top: 127px;
+      top: 129px;
       left: 510px;
       right: 0px;
       display: flex;
@@ -182,6 +535,7 @@ footer {
       border-radius: 20px 0 0 20px;
       ul {
         display: flex;
+        flex-wrap: nowrap;
         li {
           position: relative;
           margin-right: 70px;
@@ -206,6 +560,7 @@ footer {
         }
 
         li:nth-of-type(1) {
+          order: 0;
           button {
             position: absolute;
             top: 0;
@@ -213,11 +568,13 @@ footer {
           }
 
           input {
+            width: 232px;
             background: rgba(255, 255, 255, 0.89);
           }
         }
 
         li:nth-of-type(2) {
+          order: 0;
           button {
             position: absolute;
             top: 0;
@@ -231,6 +588,7 @@ footer {
         }
 
         li:nth-of-type(3) {
+          order: 0;
           button {
             position: absolute;
             top: 0;
@@ -247,14 +605,12 @@ footer {
     }
 
     .lessons {
-      display: flex;
-      flex-direction: column;
       margin-bottom: 30px;
 
       & > div > div {
         display: grid;
         place-items: center;
-        grid-template: repeat(1, 85px) / 1fr 1fr 222px 1fr 1fr 1fr 1fr;
+        grid-template: repeat(1, 85px) / 1fr 1fr 220px 1fr 1fr 1fr 1fr;
         width: 1280px;
         border-radius: 15px;
         border: 1px solid #000;
@@ -345,6 +701,37 @@ footer {
             );
           }
         }
+        & > div {
+          grid-area: 1;
+        }
+
+        & > ul:nth-of-type(1) {
+          grid-area: 1;
+        }
+
+        & > p {
+          grid-area: 1;
+        }
+
+        & > ul:nth-of-type(2) {
+          grid-area: 1;
+        }
+
+        & > ul:nth-of-type(3) {
+          grid-area: 1;
+        }
+
+        & > ul:nth-of-type(4) {
+          grid-area: 1;
+        }
+
+        & > ul:nth-of-type(5) {
+          grid-area: 1;
+        }
+
+        & > ul:nth-of-type(6) {
+          grid-area: 1;
+        }
       }
       .comment {
         display: flex;
@@ -404,6 +791,16 @@ footer {
               );
             }
           }
+        }
+      }
+    }
+
+    div:nth-of-type(2) {
+      & > div > div > div {
+        justify-self: flex-start;
+
+        svg {
+          margin-left: 5px;
         }
       }
     }
