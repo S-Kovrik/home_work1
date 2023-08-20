@@ -166,7 +166,7 @@ footer {
       margin-top: 50px;
 
       h1 {
-        @include main_font($font_size: 52px, $font_weight: 700, $color:#000);
+        @include main_font($font_size: 52px, $font_weight: 700, $color: #000);
       }
     }
 
@@ -245,38 +245,148 @@ footer {
         }
       }
     }
-  }
 
-  footer {
-    background: $main-bl;
-    nav {
-      flex-direction: row;
+    .lessons {
+      display: flex;
+      flex-direction: column;
 
-      & > div:nth-of-type(1) {
-        flex: 13% 1 0;
-        padding-left: 95px;
+      & > div > div {
+        display: grid;
+        place-items: center;
+        grid-template: repeat(1, 85px) / 1fr 1fr 222px 1fr 1fr 1fr 1fr;
+        width: 1280px;
+        border-radius: 15px;
+        border: 1px solid #000;
+
+        & > div ~ ul {
+          li:nth-child(1) {
+            @include main_font(
+              $font_size: 20px,
+              $font_weight: 500,
+              $color: #000
+            );
+            margin-bottom: 10px;
+
+            span {
+              margin-right: 5px;
+              vertical-align: text-top;
+            }
+          }
+          li:nth-child(2) {
+            margin-left: 28px;
+            @include main_font(
+              $font_size: 18px,
+              $font_weight: 400,
+              $color: rgba(0, 0, 0, 0.66)
+            );
+          }
+        }
+
+        & > div:nth-of-type(1) {
+          display: flex;
+          align-items: inherit;
+
+          & > ul {
+            li {
+              @include main_font(
+                $font_size: 20px,
+                $font_weight: 500,
+                $color: #000
+              );
+            }
+            li:nth-child(1) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+
+        & > ul:nth-of-type(1) {
+          li:nth-child(1) {
+            button {
+              position: relative;
+              display: flex;
+              align-items: center;
+              border: 1px solid #0060fc;
+              @include button(
+                $bgc: #fff,
+                $mg_btn: 0,
+                $pd-btn: 8px 20px 0 0,
+                $br-rs: 25px
+              );
+
+              li {
+                @include main_font(
+                  $font_size: 18px,
+                  $font_weight: 300,
+                  $color: #000
+                );
+                letter-spacing: 0.54px;
+              }
+              svg {
+                position: absolute;
+                top: 16px;
+                left: 120px;
+              }
+            }
+          }
+          li:nth-of-type(2) {
+            margin-left: 0;
+          }
+        }
+
+        p {
+          @include main_font($font_size: 18px, $font_weight: 400, $color: #000);
+        }
+
+        & > ul:nth-of-type(3) {
+          li:first-child {
+            @include main_font(
+              $font_size: 20px,
+              $font_weight: 500,
+              $color: #000
+            );
+          }
+        }
       }
+    }
 
-      & > div:nth-of-type(2) {
-        flex: 14% 1 0;
-        padding: 0 70px;
-        border-right: 1px solid #fff;
-        border-left: 1px solid #fff;
-      }
+    .comment {
+      display: flex;
+      border-radius: 36px;
+      background: #e4dfdf;
+    }
 
-      & > div:nth-of-type(3) {
-        flex: 25% 1 0;
-        padding-right: 40px;
-      }
+    footer {
+      background: $main-bl;
+      nav {
+        flex-direction: row;
 
-      & > div {
-        border-bottom: none;
+        & > div:nth-of-type(1) {
+          flex: 13% 1 0;
+          padding-left: 95px;
+        }
 
-        menu {
-          li {
-            color: #fff;
-            font-size: 19px;
-            text-align: left;
+        & > div:nth-of-type(2) {
+          flex: 14% 1 0;
+          padding: 0 70px;
+          border-right: 1px solid #fff;
+          border-left: 1px solid #fff;
+        }
+
+        & > div:nth-of-type(3) {
+          flex: 25% 1 0;
+          padding-right: 40px;
+        }
+
+        & > div {
+          border-bottom: none;
+
+          menu {
+            li {
+              color: #fff;
+              font-size: 19px;
+              text-align: left;
+            }
           }
         }
       }

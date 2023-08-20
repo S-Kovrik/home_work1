@@ -226,30 +226,127 @@ footer nav > div menu li {
     top: 0;
     left: 185px;
   }
-  footer {
+  .block_my-lessons .lessons {
+    display: flex;
+    flex-direction: column;
+  }
+  .block_my-lessons .lessons > div > div {
+    display: grid;
+    place-items: center;
+    grid-template: repeat(1, 85px)/1fr 1fr 222px 1fr 1fr 1fr 1fr;
+    width: 1280px;
+    border-radius: 15px;
+    border: 1px solid #000;
+  }
+  .block_my-lessons .lessons > div > div > div ~ ul li:nth-child(1) {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+  .block_my-lessons .lessons > div > div > div ~ ul li:nth-child(1) span {
+    margin-right: 5px;
+    vertical-align: text-top;
+  }
+  .block_my-lessons .lessons > div > div > div ~ ul li:nth-child(2) {
+    margin-left: 28px;
+    color: rgba(0, 0, 0, 0.66);
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .block_my-lessons .lessons > div > div > div:nth-of-type(1) {
+    display: flex;
+    align-items: inherit;
+  }
+  .block_my-lessons .lessons > div > div > div:nth-of-type(1) > ul li {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .block_my-lessons .lessons > div > div > div:nth-of-type(1) > ul li:nth-child(1) {
+    margin-bottom: 20px;
+  }
+  .block_my-lessons .lessons > div > div > ul:nth-of-type(1) li:nth-child(1) button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #0060fc;
+    background-color: #fff;
+    margin: 0;
+    padding: 8px 20px 0 0;
+    border-radius: 25px;
+  }
+  .block_my-lessons .lessons > div > div > ul:nth-of-type(1) li:nth-child(1) button li {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.54px;
+  }
+  .block_my-lessons .lessons > div > div > ul:nth-of-type(1) li:nth-child(1) button svg {
+    position: absolute;
+    top: 16px;
+    left: 120px;
+  }
+  .block_my-lessons .lessons > div > div > ul:nth-of-type(1) li:nth-of-type(2) {
+    margin-left: 0;
+  }
+  .block_my-lessons .lessons > div > div p {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .block_my-lessons .lessons > div > div > ul:nth-of-type(3) li:first-child {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .block_my-lessons .comment {
+    display: flex;
+    border-radius: 36px;
+    background: #e4dfdf;
+  }
+  .block_my-lessons footer {
     background: #0060FC;
   }
-  footer nav {
+  .block_my-lessons footer nav {
     flex-direction: row;
   }
-  footer nav > div:nth-of-type(1) {
+  .block_my-lessons footer nav > div:nth-of-type(1) {
     flex: 13% 1 0;
     padding-left: 95px;
   }
-  footer nav > div:nth-of-type(2) {
+  .block_my-lessons footer nav > div:nth-of-type(2) {
     flex: 14% 1 0;
     padding: 0 70px;
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
   }
-  footer nav > div:nth-of-type(3) {
+  .block_my-lessons footer nav > div:nth-of-type(3) {
     flex: 25% 1 0;
     padding-right: 40px;
   }
-  footer nav > div {
+  .block_my-lessons footer nav > div {
     border-bottom: none;
   }
-  footer nav > div menu li {
+  .block_my-lessons footer nav > div menu li {
     color: #fff;
     font-size: 19px;
     text-align: left;

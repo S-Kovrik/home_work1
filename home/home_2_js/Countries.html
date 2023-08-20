@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addCountryBn ()">ввод информации о стране</button>
+    <button onclick="getCountryInfoBn ()">получение информации о стране</button>
+    <button onclick="getcountrysAllInfoBn  ()">перечень всех стран</button>
+    <button onclick="deleteCountryBn ()">удаление информации о стране</button>
+    <script>
+      var countrysH = {};
+
+      function addCountry(countryName, capitalName) {
+        countrysH[countryName] = capitalName;
+      }
+
+      function deleteCountry(countryName) {
+        delete countrysH[countryName];
+      }
+
+      function getCountryInfo(countryName) {
+        if (countryName in countrysH)
+          return (
+            "страна: " + countryName + " столица: " + countrysH[countryName]
+          );
+        else return "нет информации о стране " + countryName + "!";
+      }
+
+      function listCountrys() {
+        var res = "";
+        for (var CN in countrysH) res += "\n" + getCountryInfo(CN);
+        return res;
+      }
+
+      addCountry("Германия", "Берлин");
+      addCountry("Венгрия", "Будапешт");
+      addCountry("Франция", "Париж");
+
+      console.log("список стран:" + listCountrys());
+
+      function addCountryBn() {
+        addCountry(prompt("Введите страну"), prompt("Введите столицу"));
+      }
+
+      function getCountryInfoBn() {
+        alert(getCountryInfo(prompt("Введите страну")));
+      }
+
+      function getcountrysAllInfoBn() {
+        alert("список стран:" + listCountrys());
+      }
+
+      function deleteCountryBn() {
+        deleteCountry(prompt("Введите страну"));
+      }
+    </script>
+  </body>
+</html>
