@@ -249,6 +249,7 @@ footer {
     .lessons {
       display: flex;
       flex-direction: column;
+      margin-bottom: 30px;
 
       & > div > div {
         display: grid;
@@ -273,7 +274,6 @@ footer {
             }
           }
           li:nth-child(2) {
-            margin-left: 28px;
             @include main_font(
               $font_size: 18px,
               $font_weight: 400,
@@ -323,9 +323,7 @@ footer {
                 letter-spacing: 0.54px;
               }
               svg {
-                position: absolute;
-                top: 16px;
-                left: 120px;
+                margin: 0 0 5px 5px;
               }
             }
           }
@@ -348,45 +346,168 @@ footer {
           }
         }
       }
-    }
+      .comment {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border-radius: 0 0 36px 36px;
+        background: #e4dfdf;
 
-    .comment {
-      display: flex;
-      border-radius: 36px;
-      background: #e4dfdf;
-    }
-
-    footer {
-      background: $main-bl;
-      nav {
-        flex-direction: row;
-
-        & > div:nth-of-type(1) {
-          flex: 13% 1 0;
-          padding-left: 95px;
-        }
-
-        & > div:nth-of-type(2) {
-          flex: 14% 1 0;
-          padding: 0 70px;
-          border-right: 1px solid #fff;
-          border-left: 1px solid #fff;
-        }
-
-        & > div:nth-of-type(3) {
-          flex: 25% 1 0;
-          padding-right: 40px;
-        }
-
-        & > div {
-          border-bottom: none;
-
-          menu {
-            li {
-              color: #fff;
-              font-size: 19px;
-              text-align: left;
+        ul:first-child {
+          flex: 65% 1 0;
+          li:first-child {
+            @include main_font(
+              $font_size: 20px,
+              $font_weight: 500,
+              $color: #000
+            );
+            margin-bottom: 5px;
+          }
+          li:last-child {
+            p {
+              padding: 5px 10px;
+              border-radius: 14px;
+              background: #fff;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+              @include main_font(
+                $font_size: 17px,
+                $font_weight: 300,
+                $color: #000
+              );
             }
+          }
+        }
+        ul:last-child {
+          flex: 15% 1 0;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          li {
+            @include main_font(
+              $font_size: 20px,
+              $font_weight: 500,
+              $color: #000
+            );
+          }
+          li:first-child {
+            margin-bottom: 10px;
+          }
+
+          li:last-child {
+            button {
+              color: #fff;
+              @include button(
+                $bgc: $bgc-red,
+                $mg_btn: 0,
+                $pd-btn: 10px 8px,
+                $br-rs: 25px
+              );
+            }
+          }
+        }
+      }
+    }
+
+    div:nth-of-type(3) {
+      & > div > div > div {
+        justify-self: flex-start;
+        position: relative;
+
+        svg {
+          margin-left: 5px;
+        }
+        ul {
+          position: absolute;
+          top: -9px;
+          left: 76px;
+        }
+      }
+
+      ul:nth-of-type(1) {
+        align-self: flex-start;
+        margin-top: 2px;
+      }
+    }
+
+    div:nth-of-type(4) {
+      & > div > div > div > div {
+        width: 55px;
+        height: 55px;
+        border-radius: 38px;
+        background: #dcff04;
+      }
+    }
+
+    div:nth-of-type(4) {
+      & > div > div > div {
+        justify-self: flex-start;
+        position: relative;
+
+        div {
+          margin-left: 5px;
+        }
+        ul {
+          position: absolute;
+          top: -9px;
+          left: 76px;
+        }
+      }
+
+      ul:nth-of-type(1) {
+        align-self: flex-start;
+        margin-top: 2px;
+      }
+    }
+
+    & > div:nth-of-type(6) {
+      & > div > div > div {
+        justify-self: left;
+        svg {
+          margin-left: 5px;
+        }
+      }
+    }
+    & > div:nth-of-type(8) {
+      margin-bottom: 100px;
+      & > div > div > div {
+        justify-self: left;
+        svg {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  footer {
+    background: $main-bl;
+    nav {
+      flex-direction: row;
+
+      & > div:nth-of-type(1) {
+        flex: 13% 1 0;
+        padding-left: 95px;
+      }
+
+      & > div:nth-of-type(2) {
+        flex: 14% 1 0;
+        padding: 0 70px;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+      }
+
+      & > div:nth-of-type(3) {
+        flex: 25% 1 0;
+        padding-right: 40px;
+      }
+
+      & > div {
+        border-bottom: none;
+
+        menu {
+          li {
+            color: #fff;
+            font-size: 19px;
+            text-align: left;
           }
         }
       }

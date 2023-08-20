@@ -115,6 +115,11 @@
   <path d="M11.5 4.79163V11.5L15.3333 15.3333" stroke="#808080" stroke-linecap="square"/>
 </symbol>
 
+<symbol id = 'cancel'  xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+  <rect width="55" height="55" rx="27.5" fill="#EC0404"/>
+  <path d="M17 17L37 37" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M37 17L17 37" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
 </svg>
 
 
