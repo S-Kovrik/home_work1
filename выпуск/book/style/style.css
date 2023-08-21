@@ -176,6 +176,110 @@
     top: 0;
     left: 129px;
   }
+  .block_books .filter div > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  .block_books .filter div > div:nth-of-type(1) p {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .block_books .filter div > div:nth-of-type(1) button {
+    display: flex;
+    flex-direction: column;
+  }
+  .block_books .filter div > div:nth-of-type(1) button svg {
+    margin: 2px 0;
+  }
+  .block_books .filter ul:nth-of-type(1) {
+    display: none;
+  }
+  .block_books .books_list > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+  }
+  .block_books .books_list > div img {
+    margin: 20px 0 10px 0;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) {
+    margin: 0;
+    display: grid;
+    grid-template: repeat(4, 50px)/140px 140px;
+    gap: 20px;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) p:nth-of-type(1) {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(1),
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(2) {
+    display: flex;
+    justify-content: right;
+    gap: 0;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(1) p,
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(2) p {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) p:nth-of-type(2) {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) p:nth-of-type(3) {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) p:nth-of-type(4) {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-self: end;
+    text-align: right;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) button:nth-of-type(1) {
+    justify-self: flex-start;
+    background-color: #f2111e;
+    margin: 0;
+    padding: 7px 45px;
+    border-radius: 25px;
+    color: #fff;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .block_books .arrow {
+    display: none;
+  }
   footer nav {
     display: flex;
     flex-direction: column;
@@ -386,25 +490,32 @@
     top: 0;
     left: 185px;
   }
-  .filter {
+  .block_books .filter {
     border-bottom: 1px solid #808080;
+  }
+  .block_books .filter > div {
     display: flex;
   }
-  .filter p {
+  .block_books .filter > div > div:nth-of-type(1) {
+    flex: 30% 1 0;
+  }
+  .block_books .filter > div > div:nth-of-type(1) p {
     color: #000;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
     font-size: 29px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    flex: 30% 1 0;
   }
-  .filter ul {
+  .block_books .filter > div > div:nth-of-type(1) button:nth-of-type(1) {
+    display: none;
+  }
+  .block_books .filter > div ul {
     display: flex;
     flex: 70% 1 0;
     justify-content: space-between;
   }
-  .filter ul li {
+  .block_books .filter > div ul li {
     color: #000;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
     font-size: 17px;
@@ -412,33 +523,40 @@
     font-weight: 500;
     line-height: normal;
   }
-  .filter ul li svg {
+  .block_books .filter > div ul li svg {
     margin-left: 3px;
     transform: scale(0.8);
   }
-  .filter ul li:nth-of-type(4) {
+  .block_books .filter > div ul li:nth-of-type(4) {
     font-weight: 600;
   }
-  .books_list > div > div:nth-of-type(1) {
+  .block_books .books_list > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+  }
+  .block_books .books_list > div div > div:nth-of-type(1) {
+    margin: 10px 0;
     display: grid;
-    grid-template: repeat(4, 1fr)/150px 150px;
+    grid-template: repeat(4, 50px)/140px 140px;
     gap: 20px;
   }
-  .books_list > div > div:nth-of-type(1) p:nth-of-type(1) {
+  .block_books .books_list > div div > div:nth-of-type(1) p:nth-of-type(1) {
     color: #000;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 26px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
-  .books_list > div > div:nth-of-type(1) div:nth-of-type(1),
-  .books_list > div > div:nth-of-type(1) div:nth-of-type(2) {
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(1),
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(2) {
     display: flex;
     justify-content: right;
+    gap: 0;
   }
-  .books_list > div > div:nth-of-type(1) div:nth-of-type(1) p,
-  .books_list > div > div:nth-of-type(1) div:nth-of-type(2) p {
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(1) p,
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(2) p {
     color: #000;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
     font-size: 17px;
@@ -446,7 +564,7 @@
     font-weight: 300;
     line-height: normal;
   }
-  .books_list > div > div:nth-of-type(1) p:nth-of-type(2) {
+  .block_books .books_list > div div > div:nth-of-type(1) p:nth-of-type(2) {
     color: #000;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
     font-size: 20px;
@@ -454,7 +572,7 @@
     font-weight: 400;
     line-height: normal;
   }
-  .books_list > div > div:nth-of-type(1) p:nth-of-type(3) {
+  .block_books .books_list > div div > div:nth-of-type(1) p:nth-of-type(3) {
     color: #000;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
     font-size: 22px;
@@ -462,7 +580,7 @@
     font-weight: 500;
     line-height: normal;
   }
-  .books_list > div > div:nth-of-type(1) p:nth-of-type(4) {
+  .block_books .books_list > div div > div:nth-of-type(1) p:nth-of-type(4) {
     color: #000;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
     font-size: 20px;
@@ -470,8 +588,9 @@
     font-weight: 400;
     line-height: normal;
     justify-self: end;
+    text-align: right;
   }
-  .books_list > div > div:nth-of-type(1) button:nth-of-type(1) {
+  .block_books .books_list > div div > div:nth-of-type(1) button:nth-of-type(1) {
     justify-self: flex-start;
     background-color: #f2111e;
     margin: 0;
@@ -483,6 +602,24 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+  }
+  .block_books .arrow {
+    display: flex;
+    justify-content: space-between;
+  }
+  .block_books .arrow button {
+    color: #808080;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #fff;
+    margin: 70px 0;
+    padding: 20px 27px;
+    border-radius: 25px;
+    border-radius: 25px;
+    border: 1px solid #808080;
   }
   footer {
     background: #0060FC;

@@ -79,7 +79,7 @@
     </header>
     <section class="block_books">
       <div class="ir-cr_dp">
-        <h1>Подборка книг для чтения</h1>
+        <h1 class="inner-container">Подборка книг для чтения</h1>
         <div class="widget_right">
           <div class="inner-container">
             <form>
@@ -112,57 +112,259 @@
           </div>
         </div>
       </div>
-      <div class="ir-cr_dp">
+      <div class="inner-container cr_dp">
         <div class="filter">
-          <p>Фильтр</p>
-          <ul>
-            <li>
-              Популярность<svg height="12" width="20">
-                <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
-              </svg>
-            </li>
-            <li>
-              Количество просмотров<svg height="12" width="20">
-                <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
-              </svg>
-            </li>
-            <li>
-              Рейтинг<svg height="12" width="20">
-                <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
-              </svg>
-            </li>
-            <li>
-              Наилучшее<svg height="25" width="26">
-                <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
-              </svg>
-            </li>
-          </ul>
+          <div class="ir-cr_dp">
+            <div>
+              <p>Фильтр</p>
+              <button onclick="myFunctionFilter()">
+                <svg height="6" width="6">
+                  <use xlink:href="./image/svg_sprites.svg#point"></use>
+                </svg>
+                <svg height="6" width="6">
+                  <use xlink:href="./image/svg_sprites.svg#point"></use>
+                </svg>
+                <svg height="6" width="6">
+                  <use xlink:href="./image/svg_sprites.svg#point"></use>
+                </svg>
+              </button>
+            </div>
+            <ul id="mydropdown__filter">
+              <li>
+                Популярность<svg height="12" width="20">
+                  <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
+                </svg>
+              </li>
+              <li>
+                Количество просмотров<svg height="12" width="20">
+                  <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
+                </svg>
+              </li>
+              <li>
+                Рейтинг<svg height="12" width="20">
+                  <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
+                </svg>
+              </li>
+              <li>
+                Наилучшее<svg height="12" width="20">
+                  <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="ir-cr_dp">
+      <div class="ir-cr_dp inner-container">
         <div class="books_list">
           <div>
-            <img src="./image/piter_pen.png" alt="книга" />
             <div>
-              <p>Peter Pan</p>
+              <img src="./image/piter_pen.png" alt="книга" />
               <div>
-                <svg height="23" width="23">
-                  <use xlink:href="./image/svg_sprites.svg#star"></use>
-                </svg>
-                <p>4.9</p>
+                <p>Peter Pan</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>J. M. Barrie</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Читать</button>
               </div>
-              <p>J. M. Barrie</p>
+            </div>
+            <div>
+              <img src="./image/oliver.jpg" alt="книга" />
               <div>
-                <svg height="23" width="23">
-                  <use xlink:href="./image/svg_sprites.svg#viewed"></use>
-                </svg>
-                <p>499</p>
+                <p>Oliver Twist</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>Charles Dickens</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>выше среднего</p>
+                <button>Читать</button>
               </div>
-              <p>Сложность&#58;</p>
-              <p>Начальный</p>
-              <button>Читать</button>
+            </div>
+            <div>
+              <img src="./image/trainspotting.jpg" alt="книга" />
+              <div>
+                <p>Trainspotting</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>John Hodge</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Читать</button>
+              </div>
             </div>
           </div>
+          <div>
+            <div>
+              <img src="./image/piter_pen.png" alt="книга" />
+              <div>
+                <p>Peter Pan</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>J. M. Barrie</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Читать</button>
+              </div>
+            </div>
+            <div>
+              <img src="./image/oliver.jpg" alt="книга" />
+              <div>
+                <p>Oliver Twist</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>Charles Dickens</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>выше среднего</p>
+                <button>Читать</button>
+              </div>
+            </div>
+            <div>
+              <img src="./image/trainspotting.jpg" alt="книга" />
+              <div>
+                <p>Trainspotting</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>John Hodge</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Читать</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img src="./image/piter_pen.png" alt="книга" />
+              <div>
+                <p>Peter Pan</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>J. M. Barrie</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Читать</button>
+              </div>
+            </div>
+            <div>
+              <img src="./image/oliver.jpg" alt="книга" />
+              <div>
+                <p>Oliver Twist</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>Charles Dickens</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>выше среднего</p>
+                <button>Читать</button>
+              </div>
+            </div>
+            <div>
+              <img src="./image/trainspotting.jpg" alt="книга" />
+              <div>
+                <p>Trainspotting</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#star"></use>
+                  </svg>
+                  <p>4.9</p>
+                </div>
+                <p>John Hodge</p>
+                <div>
+                  <svg height="23" width="23">
+                    <use xlink:href="./image/svg_sprites.svg#viewed"></use>
+                  </svg>
+                  <p>499</p>
+                </div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Читать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ir-cr_dp inner-container">
+        <div class="arrow">
+          <button>Предыдущая страница</button><button>Следущая страница</button>
         </div>
       </div>
     </section>
