@@ -2,6 +2,10 @@
 @import "./mixin.scss";
 @import "./extend.scss";
 
+.show {
+  display: block;
+}
+
 @media all and (max-width: 480px) {
   .container {
     max-width: 480px;
@@ -62,6 +66,33 @@
     nav {
       display: none;
     }
+    
+      nav {
+        background: #fff;
+        li {
+          @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
+          margin: 10px 0;
+        }
+        menu {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          li:nth-of-type(1) {
+            text-align: center;
+            ul {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              li{
+              @include main_font($font_size: 16px, $font_weight: 400, $color: #000);
+        
+            }
+            a {
+              color: #000;
+            }
+          }}
+        }
+      }
   }
 
   .block_my-lessons {
@@ -464,7 +495,7 @@
           }
         }
       }
-      div:first-child{
+      div:first-child {
         menu:first-child {
           margin-top: 0;
         }
@@ -541,11 +572,32 @@
         display: flex;
         justify-content: space-between;
         li {
-          @include main_font($font_size: 169x, $font_weight: 500, $color: #fff);
+          @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
           padding: 6px 0;
           svg {
             transform: scale(0.5);
             vertical-align: middle;
+          }
+        }
+        & > li:nth-of-type(1) {
+          position: relative;
+          ul {
+            display: none;
+          }
+        }
+        li:nth-of-type(1):hover > ul {
+          display: block;
+          width: 200px;
+          background: $main-bl;
+          position: absolute;
+          top: 30px;
+          left: 0;
+          border-radius: 25px;
+          padding: 10px;
+
+          li:nth-of-type(1) {
+            width: 100px;
+            border-bottom: 1px solid #fff;
           }
         }
       }

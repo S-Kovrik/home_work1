@@ -1,3 +1,7 @@
+.show {
+  display: block;
+}
+
 @media all and (max-width: 480px) {
   .container {
     max-width: 480px;
@@ -47,6 +51,42 @@
   }
   header nav {
     display: none;
+  }
+  header nav {
+    background: #fff;
+  }
+  header nav li {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 10px 0;
+  }
+  header nav menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav menu li:nth-of-type(1) {
+    text-align: center;
+  }
+  header nav menu li:nth-of-type(1) ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav menu li:nth-of-type(1) ul li {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  header nav menu li:nth-of-type(1) ul a {
+    color: #000;
   }
   .block_my-lessons h1 {
     color: #000;
@@ -452,7 +492,7 @@
   header nav menu li {
     color: #fff;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 169x;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -461,6 +501,26 @@
   header nav menu li svg {
     transform: scale(0.5);
     vertical-align: middle;
+  }
+  header nav menu > li:nth-of-type(1) {
+    position: relative;
+  }
+  header nav menu > li:nth-of-type(1) ul {
+    display: none;
+  }
+  header nav menu li:nth-of-type(1):hover > ul {
+    display: block;
+    width: 200px;
+    background: #0060FC;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  header nav menu li:nth-of-type(1):hover > ul li:nth-of-type(1) {
+    width: 100px;
+    border-bottom: 1px solid #fff;
   }
   .block_my-lessons h1 {
     color: #000;

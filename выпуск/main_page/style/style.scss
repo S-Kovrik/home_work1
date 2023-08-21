@@ -2,6 +2,10 @@
 @import "./mixin.scss";
 @import "./extend.scss";
 
+.show {
+  display: block;
+}
+
 .container {
   max-width: 480px;
   margin: auto;
@@ -21,12 +25,13 @@
 header {
   background-color: #0060fc;
 
-  div {
+  & > div {
     .block_header {
       display: flex;
       justify-content: space-around;
       align-items: center;
       padding: 7px 0 22px 0;
+
       & > div {
         button {
           height: 27px;
@@ -54,8 +59,40 @@ header {
       }
     }
   }
+
   nav {
     display: none;
+  }
+
+  nav {
+    background: #fff;
+    li {
+      @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
+      margin: 10px 0;
+    }
+    menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li:nth-of-type(1) {
+        text-align: center;
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          li {
+            @include main_font(
+              $font_size: 16px,
+              $font_weight: 400,
+              $color: #000
+            );
+          }
+          a {
+            color: #000;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -111,7 +148,6 @@ header {
 
 .test_free {
   @include block_flex();
-  margin-top: 50px;
 
   h3 {
     @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
@@ -190,7 +226,8 @@ header {
     }
     ul {
       padding: 20px 0;
-      @extend %block_flex_row;
+      display: flex;
+      justify-content: space-between;
 
       button {
         @include main_font($font_size: 16px, $font_weight: 500, $color: #000);
@@ -315,7 +352,8 @@ header {
   }
 
   & > div > div {
-    @extend%block_flex_cn;
+    display: flex;
+    flex-direction: column;
 
     & > div {
       @extend%block_flex_cn;
@@ -480,16 +518,59 @@ footer {
 
     nav {
       display: block;
+      background: $main-bl;
       border-top: 1px solid rgba(255, 255, 255, 0.6);
       menu {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         li {
-          @include main_font($font_size: 169x, $font_weight: 500, $color: #fff);
+          @include main_font($font_size: 19px, $font_weight: 500, $color: #fff);
           padding: 6px 0;
+          margin: 0;
+          & > ul:nth-of-type(1) {
+            li {
+              @include main_font(
+                $font_size: 19px,
+                $font_weight: 500,
+                $color: #fff
+              );
+              a {
+                @include main_font(
+                  $font_size: 19px,
+                  $font_weight: 500,
+                  $color: #fff
+                );
+              }
+            }
+          }
           svg {
             transform: scale(0.5);
             vertical-align: middle;
+          }
+        }
+        li:nth-of-type(1) {
+          position: relative;
+          ul {
+            display: none;
+          }
+        }
+        li:nth-of-type(1):hover > ul {
+          display: block;
+          width: 220px;
+          background: $main-bl;
+          position: absolute;
+          top: 30px;
+          left: 0;
+          border-radius: 25px;
+          padding: 10px;
+
+          li:nth-of-type(1) {
+            width: 130px;
+            border-bottom: 1px solid #fff;
+          }
+          li:nth-of-type(2) {
+            margin: 0;
           }
         }
       }
@@ -831,9 +912,8 @@ footer {
 
       & > div {
         border-bottom: none;
-        
+
         menu {
-          
           li {
             color: #fff;
             font-size: 19px;

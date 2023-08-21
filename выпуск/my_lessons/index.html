@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./reset-normalize/normalize.css" />
 
     <link rel="stylesheet" href="./style/style.css" />
-    <title>Engl</title>
+    <title>Мои уроки</title>
   </head>
   <body>
     <header class="container cr_dp">
@@ -36,7 +36,7 @@
               <use xlink:href="./image/svg_sprites.svg#profile"></use>
             </svg>
           </div>
-          <button>
+          <button onclick="myFunctionHeader()">
             <img
               src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iOTYuMDAwMDAwcHQiIGhlaWdodD0iOTYuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCA5Ni4wMDAwMDAgOTYuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCw5Ni4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiNGRkYiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik05NCA3MDUgYy00IC04IC00IC0yMiAwIC0zMCA1IC0xMyA1NCAtMTUgMzg4IC0xMyBsMzgzIDMgMCAyNSAwIDI1Ci0zODMgMyBjLTMzNCAyIC0zODMgMCAtMzg4IC0xM3oiLz4KPHBhdGggZD0iTTk0IDQ5NSBjLTQgLTggLTQgLTIyIDAgLTMwIDUgLTEzIDU0IC0xNSAzODggLTEzIGwzODMgMyAwIDI1IDAgMjUKLTM4MyAzIGMtMzM0IDIgLTM4MyAwIC0zODggLTEzeiIvPgo8cGF0aCBkPSJNOTQgMjg1IGMtNCAtOCAtNCAtMjIgMCAtMzAgNSAtMTMgNTQgLTE1IDM4OCAtMTMgbDM4MyAzIDAgMjUgMCAyNQotMzgzIDMgYy0zMzQgMiAtMzgzIDAgLTM4OCAtMTN6Ii8+CjwvZz4KPC9zdmc+Cg=="
               alt="Выпадающее меню"
@@ -46,12 +46,16 @@
           </button>
         </div>
       </div>
-      <nav>
+      <nav id="mydropdown__nav">
         <menu class="ir-cr_dp"
           ><li>
             Уроки<svg height="10" width="20">
               <use xlink:href="./image/svg_sprites.svg#dropdown_lessons"></use>
             </svg>
+            <ul>
+              <li><a href="../my_lessons/index.html" target="_blank" title="ссылка на мои уроки"> Мои уроки</a> </li>
+              <li>Домашнее задание</li>
+            </ul>
           </li>
           <li>Курсы</li>
           <li>Телеканалы</li>
@@ -765,5 +769,6 @@
         </div>
       </nav>
     </footer>
+    <script src="../my_lessons/style/script.js"></script>
   </body>
 </html>

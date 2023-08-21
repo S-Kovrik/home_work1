@@ -15,8 +15,11 @@
 }
 
 @mixin block_flex() {
-  @extend %block-top-indent;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 @mixin block_flex-cn() {
-  @extend%block_flex_cn;
+  display: flex;
+  flex-direction: column;
 }
