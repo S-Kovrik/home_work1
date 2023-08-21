@@ -1,0 +1,539 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./extend.scss";
+
+.show {
+  display: block;
+}
+
+@media all and (max-width: 480px) {
+  .container {
+    max-width: 480px;
+    margin: auto;
+  }
+
+  .inner-container {
+    max-width: 360px;
+    margin: auto;
+  }
+
+  .clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  header {
+    background-color: #0060fc;
+
+    div {
+      .block_header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 7px 0 22px 0;
+        & > div {
+          button {
+            height: 27px;
+            @include main_font(
+              $font_size: 16px,
+              $font_weight: 500,
+              $color: #fff
+            );
+            @include button(
+              $bgc: $bgc-red,
+              $mg_btn: 0,
+              $pd-btn: 3px,
+              $br-rs: 20px
+            );
+          }
+
+          & > button:nth-child(1) {
+            display: none;
+          }
+
+          & > button:nth-child(4) {
+            align-self: flex-start;
+            background-color: #0060fc;
+            padding: 0.1px;
+          }
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+    nav {
+      display: none;
+    }
+
+    nav {
+      background: #fff;
+      li {
+        @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
+        margin: 10px 0;
+      }
+      menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        li:nth-of-type(1) {
+          text-align: center;
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li {
+              @include main_font(
+                $font_size: 16px,
+                $font_weight: 400,
+                $color: #000
+              );
+            }
+            a {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .block_books {
+    h1 {
+      @include main_font($font_size: 21px, $font_weight: 700, $color: #000);
+      margin-top: 30px;
+    }
+    .widget_right {
+      margin-top: 10px;
+      background: $main-bl;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      border-radius: 20px 0 0 20px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+
+        li {
+          position: relative;
+          button {
+            width: 42px;
+            height: 49px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+          }
+
+          input {
+            width: 169px;
+            height: 42px;
+            padding-left: 40px;
+            border: 2px solid #7ba7ab;
+            border-radius: 25px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.96);
+            @include main_font(
+              $font_size: 16px,
+              $font_weight: 500,
+              $color: #9e9c9c
+            );
+          }
+        }
+
+        li:nth-of-type(1) {
+          order: 2;
+          button {
+            position: absolute;
+            top: 0;
+            left: 5px;
+          }
+
+          input {
+            width: 360px;
+            background: rgba(255, 255, 255, 0.89);
+          }
+        }
+
+        li:nth-of-type(2) {
+          order: 1;
+          button {
+            position: absolute;
+            top: 0;
+            left: 5px;
+          }
+          button + button {
+            position: absolute;
+            top: 0;
+            left: 131px;
+          }
+        }
+
+        li:nth-of-type(3) {
+          order: 1;
+          button {
+            position: absolute;
+            top: 0;
+            left: 5px;
+          }
+
+          button + button {
+            position: absolute;
+            top: 0;
+            left: 129px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #808080;
+      & > div:nth-of-type(3) {
+        border-bottom: none;
+      }
+      & > div {
+        border-bottom: 1px solid #808080;
+        width: 100%;
+
+        menu {
+          margin: 30px 0;
+
+          li {
+            @include main_font(
+              $font_size: 16px,
+              $font_weight: 500,
+              $color: #000
+            );
+            text-align: center;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      div:first-child {
+        menu:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 481px) {
+  .cr_dp {
+    max-width: 1920px;
+    margin: auto;
+  }
+
+  .ir-cr_dp {
+    max-width: 1278px;
+    margin: auto;
+  }
+
+  header {
+    background-color: #0060fc;
+
+    div {
+      .block_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 3px 0;
+
+        & > div {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+
+          button {
+            height: 27px;
+            @include main_font(
+              $font_size: 16px,
+              $font_weight: 500,
+              $color: #fff
+            );
+            @include button(
+              $bgc: $bgc-red,
+              $mg_btn: 0,
+              $pd-btn: 5px 20px,
+              $br-rs: 20px
+            );
+          }
+          & > button:nth-child(1) {
+            display: block;
+          }
+
+          & > button:nth-child(2) {
+            padding: 5px;
+          }
+
+          & > svg:nth-of-type(1) {
+            margin-left: 50px;
+          }
+          & > svg {
+            display: block;
+          }
+        }
+        & > button:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+
+    nav {
+      display: block;
+      border-top: 1px solid rgba(255, 255, 255, 0.6);
+      menu {
+        display: flex;
+        justify-content: space-between;
+        li {
+          @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
+          padding: 6px 0;
+          svg {
+            transform: scale(0.5);
+            vertical-align: middle;
+          }
+        }
+        & > li:nth-of-type(1) {
+          position: relative;
+          ul {
+            display: none;
+          }
+        }
+        li:nth-of-type(1):hover > ul {
+          display: block;
+          width: 200px;
+          background: $main-bl;
+          position: absolute;
+          top: 30px;
+          left: 0;
+          border-radius: 25px;
+          padding: 10px;
+
+          li:nth-of-type(1) {
+            width: 100px;
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .block_books {
+    h1 {
+      @include main_font($font_size: 52px, $font_weight: 700, $color: #000);
+      margin-top: 50px;
+      width: 40%;
+      text-align: left;
+    }
+    .widget_right {
+      margin-top: 50px;
+    }
+
+    form {
+      position: fixed;
+      top: 129px;
+      left: 710px;
+      right: 0px;
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      background: $main-bl;
+      border-radius: 20px 0 0 20px;
+      ul {
+        display: flex;
+        flex-wrap: nowrap;
+        li {
+          position: relative;
+          margin-right: 70px;
+          button {
+            width: 42px;
+            height: 49px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+          }
+
+          input {
+            width: 232px;
+            height: 42px;
+            padding-left: 50px;
+            border: 2px solid #7ba7ab;
+            border-radius: 25px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.96);
+            color: #9e9c9c;
+          }
+        }
+
+        li:nth-of-type(1) {
+          order: 0;
+          button {
+            position: absolute;
+            top: 0;
+            left: 5px;
+          }
+
+          input {
+            width: 232px;
+            background: rgba(255, 255, 255, 0.89);
+          }
+        }
+
+        li:nth-of-type(2) {
+          order: 0;
+          button {
+            position: absolute;
+            top: 0;
+            left: 5px;
+          }
+          button + button {
+            position: absolute;
+            top: 0;
+            left: 185px;
+          }
+        }
+
+        li:nth-of-type(3) {
+          order: 0;
+          button {
+            position: absolute;
+            top: 0;
+            left: 5px;
+          }
+
+          button + button {
+            position: absolute;
+            top: 0;
+            left: 185px;
+          }
+        }
+      }
+    }
+  }
+
+  .filter {
+    border-bottom: 1px solid #808080;
+    display: flex;
+
+    p {
+      @include main_font($font_size: 29px, $font_weight: 600, $color: #000);
+      flex: 30% 1 0;
+    }
+
+    ul {
+      display: flex;
+      flex: 70% 1 0;
+      justify-content: space-between;
+      li {
+        @include main_font($font_size: 17px, $font_weight: 500, $color: #000);
+        svg {
+          margin-left: 3px;
+          transform: scale(0.8);
+        }
+      }
+
+      li:nth-of-type(4) {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .books_list {
+    & > div > div:nth-of-type(1) {
+      display: grid;
+      grid-template: repeat(4, 1fr) / 150px 150px;
+
+      gap: 20px;
+
+      p:nth-of-type(1) {
+        @include main_font($font_size: 26px, $font_weight: 600, $color: #000);
+      }
+
+      div:nth-of-type(1),
+      div:nth-of-type(2) {
+        display: flex;
+        justify-content: right;
+
+        p {
+          @include main_font($font_size: 17px, $font_weight: 300, $color: #000);
+        }
+      }
+
+      p:nth-of-type(2) {
+        @include main_font($font_size: 20px, $font_weight: 400, $color: #000);
+      }
+
+      p:nth-of-type(3) {
+        @include main_font($font_size: 22px, $font_weight: 500, $color: #000);
+      }
+
+      p:nth-of-type(4) {
+        @include main_font($font_size: 20px, $font_weight: 400, $color: #000);
+        justify-self: end;
+      }
+
+      button:nth-of-type(1) {
+        justify-self: flex-start;
+        @include button(
+          $bgc: $bgc-red,
+          $mg_btn: 0,
+          $pd-btn: 7px 45px,
+          $br-rs: 25px
+        );
+        @include main_font($font_size: 20px, $font_weight: 500, $color: #fff);
+      }
+    }
+  }
+
+  footer {
+    background: $main-bl;
+    nav {
+      display: flex;
+      flex-direction: row;
+      padding: 70px 0 30px 0;
+
+      & > div:nth-of-type(1) {
+        flex: 13% 1 0;
+        padding-left: 110px;
+      }
+
+      & > div:nth-of-type(2) {
+        flex: 14% 1 0;
+        padding: 0 70px;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+      }
+
+      & > div:nth-of-type(3) {
+        flex: 25% 1 0;
+        padding-left: 40px;
+      }
+
+      & > div {
+        border-bottom: none;
+
+        menu {
+          li {
+            @include main_font(
+              $font_size: 19px,
+              $font_weight: 500,
+              $color: #fff
+            );
+            text-align: left;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+}
