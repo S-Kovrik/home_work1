@@ -129,6 +129,11 @@
   </defs>
 </symbol>
 
+<symbol id = 'icon_play' xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61" fill="none">
+  <circle cx="30.5" cy="30.5" r="30.5" fill="#0060FC"/>
+  <path d="M22.9741 49.9088V20.201V11.8828L46.3443 30.8958L22.9741 49.9088Z" fill="white" stroke="white"/>
+</symbol>
+
 </svg>
 
 
