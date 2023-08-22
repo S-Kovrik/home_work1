@@ -1,0 +1,22 @@
+@mixin main_font($font_size, $font_weight, $color) {
+  color: $color;
+  font-family: $mainfont-family;
+  font-size: $font_size;
+  font-style: normal;
+  font-weight: $font_weight;
+  line-height: normal;
+}
+
+@mixin button($bgc, $mg_btn, $pd-btn, $br-rs) {
+  background-color: $bgc;
+  margin: $mg_btn;
+  padding: $pd-btn;
+  border-radius: $br-rs;
+}
+
+@mixin block_flex() {
+  @extend %block-top-indent;
+}
+@mixin block_flex-cn() {
+  @extend%block_flex_cn;
+}

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&family=Montserrat:wght@200;300;400;500;700;900&family=Roboto:ital,wght@0,300;0,500;1,700&family=Rubik:ital,wght@1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset-normalize/reset.css" />
+    <link rel="stylesheet" href="./reset-normalize/normalize.css" />
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Радио</title>
+  </head>
+  <body>
+    <header class="container cr_dp">
+      <div class="inner-container ir-cr_dp">
+        <div class="block_header">
+          <a
+            href="../main_page/main_page.html"
+            target="_blank"
+            title="главная страница"
+            ><img
+              src="./image/logo_header.svg"
+              alt="Логотип"
+              width="138"
+              height="42"
+              aria-grabbed=""
+          /></a>
+          <div>
+            <button>Бесплатный урок</button>
+            <button>Купить уроки</button>
+            <svg height="36" width="36">
+              <use xlink:href="./image/svg_sprites.svg#notification"></use>
+            </svg>
+            <svg height="40" width="40">
+              <use xlink:href="./image/svg_sprites.svg#profile"></use>
+            </svg>
+          </div>
+          <button onclick="myFunctionHeader()">
+            <img
+              src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iOTYuMDAwMDAwcHQiIGhlaWdodD0iOTYuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCA5Ni4wMDAwMDAgOTYuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCw5Ni4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiNGRkYiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik05NCA3MDUgYy00IC04IC00IC0yMiAwIC0zMCA1IC0xMyA1NCAtMTUgMzg4IC0xMyBsMzgzIDMgMCAyNSAwIDI1Ci0zODMgMyBjLTMzNCAyIC0zODMgMCAtMzg4IC0xM3oiLz4KPHBhdGggZD0iTTk0IDQ5NSBjLTQgLTggLTQgLTIyIDAgLTMwIDUgLTEzIDU0IC0xNSAzODggLTEzIGwzODMgMyAwIDI1IDAgMjUKLTM4MyAzIGMtMzM0IDIgLTM4MyAwIC0zODggLTEzeiIvPgo8cGF0aCBkPSJNOTQgMjg1IGMtNCAtOCAtNCAtMjIgMCAtMzAgNSAtMTMgNTQgLTE1IDM4OCAtMTMgbDM4MyAzIDAgMjUgMCAyNQotMzgzIDMgYy0zMzQgMiAtMzgzIDAgLTM4OCAtMTN6Ii8+CjwvZz4KPC9zdmc+Cg=="
+              alt="Выпадающее меню"
+              width="35"
+              height="35"
+            />
+          </button>
+        </div>
+      </div>
+      <nav id="mydropdown__nav">
+        <menu class="ir-cr_dp"
+          ><li>
+            Уроки<svg height="10" width="20">
+              <use xlink:href="./image/svg_sprites.svg#dropdown_lessons"></use>
+            </svg>
+            <ul>
+              <li>
+                <a
+                  href="../my_lessons/index.html"
+                  target="_blank"
+                  title="ссылка на мои уроки"
+                >
+                  Мои уроки</a
+                >
+              </li>
+              <li>Домашнее задание</li>
+            </ul>
+          </li>
+          <li>Курсы</li>
+          <li>Телеканалы</li>
+          <li>Видео</li>
+          <li>Книги</li>
+          <li>Радио</li></menu
+        >
+      </nav>
+    </header>
+    <section class="block_radio">
+      <div class="ir-cr_dp">
+        <div>
+          <h1 class="inner-container">Слушайте радио когда и где угодно</h1>
+          <div>
+            <ul>
+              <li>Прослушано в этом месяце&#58;</li>
+              <li>
+                <p>Рекомендовано часов&#58;</p>
+                <p>17</p>
+              </li>
+              <li>
+                <p>Прослушано часов&#58;</p>
+                <p>17</p>
+              </li>
+              <li>
+                <p>Ваша успешность&#58;</p>
+                <p>60&#37;</p>
+              </li>
+            </ul>
+            <svg height="210" width="71">
+              <use
+                xlink:href="./image/svg_sprites.svg#icon_counter_thermometer"
+              ></use>
+            </svg>
+          </div>
+        </div>
+        <div class="widget_right">
+          <div class="inner-container">
+            <form>
+              <ul>
+                <li>
+                  <button type="submit">
+                    <svg height="23" width="23">
+                      <use xlink:href="./image/svg_sprites.svg#search"></use>
+                    </svg>
+                  </button>
+                  <input type="text" placeholder="Поиск" />
+                </li>
+                <li>
+                  <button type="submit">
+                    <svg height="23" width="23">
+                      <use xlink:href="./image/svg_sprites.svg#icon_language"></use>
+                    </svg>
+                  </button>
+                  <button type="submit">
+                    <svg height="12" width="20">
+                      <use
+                        xlink:href="./image/svg_sprites.svg#dropdown_menu"
+                      ></use>
+                    </svg>
+                  </button>
+                  <input type="text" placeholder="World" />
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="inner-container cr_dp">
+        <div class="block_radio-mini">
+          <h3 class="ir-cr_dp">Радио. Слушай и улучшай навыки аудирования</h3>
+          <div class="ir-cr_dp">
+            <div>
+              <div>
+                <img
+                  src="../radio/image/img_radio-mini.png"
+                  alt="шкала громкости"
+                />
+              </div>
+              <ul>
+                <li>
+                  Слушайте радио в свободное время, во время вожденния, занятия
+                  спортом. Будьте всегда погружены в изучения иностранного
+                  языка.
+                </li>
+                <li>
+                  Специально для вас мы собрали подборку лучших БЕСПЛАТНЫХ
+                  радиостанцый со всего мира.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner-container cr_dp">
+        <div class="filter">
+          <div class="ir-cr_dp">
+            <div>
+              <p>Фильтр</p>
+              <button onclick="myFunctionFilter()">
+                <svg height="6" width="6">
+                  <use xlink:href="./image/svg_sprites.svg#point"></use>
+                </svg>
+                <svg height="6" width="6">
+                  <use xlink:href="./image/svg_sprites.svg#point"></use>
+                </svg>
+                <svg height="6" width="6">
+                  <use xlink:href="./image/svg_sprites.svg#point"></use>
+                </svg>
+              </button>
+            </div>
+            <ul id="mydropdown__filter">
+              <li>
+                Популярность<svg height="12" width="20">
+                  <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
+                </svg>
+              </li>
+              <li>
+                Количество просмотров<svg height="12" width="20">
+                  <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
+                </svg>
+              </li>
+              <li>
+                Рейтинг<svg height="12" width="20">
+                  <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
+                </svg>
+              </li>
+              <li>
+                Наилучшее<svg height="12" width="20">
+                  <use xlink:href="./image/svg_sprites.svg#dropdown_menu"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="ir-cr_dp inner-container">
+        <div class="books_list">
+          <div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+            <div>
+              <iframe
+                width="1278"
+                height="590"
+                src="https://www.youtube.com/embed/AonnfGbm8-k"
+                title="Как заговорить на иностранном языке"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div>
+                <p>Euronews English Live</p>
+                <div></div>
+                <p>J. M. Barrie</p>
+                <div></div>
+                <p>Сложность&#58;</p>
+                <p>Начальный</p>
+                <button>Смотреть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ir-cr_dp inner-container">
+        <div class="arrow">
+          <button>Предыдущая страница</button><button>Следущая страница</button>
+        </div>
+      </div>
+    </section>
+    <footer class="container container cr_dp">
+      <nav class="container ir-cr_dp">
+        <div>
+          <menu
+            ><div class="inner-container">
+              <li>Процесс изучения</li>
+              <li>Цена</li>
+              <li>Груповые уроки</li>
+              <li>Разговорные клубы</li>
+            </div></menu
+          >
+        </div>
+        <div>
+          <menu
+            ><div class="inner-container">
+              <li>Общий английский</li>
+              <li>Бизнес английский</li>
+              <li>Подготовка к экзамену</li>
+              <li>Школьный английский</li>
+            </div></menu
+          >
+        </div>
+        <div>
+          <menu
+            ><div class="inner-container">
+              <li>Работа для учителей</li>
+              <li>Политика конфиденциальности</li>
+              <li>Условия и положения</li>
+              <li>Контакты</li>
+            </div></menu
+          >
+        </div>
+      </nav>
+    </footer>
+    <script src="../my_lessons/style/script.js"></script>
+  </body>
+</html>

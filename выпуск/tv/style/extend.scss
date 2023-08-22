@@ -1,0 +1,15 @@
+%block-top-indent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+%block_flex_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+%block_flex_cn {
+  display: flex;
+  flex-direction: column;
+}
