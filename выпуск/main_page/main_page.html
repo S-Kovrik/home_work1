@@ -51,9 +51,29 @@
           </button>
         </div>
       </div>
-      <nav id="mydropdown__nav">
-        <menu class="ir-cr_dp"
-          ><li>
+      <nav class="container cr_dp" id="mydropdown__nav">
+        <div class="inner-container ir-cr_dp">
+          <button>
+            <svg height="33" width="33">
+              <use xlink:href="./image/svg_sprites.svg#cancel"></use>
+            </svg>
+          </button>
+          <button>
+            <svg height="36" width="35">
+              <use
+                xlink:href="./image/svg_sprites.svg#notification_black"
+              ></use>
+            </svg>
+          </button>
+          <button>
+            Мой профиль
+            <svg height="40" width="40">
+              <use xlink:href="./image/svg_sprites.svg#profile"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="inner-container ir-cr_dp">
+          <li>
             Уроки<svg height="10" width="20">
               <use xlink:href="./image/svg_sprites.svg#dropdown_lessons"></use>
             </svg>
@@ -86,8 +106,24 @@
               >Книги</a
             >
           </li>
-          <li><a href="../radio/index.html" target="_blank" title="страница радио"> Радио</a> </li></menu
-        >
+          <li>
+            <a
+              href="../radio/index.html"
+              target="_blank"
+              title="страница радио"
+            >
+              Радио</a
+            >
+          </li>
+        </ul>
+        <div>
+          <button>
+            Выйти из аккаунта
+            <svg height="40" width="40">
+              <use xlink:href="./image/svg_sprites.svg#profile"></use>
+            </svg>
+          </button>
+        </div>
       </nav>
     </header>
     <section class="block_languages">
@@ -349,37 +385,42 @@
     <footer class="container container cr_dp">
       <nav class="container ir-cr_dp">
         <div>
-          <menu
-            ><div class="inner-container">
+          <ul>
+            <div class="inner-container">
               <li>Процесс изучения</li>
               <li>Цена</li>
               <li>Груповые уроки</li>
               <li>Разговорные клубы</li>
-            </div></menu
-          >
+            </div>
+          </ul>
         </div>
         <div>
-          <menu
-            ><div class="inner-container">
+          <ul>
+            <div class="inner-container">
               <li>Общий английский</li>
               <li>Бизнес английский</li>
               <li>Подготовка к экзамену</li>
               <li>Школьный английский</li>
-            </div></menu
-          >
+            </div>
+          </ul>
         </div>
         <div>
-          <menu
-            ><div class="inner-container">
+          <ul>
+            <div class="inner-container">
               <li>Работа для учителей</li>
               <li>Политика конфиденциальности</li>
               <li>Условия и положения</li>
               <li>Контакты</li>
-            </div></menu
-          >
+            </div>
+          </ul>
         </div>
       </nav>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>

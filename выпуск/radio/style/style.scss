@@ -69,11 +69,15 @@
 
     nav {
       background: #fff;
+
+      a {
+        color: #000;
+      }
       li {
         @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
         margin: 10px 0;
       }
-      menu {
+      ul {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -99,93 +103,124 @@
     }
   }
 
-  .block_tv {
-    h1 {
-      @include main_font($font_size: 21px, $font_weight: 700, $color: #000);
-      margin-top: 30px;
-    }
-    .widget_right {
-      margin-top: 10px;
-      background: $main-bl;
+  .block_radio {
+    div:nth-of-type(1) {
+      div:nth-of-type(1) {
+        h1 {
+          @include main_font($font_size: 21px, $font_weight: 700, $color: #000);
+          margin-top: 30px;
+        }
+
+        div:nth-child(2) {
+          display: none;
+        }
+      }
+
+      .widget_right {
+        margin-top: 10px;
+        background: $main-bl;
+        form {
+          display: flex;
+          align-items: center;
+          padding: 15px 0;
+          border-radius: 20px 0 0 20px;
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+
+            li {
+              position: relative;
+              button {
+                width: 42px;
+                height: 49px;
+                border: none;
+                border-radius: 0 5px 5px 0;
+                cursor: pointer;
+              }
+
+              input {
+                width: 169px;
+                height: 42px;
+                padding-left: 45px;
+                border: 2px solid #7ba7ab;
+                border-radius: 25px;
+                outline: none;
+                background: rgba(255, 255, 255, 0.96);
+                @include main_font(
+                  $font_size: 16px,
+                  $font_weight: 500,
+                  $color: #9e9c9c
+                );
+              }
+            }
+
+            li:nth-of-type(1) {
+              order: 2;
+              button {
+                position: absolute;
+                top: 0;
+                left: 5px;
+              }
+
+              input {
+                width: 360px;
+                background: rgba(255, 255, 255, 0.89);
+              }
+            }
+
+            li:nth-of-type(2) {
+              order: 1;
+              button {
+                position: absolute;
+                top: 0;
+                left: 5px;
+              }
+              button + button {
+                position: absolute;
+                top: 0;
+                left: 131px;
+              }
+            }
+
+            li:nth-of-type(3) {
+              order: 1;
+              button {
+                position: absolute;
+                top: 0;
+                left: 5px;
+              }
+
+              button + button {
+                position: absolute;
+                top: 0;
+                left: 129px;
+              }
+            }
+          }
+        }
+      }
     }
 
-    form {
-      display: flex;
-      align-items: center;
-      padding: 15px 0;
-      border-radius: 20px 0 0 20px;
-      ul {
+    .block_radio-mini {
+      h3 {
+        display: none;
+      }
+
+      div:nth-of-type(1) > div {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
-
-        li {
-          position: relative;
-          button {
-            width: 42px;
-            height: 49px;
-            border: none;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-          }
-
-          input {
-            width: 169px;
-            height: 42px;
-            padding-left: 40px;
-            border: 2px solid #7ba7ab;
-            border-radius: 25px;
-            outline: none;
-            background: rgba(255, 255, 255, 0.96);
-            @include main_font(
-              $font_size: 16px,
-              $font_weight: 500,
-              $color: #9e9c9c
-            );
-          }
-        }
-
-        li:nth-of-type(1) {
+        flex-direction: column;
+        align-items: center;
+        div {
+          display: block;
           order: 2;
-          button {
-            position: absolute;
-            top: 0;
-            left: 5px;
-          }
-
-          input {
-            width: 360px;
-            background: rgba(255, 255, 255, 0.89);
-          }
         }
-
-        li:nth-of-type(2) {
+        ul {
+          margin: 20px 0 10px 0;
           order: 1;
-          button {
-            position: absolute;
-            top: 0;
-            left: 5px;
-          }
-          button + button {
-            position: absolute;
-            top: 0;
-            left: 131px;
-          }
-        }
-
-        li:nth-of-type(3) {
-          order: 1;
-          button {
-            position: absolute;
-            top: 0;
-            left: 5px;
-          }
-
-          button + button {
-            position: absolute;
-            top: 0;
-            left: 129px;
+          li:first-child {
+            margin-bottom: 10px;
           }
         }
       }
@@ -213,22 +248,20 @@
       }
     }
 
-    .books_list {
+    div:nth-of-type(4) > div.books_list {
       & > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 40px 0;
-        iframe {
-          width: 250px;
-          height: 200px;
+        div {
           margin: 40px 0 10px 0;
         }
 
-        div > div:nth-of-type(1) {
-          margin: 0;
+        & > div > div:nth-of-type(1) {
+          margin: 5px 0;
           display: grid;
-          grid-template: repeat(4, 50px) / 140px 140px;
+          grid-template: repeat(2, 50px) / 140px 140px;
           gap: 10px;
 
           p:nth-of-type(1) {
@@ -239,60 +272,19 @@
             );
           }
 
-          div:nth-of-type(1),
-          div:nth-of-type(2) {
-            display: flex;
-            justify-content: right;
-            gap: 0;
-
-            p {
-              @include main_font(
-                $font_size: 17px,
-                $font_weight: 300,
-                $color: #000
-              );
-            }
-          }
-
           p:nth-of-type(2) {
+            grid-area: 2/1/2/3;
             @include main_font(
               $font_size: 20px,
               $font_weight: 400,
               $color: #000
             );
           }
-
-          p:nth-of-type(3) {
-            @include main_font(
-              $font_size: 22px,
-              $font_weight: 500,
-              $color: #000
-            );
-          }
-
-          p:nth-of-type(4) {
-            @include main_font(
-              $font_size: 20px,
-              $font_weight: 400,
-              $color: #000
-            );
-            justify-self: end;
-            text-align: right;
-          }
-
-          button:nth-of-type(1) {
-            justify-self: flex-start;
-            @include button(
-              $bgc: $bgc-red,
-              $mg_btn: 0,
-              $pd-btn: 7px 45px,
-              $br-rs: 25px
-            );
-            @include main_font(
-              $font_size: 20px,
-              $font_weight: 500,
-              $color: #fff
-            );
+          div {
+            margin: 0;
+            grid-area: 1/2/3/3;
+            align-self: center;
+            justify-self: right;
           }
         }
       }
@@ -315,7 +307,7 @@
         border-bottom: 1px solid #808080;
         width: 100%;
 
-        menu {
+        ul {
           margin: 30px 0;
 
           li {
@@ -330,7 +322,7 @@
         }
       }
       div:first-child {
-        menu:first-child {
+        ul:first-child {
           margin-top: 0;
         }
       }
@@ -402,7 +394,7 @@
     nav {
       display: block;
       border-top: 1px solid rgba(255, 255, 255, 0.6);
-      menu {
+      ul {
         display: flex;
         justify-content: space-between;
         li {
@@ -501,7 +493,7 @@
         form {
           justify-content: flex-end;
           position: fixed;
-          top: 129px;
+          top: 242px;
           left: 0;
           right: 1000px;
           display: flex;
@@ -513,7 +505,7 @@
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-      
+
             li {
               position: relative;
               margin-right: 30px;
@@ -803,7 +795,7 @@
       & > div {
         border-bottom: none;
 
-        menu {
+        ul {
           li {
             @include main_font(
               $font_size: 19px,

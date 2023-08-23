@@ -65,21 +65,50 @@ header {
   }
 
   nav {
+    padding: 20px;
     background: #fff;
+
+    div:nth-of-type(1) {
+      display: flex;
+      justify-content: space-between;
+
+      & > button:last-child {
+        @include button(
+          $bgc: $main-bl,
+          $mg_btn: 0,
+          $pd-btn: 0 5px,
+          $br-rs: 15px
+        );
+        display: flex;
+        align-items: center;
+        @include main_font($font_size: 12px, $font_weight: 600, $color: #fff);
+        svg {
+          transform: scale(0.5);
+        }
+      }
+    }
+
+    ul:nth-of-type(1) {
+      margin: 20px auto;
+    }
+
+    a {
+      color: #000;
+    }
     li {
       @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
       margin: 10px 0;
     }
-    menu {
+    ul {
       display: flex;
       flex-direction: column;
       align-items: center;
       li:nth-of-type(1) {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         ul {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
           li {
             @include main_font(
               $font_size: 16px,
@@ -90,6 +119,25 @@ header {
           a {
             color: #000;
           }
+        }
+      }
+    }
+    & > div:nth-of-type(2) {
+      display: flex;
+      justify-content: center;
+      & > button {
+        @include button(
+          $bgc: $main-bl,
+          $mg_btn: 0,
+          $pd-btn: 0 10px,
+          $br-rs: 15px
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include main_font($font_size: 12px, $font_weight: 600, $color: #fff);
+        svg {
+          transform: scale(0.5);
         }
       }
     }
@@ -442,7 +490,7 @@ footer {
     & > div {
       border-bottom: 1px solid #808080;
       width: 100%;
-      menu {
+      ul {
         margin: 30px 0;
 
         li {
@@ -520,10 +568,25 @@ footer {
       display: block;
       background: $main-bl;
       border-top: 1px solid rgba(255, 255, 255, 0.6);
-      menu {
+      padding: 0;
+
+      div:nth-of-type(1),
+      div:nth-of-type(2) {
+        display: none;
+      }
+
+      a {
+        color: #fff;
+      }
+      ul:nth-of-type(1) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin: 0 auto;
+
+        li:nth-of-type(1){
+          flex-direction: row;
+        }
         li {
           @include main_font($font_size: 19px, $font_weight: 500, $color: #fff);
           padding: 6px 0;
@@ -913,7 +976,7 @@ footer {
       & > div {
         border-bottom: none;
 
-        menu {
+        ul {
           li {
             color: #fff;
             font-size: 19px;

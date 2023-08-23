@@ -69,11 +69,15 @@
     
       nav {
         background: #fff;
+
+        a{
+          color: #000;
+        }
         li {
           @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
           margin: 10px 0;
         }
-        menu {
+        ul{
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -481,7 +485,7 @@
         border-bottom: 1px solid #808080;
         width: 100%;
 
-        menu {
+        ul {
           margin: 30px 0;
 
           li {
@@ -496,7 +500,7 @@
         }
       }
       div:first-child {
-        menu:first-child {
+        ul:first-child {
           margin-top: 0;
         }
       }
@@ -568,7 +572,7 @@
     nav {
       display: block;
       border-top: 1px solid rgba(255, 255, 255, 0.6);
-      menu {
+      ul {
         display: flex;
         justify-content: space-between;
         li {
@@ -993,7 +997,7 @@
       & > div {
         border-bottom: none;
 
-        menu {
+        ul{
           li {
             @include main_font(
               $font_size: 19px,
