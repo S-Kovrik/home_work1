@@ -69,15 +69,20 @@ header {
         align-items: center;
         position: relative;
 
-        svg {
+        svg:nth-child(1) {
           position: absolute;
           top: 9px;
           left: 68px;
+          transform: rotate(180deg);
         }
 
-        svg.svg_absolute{
-          left: 119px;
-          transform: rotate(180deg);
+        svg:nth-child(1).svg_absolute {
+          left: 118px;
+          transform: rotate(0);
+        }
+
+        svg:nth-child(2) {
+          display: none;
         }
 
         ul:nth-of-type(1) {
@@ -521,7 +526,6 @@ header {
 footer {
   nav {
     @extend%block_flex_cn;
-    align-items: center;
     & > div:nth-of-type(3) {
       border-bottom: none;
     }
@@ -645,9 +649,13 @@ footer {
               }
             }
           }
-          svg {
-            transform: scale(0.5);
-            vertical-align: middle;
+          svg:nth-of-type(1) {
+            display: none;
+          }
+
+          svg:nth-of-type(2) {
+            margin-top: 7px;
+            transform: rotate(0);
           }
         }
         li:nth-of-type(1) {
@@ -994,6 +1002,7 @@ footer {
     background: $main-bl;
     nav {
       flex-direction: row;
+      align-items: flex-start;
 
       & > div:nth-of-type(1) {
         flex: 13% 1 0;
