@@ -41,7 +41,7 @@
               <use xlink:href="./image/svg_sprites.svg#profile"></use>
             </svg>
           </div>
-          <button onclick="myFunctionHeader()">
+          <button class="open">
             <img
               src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iOTYuMDAwMDAwcHQiIGhlaWdodD0iOTYuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCA5Ni4wMDAwMDAgOTYuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCw5Ni4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiNGRkYiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik05NCA3MDUgYy00IC04IC00IC0yMiAwIC0zMCA1IC0xMyA1NCAtMTUgMzg4IC0xMyBsMzgzIDMgMCAyNSAwIDI1Ci0zODMgMyBjLTMzNCAyIC0zODMgMCAtMzg4IC0xM3oiLz4KPHBhdGggZD0iTTk0IDQ5NSBjLTQgLTggLTQgLTIyIDAgLTMwIDUgLTEzIDU0IC0xNSAzODggLTEzIGwzODMgMyAwIDI1IDAgMjUKLTM4MyAzIGMtMzM0IDIgLTM4MyAwIC0zODggLTEzeiIvPgo8cGF0aCBkPSJNOTQgMjg1IGMtNCAtOCAtNCAtMjIgMCAtMzAgNSAtMTMgNTQgLTE1IDM4OCAtMTMgbDM4MyAzIDAgMjUgMCAyNQotMzgzIDMgYy0zMzQgMiAtMzgzIDAgLTM4OCAtMTN6Ii8+CjwvZz4KPC9zdmc+Cg=="
               alt="Выпадающее меню"
@@ -51,9 +51,9 @@
           </button>
         </div>
       </div>
-      <nav class="container cr_dp" id="mydropdown__nav">
+      <nav id="menu_nav" class="container cr_dp">
         <div class="inner-container ir-cr_dp">
-          <button>
+          <button class="close">
             <svg height="33" width="33">
               <use xlink:href="./image/svg_sprites.svg#cancel"></use>
             </svg>
@@ -73,11 +73,13 @@
           </button>
         </div>
         <ul class="inner-container ir-cr_dp">
-          <li>
-            Уроки<svg height="10" width="20">
-              <use xlink:href="./image/svg_sprites.svg#dropdown_lessons"></use>
+          <li onclick="myFunctionHeader()">
+            Уроки<svg id="mydropdown__svg" height="8" width="13">
+              <use
+                xlink:href="./image/svg_sprites.svg#dropdown_lessons_black"
+              ></use>
             </svg>
-            <ul>
+            <ul id="mydropdown__sublist">
               <li>
                 <a
                   href="../my_lessons/index.html"

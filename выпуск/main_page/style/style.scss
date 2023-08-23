@@ -2,10 +2,6 @@
 @import "./mixin.scss";
 @import "./extend.scss";
 
-.show {
-  display: block;
-}
-
 .container {
   max-width: 480px;
   margin: auto;
@@ -23,6 +19,7 @@
 }
 
 header {
+  position: relative;
   background-color: #0060fc;
 
   & > div {
@@ -61,12 +58,44 @@ header {
   }
 
   nav {
-    display: none;
-  }
-
-  nav {
     padding: 20px;
     background: #fff;
+    width: 100%;
+
+    ul:nth-of-type(1) {
+      li:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        svg {
+          position: absolute;
+          top: 9px;
+          left: 68px;
+        }
+
+        svg.svg_absolute{
+          left: 119px;
+          transform: rotate(180deg);
+        }
+
+        ul:nth-of-type(1) {
+          display: none;
+          li,
+          a {
+            @include main_font(
+              $font_size: 16px,
+              $font_weight: 500,
+              $color: #000
+            );
+          }
+        }
+        ul.show {
+          display: block;
+        }
+      }
+    }
 
     div:nth-of-type(1) {
       display: flex;
@@ -104,10 +133,6 @@ header {
       flex-direction: column;
       align-items: center;
       li:nth-of-type(1) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
         ul {
           li {
             @include main_font(
@@ -142,6 +167,13 @@ header {
       }
     }
   }
+
+  #menu_nav {
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    transition: 1s;
+  }
 }
 
 .block_languages {
@@ -154,6 +186,12 @@ header {
       h3 {
         margin-top: 30px;
         @include main_font($font_size: 21px, $font_weight: 700, $color: #fff);
+      }
+
+      & > div:nth-of-type(2) {
+        form {
+          display: none;
+        }
       }
       & > div:nth-of-type(1) {
         & > button {
@@ -564,8 +602,8 @@ footer {
       }
     }
 
-    nav {
-      display: block;
+    nav#menu_nav {
+      position: static;
       background: $main-bl;
       border-top: 1px solid rgba(255, 255, 255, 0.6);
       padding: 0;
@@ -584,7 +622,7 @@ footer {
         justify-content: space-between;
         margin: 0 auto;
 
-        li:nth-of-type(1){
+        li:nth-of-type(1) {
           flex-direction: row;
         }
         li {
@@ -670,6 +708,7 @@ footer {
         & > div:nth-of-type(2) {
           align-self: center;
           form {
+            display: block;
             position: relative;
             width: 645px;
             margin-left: 115px;
