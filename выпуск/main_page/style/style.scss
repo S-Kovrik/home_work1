@@ -968,6 +968,11 @@ footer {
           }
         }
 
+        & > div.card > div:hover{
+transform: scale(1.2);
+transition-duration: 3s;
+        }
+
         & > div.card > div {
           position: relative;
           margin: 30px 20px;
@@ -1110,15 +1115,6 @@ footer {
       .prev:hover,
       .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
-      }
-
-      @-webkit-keyframes fade {
-        from {
-          opacity: 0.4;
-        }
-        to {
-          opacity: 1;
-        }
       }
 
       @keyframes fade {
