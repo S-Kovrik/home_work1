@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
     <button onclick="addCountryBn ()">ввод информации о стране</button>
     <button onclick="getCountryInfoBn ()">получение информации о стране</button>
-    <button onclick="getcountrysAllInfoBn  ()">перечень всех стран</button>
+    <button onclick="getСountrysAllInfoBn  ()">перечень всех стран</button>
     <button onclick="deleteCountryBn ()">удаление информации о стране</button>
-    <script>
+    <script src="./script.js">
       var countrysH = {};
 
       function addCountry(countryName, capitalName) {
@@ -49,7 +49,7 @@
         alert(getCountryInfo(prompt("Введите страну")));
       }
 
-      function getcountrysAllInfoBn() {
+      function getCountrysAllInfoBn() {
         alert("список стран:" + listCountrys());
       }
 
