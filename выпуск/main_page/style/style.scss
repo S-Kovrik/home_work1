@@ -1,13 +1,14 @@
 @import "./variables.scss";
 @import "./mixin.scss";
 
-@media all and (max-width: 480px) {
-  %block-top-indent {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-  }
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
 
+@media all and (max-width: 480px) {
+  
   %block_flex_row {
     display: flex;
     flex-direction: row;
@@ -26,12 +27,6 @@
   .inner-container {
     max-width: 360px;
     margin: auto;
-  }
-
-  .clearfix:after {
-    content: "";
-    clear: both;
-    display: block;
   }
 
   header {
@@ -75,7 +70,7 @@
     }
 
     nav {
-      padding: 20px;
+      padding: 20px 20px 30px;
       background: #fff;
       width: 100%;
 
@@ -252,7 +247,8 @@
   }
 
   .test_free {
-    @include block_flex();
+    @extend %block_flex_cn;
+    margin-top: 50px;
 
     h3 {
       @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
@@ -276,8 +272,9 @@
   }
 
   .learn_easily {
-    @include block_flex();
-
+    @extend %block_flex_cn;
+    margin-top: 50px;
+    
     h3 {
       @include main_font($font_size: 19px, $font_weight: 600, $color: #000);
       margin-bottom: 20px;
@@ -317,8 +314,7 @@
       );
     }
     & > div > div {
-      display: flex;
-      flex-direction: column;
+      @extend %block_flex_cn;
     }
   }
 
@@ -336,7 +332,7 @@
       }
       ul {
         padding: 20px 0;
-        display: flex;
+        @extend %block_flex_row;
         justify-content: space-between;
 
         button {
@@ -379,7 +375,7 @@
       }
 
       & > div > div.card {
-        flex-direction: column;
+        @extend %block_flex_cn;
         align-items: center;
 
         & > div {
@@ -538,13 +534,11 @@
     }
 
     & > div > div {
-      display: flex;
-      flex-direction: column;
+      @extend %block_flex_cn;
 
       & > div {
-        @extend%block_flex_cn;
+        @extend %block_flex_cn;
         align-items: center;
-        justify-content: space-between;
         gap: 30px;
         margin: 30px 0;
       }
@@ -649,7 +643,18 @@
   }
 }
 
-@media all and (min-width: 481px) {
+@media all and (min-width: 1920px) {
+
+   %block_flex_row-xxl {
+    display: flex;
+    flex-direction: row;
+  }
+
+  %block_flex_cn-xxl {
+    display: flex;
+    flex-direction: column;
+  }
+  
   .cr_dp {
     max-width: 1920px;
     margin: auto;
@@ -665,13 +670,11 @@
 
     div {
       .block_header {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
+        @include block_flex_main($fx-dn:row, $jf-ct: space-between, $an-is: end);
         padding: 3px 0;
 
         & > div {
-          display: flex;
+         @extend %block_flex_row-xxl;
           align-items: center;
           gap: 25px;
 
@@ -725,13 +728,12 @@
         color: #fff;
       }
       ul:nth-of-type(1) {
-        display: flex;
-        flex-direction: row;
+        @extend %block_flex_row-xxl;
         justify-content: space-between;
         margin: 0 auto;
 
         li:nth-of-type(1) {
-          flex-direction: row;
+          @extend %block_flex_row-xxl;
         }
         li {
           @include main_font($font_size: 19px, $font_weight: 500, $color: #fff);
@@ -798,8 +800,7 @@
 
     div.ir-cr_dp {
       & > div {
-        display: flex;
-        flex-direction: column;
+        @extend %block_flex_cn-xxl;
         align-items: end;
         margin-right: 25px;
 
@@ -859,9 +860,8 @@
     .test_free {
       display: grid;
       grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-      margin-top: 50px;
       position: absolute;
-      left: 500px;
+      left: 683px;
       top: -415px;
 
       h3 {
@@ -873,7 +873,7 @@
       p {
         @include main_font($font_size: 20px, $font_weight: 500, $color: #fff);
         order: 2;
-        padding-right: 150px;
+        padding-right: 160px;
       }
 
       button {
@@ -895,12 +895,15 @@
 
   .learn_easily {
     position: relative;
+    margin-top: 60px;
     border-top: 1px solid #808080;
+    
+
     & > div {
       h3:nth-of-type(1) {
         position: absolute;
         top: -28px;
-        left: 117px;
+        left: 310px;
         padding: 5px;
         background-color: #fff;
         font-size: 32px;
@@ -914,18 +917,19 @@
       }
 
       h3:nth-of-type(2) {
-        margin: 50px 0 20px 0;
+        margin: 40px 0;
         font-size: 52px;
         font-weight: 700;
         text-align: center;
       }
 
       div {
-        display: flex;
-        flex-direction: row;
+        @extend %block_flex_row-xxl;
         justify-content: center;
         button:nth-of-type(1) {
-          font-size: 20px;
+          width: 227px;
+          @include main_font($font_size: 20px, $font_weight: 500, $color: #f2111e);
+          border: 1px solid #f2111e;
           @include button(
             $bgc: #fff,
             $mg_btn: 0 210px 0 0,
@@ -934,7 +938,8 @@
           );
         }
         button:nth-of-type(2) {
-          font-size: 20px;
+          width: 227px;
+          @include main_font($font_size: 20px, $font_weight: 500, $color: #fff);
           @include button(
             $bgc: $main-bl,
             $mg_btn: 0,
@@ -955,7 +960,7 @@
     h3 {
       position: absolute;
       top: -20px;
-      left: 114px;
+      left: 315px;
       font-size: 28px;
       margin-top: 0;
       background-color: #fff;
@@ -969,6 +974,7 @@
       }
       ul {
         padding: 20px 100px;
+        @extend %block_flex_row-xxl;
         justify-content: space-around;
 
         button {
@@ -993,9 +999,7 @@
         position: relative;
 
         div.card {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
+          @extend %block_flex_row-xxl;
         }
 
         & > div.card:nth-of-type(2) > div {
@@ -1140,7 +1144,7 @@
       .next {
         cursor: pointer;
         position: absolute;
-        top: 50%;
+        top: 44%;
         width: auto;
         margin-top: -22px;
         padding: 16px;
@@ -1152,11 +1156,11 @@
       }
 
       .prev {
-        left: -5%;
+        left: 10%;
       }
 
       .next {
-        right: -5%;
+        right: 10%;
       }
 
       .prev:hover,
@@ -1190,14 +1194,6 @@
       display: grid;
       grid-template: repeat(2, 1fr) / repeat(3, 1fr);
       grid-gap: 50px 55px;
-
-      & > div {
-        @include block_flex-cn();
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-        margin: 0;
-      }
 
       & > div:nth-of-type(1) {
         order: 1;
@@ -1243,18 +1239,18 @@
 
   .block_reviews {
     background: url("../image/bg_reviews.svg") no-repeat center;
-    padding: 80px 0;
+    padding: 90px 0;
     margin-top: 80px;
-
+  
     h3 {
       font-size: 32px;
-      margin: 30px 0;
+      margin-bottom: 50px;
+      @include main_font($font_size: 32px, $font_weight: 600, $color: #fff);
     }
 
     & > div > div {
-      flex-direction: row;
+      @extend %block_flex_row-xxl;
       justify-content: space-between;
-      align-items: start;
     }
 
     & > div > div > div {
@@ -1262,24 +1258,39 @@
       flex-basis: 30%;
 
       img {
+          float: left;
+          margin-right: 25px;
         transform: scale(1.2);
       }
 
       ul {
         li {
-          font-size: 20px;
+          @include main_font(
+            $font_size: 20px,
+            $font_weight: 500,
+            $color: #fff
+          );
         }
       }
 
       p {
+        @include main_font(
+          $font_size: 20px,
+          $font_weight: 500,
+          $color: #000
+        );
         height: 120px;
         overflow-y: scroll;
-        font-size: 20px;
         border-radius: 5px;
+        background: #fff;
+        margin-top: 35px;
+        padding: 3px 5px;
       }
 
       svg {
-        top: 117px;
+          position: absolute;
+          top: 97px;
+          left: 20px;
       }
     }
   }
@@ -1287,7 +1298,7 @@
   footer {
     background: $main-bl;
     nav {
-      flex-direction: row;
+      @extend %block_flex_row-xxl;
       align-items: flex-start;
 
       & > div:nth-of-type(1) {
@@ -1304,7 +1315,7 @@
 
       & > div:nth-of-type(3) {
         flex: 25% 1 0;
-        padding-right: 40px;
+        padding-left: 75px;
       }
 
       & > div {
@@ -1312,9 +1323,13 @@
 
         ul {
           li {
-            color: #fff;
-            font-size: 19px;
+            @include main_font(
+              $font_size: 19px,
+              $font_weight: 500,
+              $color: #fff
+            );
             text-align: left;
+            margin-bottom: 10px;
           }
         }
       }
