@@ -10,7 +10,7 @@
 
   %block_flex_row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
   }
 
   %block_flex_cn {
@@ -41,7 +41,7 @@
     & > div {
       .block_header {
         @include block_flex_main(
-          $fx-dn: center,
+          $fx-dn: row,
           $jf-ct: space-around,
           $an-is: center
         );
@@ -67,11 +67,6 @@
             display: none;
           }
 
-          & > button:nth-child(4) {
-            align-self: flex-start;
-            background-color: #0060fc;
-            padding: 0.1px;
-          }
           svg {
             display: none;
           }
@@ -84,13 +79,31 @@
       background: #fff;
       width: 100%;
 
+      div:nth-of-type(1) {
+        @extend %block_flex_row;
+        justify-content: space-between;
+
+        & > button:last-child {
+          @include button(
+            $bgc: $main-bl,
+            $mg_btn: 0,
+            $pd-btn: 0 5px,
+            $br-rs: 15px
+          );
+         @extend %block_flex_row;
+          align-items: center;
+          @include main_font($font_size: 12px, $font_weight: 600, $color: #fff);
+          svg {
+            transform: scale(0.5);
+          }
+        }
+      }
+
       ul:nth-of-type(1) {
         li:nth-of-type(1) {
-          display: flex;
-          flex-direction: column;
+          @extend %block_flex_cn;
           align-items: center;
           position: relative;
-
           svg:nth-child(1) {
             position: absolute;
             top: 9px;
@@ -124,25 +137,6 @@
         }
       }
 
-      div:nth-of-type(1) {
-        display: flex;
-        justify-content: space-between;
-
-        & > button:last-child {
-          @include button(
-            $bgc: $main-bl,
-            $mg_btn: 0,
-            $pd-btn: 0 5px,
-            $br-rs: 15px
-          );
-          display: flex;
-          align-items: center;
-          @include main_font($font_size: 12px, $font_weight: 600, $color: #fff);
-          svg {
-            transform: scale(0.5);
-          }
-        }
-      }
 
       ul:nth-of-type(1) {
         margin: 20px auto;
@@ -156,8 +150,7 @@
         margin: 10px 0;
       }
       ul {
-        display: flex;
-        flex-direction: column;
+        @extend %block_flex_cn;
         align-items: center;
         li:nth-of-type(1) {
           ul {
@@ -175,7 +168,7 @@
         }
       }
       & > div:nth-of-type(2) {
-        display: flex;
+        @extend %block_flex_row;
         justify-content: center;
         & > button {
           @include button(
@@ -184,8 +177,7 @@
             $pd-btn: 0 10px,
             $br-rs: 15px
           );
-          display: flex;
-          justify-content: center;
+          @extend %block_flex_row;
           align-items: center;
           @include main_font($font_size: 12px, $font_weight: 600, $color: #fff);
           svg {

@@ -1,5 +1,9 @@
 @media all and (max-width: 480px) {
-  footer nav, .block_reviews > div > div, .block_advantages > div > div > div {
+  header nav > div:nth-of-type(2) > button, header nav > div:nth-of-type(2), header nav div:nth-of-type(1) > button:last-child, header nav div:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+  }
+  footer nav, .block_reviews > div > div, .block_advantages > div > div > div, header nav ul, header nav ul:nth-of-type(1) li:nth-of-type(1) {
     display: flex;
     flex-direction: column;
   }
@@ -22,7 +26,7 @@
   }
   header > div .block_header {
     display: flex;
-    flex-direction: center;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 7px 0 22px 0;
@@ -43,11 +47,6 @@
   header > div .block_header > div > button:nth-child(1) {
     display: none;
   }
-  header > div .block_header > div > button:nth-child(4) {
-    align-self: flex-start;
-    background-color: #0060fc;
-    padding: 0.1px;
-  }
   header > div .block_header > div svg {
     display: none;
   }
@@ -56,9 +55,26 @@
     background: #fff;
     width: 100%;
   }
+  header nav div:nth-of-type(1) {
+    justify-content: space-between;
+  }
+  header nav div:nth-of-type(1) > button:last-child {
+    background-color: #0060FC;
+    margin: 0;
+    padding: 0 5px;
+    border-radius: 15px;
+    align-items: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  header nav div:nth-of-type(1) > button:last-child svg {
+    transform: scale(0.5);
+  }
   header nav ul:nth-of-type(1) li:nth-of-type(1) {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     position: relative;
   }
@@ -90,27 +106,6 @@
   header nav ul:nth-of-type(1) li:nth-of-type(1) ul.show {
     display: block;
   }
-  header nav div:nth-of-type(1) {
-    display: flex;
-    justify-content: space-between;
-  }
-  header nav div:nth-of-type(1) > button:last-child {
-    background-color: #0060FC;
-    margin: 0;
-    padding: 0 5px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  header nav div:nth-of-type(1) > button:last-child svg {
-    transform: scale(0.5);
-  }
   header nav ul:nth-of-type(1) {
     margin: 20px auto;
   }
@@ -127,8 +122,6 @@
     margin: 10px 0;
   }
   header nav ul {
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
   header nav ul li:nth-of-type(1) ul li {
@@ -143,7 +136,6 @@
     color: #000;
   }
   header nav > div:nth-of-type(2) {
-    display: flex;
     justify-content: center;
   }
   header nav > div:nth-of-type(2) > button {
@@ -151,8 +143,6 @@
     margin: 0;
     padding: 0 10px;
     border-radius: 15px;
-    display: flex;
-    justify-content: center;
     align-items: center;
     color: #fff;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
