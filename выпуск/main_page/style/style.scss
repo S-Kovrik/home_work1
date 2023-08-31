@@ -1195,6 +1195,10 @@
       grid-template: repeat(2, 1fr) / repeat(3, 1fr);
       grid-gap: 50px 55px;
 
+      div{
+        @include block_flex_main($fx-dn:column, $jf-ct:space-around, $an-is:center);
+        padding: 30px;}
+
       & > div:nth-of-type(1) {
         order: 1;
       }
