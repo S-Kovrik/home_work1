@@ -1,12 +1,22 @@
 @import "./variables.scss";
 @import "./mixin.scss";
-@import "./extend.scss";
 
 .show {
   display: block;
 }
 
 @media all and (max-width: 480px) {
+
+  %block_flex_row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  %block_flex_cn {
+    display: flex;
+    flex-direction: column;
+  }
+  
   .container {
     max-width: 480px;
     margin: auto;
@@ -28,9 +38,7 @@
 
     div {
       .block_header {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include block_flex_main($fx-dn:row, $jf-ct: space-around, $an-is: center);
         padding: 7px 0 22px 0;
         & > div {
           button {
@@ -52,11 +60,6 @@
             display: none;
           }
 
-          & > button:nth-child(4) {
-            align-self: flex-start;
-            background-color: #0060fc;
-            padding: 0.1px;
-          }
           svg {
             display: none;
           }
@@ -77,14 +80,12 @@
         margin: 10px 0;
       }
       ul {
-        display: flex;
-        flex-direction: column;
+        @extend %block_flex_cn;
         align-items: center;
         li:nth-of-type(1) {
           text-align: center;
           ul {
-            display: flex;
-            flex-direction: column;
+            @extend %block_flex_cn;
             align-items: center;
             li {
               @include main_font(
@@ -113,12 +114,9 @@
     }
 
     form {
-      display: flex;
-      align-items: center;
       padding: 15px 0;
-      border-radius: 20px 0 0 20px;
       ul {
-        display: flex;
+        @extend %block_flex_row;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 10px;
@@ -196,16 +194,14 @@
 
     .filter {
       div > div:nth-of-type(1) {
-        display: flex;
-        flex-direction: row;
+        @extend %block_flex_row;
         justify-content: space-between;
         margin: 20px 0;
         p {
           @include main_font($font_size: 21px, $font_weight: 700, $color: #000);
         }
         button {
-          display: flex;
-          flex-direction: column;
+          @extend %block_flex_cn;
           svg {
             margin: 2px 0;
           }
@@ -218,8 +214,7 @@
 
     .books_list {
       & > div {
-        display: flex;
-        flex-direction: column;
+        @extend %block_flex_cn;
         align-items: center;
         margin: 40px 0;
         img {
@@ -243,7 +238,7 @@
 
             div:nth-of-type(1),
             div:nth-of-type(2) {
-              display: flex;
+              @extend %block_flex_row;
               justify-content: right;
               gap: 0;
 
@@ -307,8 +302,7 @@
 
   footer {
     nav {
-      display: flex;
-      flex-direction: column;
+      @extend %block_flex_cn;
       align-items: center;
       border-top: 1px solid #808080;
       & > div:nth-of-type(3) {
@@ -341,7 +335,18 @@
   }
 }
 
-@media all and (min-width: 481px) {
+@media all and (min-width: 1920px) {
+
+  %block_flex_row-xxl {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  %block_flex_cn-xxl {
+    display: flex;
+    flex-direction: column;
+  }
+
   .cr_dp {
     max-width: 1920px;
     margin: auto;
@@ -357,13 +362,11 @@
 
     div {
       .block_header {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
+        @include block_flex_main($fx-dn:row, $jf-ct: space-between, $an-is: end);
         padding: 3px 0;
 
         & > div {
-          display: flex;
+          @extend %block_flex_row-xxl;
           align-items: center;
           gap: 25px;
 
@@ -380,9 +383,6 @@
               $pd-btn: 5px 20px,
               $br-rs: 20px
             );
-          }
-          & > button:nth-child(1) {
-            display: block;
           }
 
           & > button:nth-child(2) {
@@ -406,7 +406,7 @@
       display: block;
       border-top: 1px solid rgba(255, 255, 255, 0.6);
       ul {
-        display: flex;
+        @extend %block_flex_row-xxl;
         justify-content: space-between;
         li {
           @include main_font($font_size: 16px, $font_weight: 500, $color: #fff);
@@ -455,15 +455,14 @@
     form {
       position: fixed;
       top: 129px;
-      left: 710px;
+      left: 1060px;
       right: 0px;
-      display: flex;
-      align-items: center;
-      padding: 15px 0;
+      padding: 15px 0 15px 30px;
       background: $main-bl;
       border-radius: 20px 0 0 20px;
+      z-index: 10;
       ul {
-        display: flex;
+        @extend %block_flex_row-xxl;
         flex-wrap: nowrap;
         li {
           position: relative;
@@ -536,7 +535,7 @@
     .filter {
       border-bottom: 1px solid #808080;
       & > div {
-        display: flex;
+        @extend %block_flex_row-xxl;
         & > div:nth-of-type(1) {
           flex: 30% 1 0;
           p {
@@ -552,7 +551,7 @@
         }
 
         ul {
-          display: flex;
+          @extend %block_flex_row-xxl;
           flex: 70% 1 0;
           justify-content: space-between;
           li {
@@ -576,7 +575,7 @@
 
     .books_list {
       & > div {
-        display: flex;
+        @extend %block_flex_row-xxl;
         justify-content: space-between;
         margin: 40px 0;
 
@@ -596,7 +595,7 @@
 
           div:nth-of-type(1),
           div:nth-of-type(2) {
-            display: flex;
+            @extend %block_flex_row-xxl;
             justify-content: right;
             gap: 0;
 
@@ -653,7 +652,7 @@
       }
     }
     .arrow {
-      display: flex;
+     @extend %block_flex_row-xxl;
       justify-content: space-between;
 
       button {
@@ -677,9 +676,9 @@
   footer {
     background: $main-bl;
     nav {
-      display: flex;
-      flex-direction: row;
-      padding: 70px 0 30px 0;
+      @extend %block_flex_row-xxl;
+      align-items: flex-start;
+      padding-top: 70px;
 
       & > div:nth-of-type(1) {
         flex: 13% 1 0;
@@ -688,7 +687,7 @@
 
       & > div:nth-of-type(2) {
         flex: 14% 1 0;
-        padding: 0 70px;
+        padding: 0 70px 50px 70px;
         border-right: 1px solid #fff;
         border-left: 1px solid #fff;
       }

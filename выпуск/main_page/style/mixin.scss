@@ -21,12 +21,4 @@
   align-items:$an-is ;
 }
 
-@mixin block_flex() {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-}
-@mixin block_flex-cn() {
-  display: flex;
-  flex-direction: column;
-}
+

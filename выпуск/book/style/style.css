@@ -3,6 +3,15 @@
 }
 
 @media all and (max-width: 480px) {
+  .block_books .books_list > div > div div:nth-of-type(1) div:nth-of-type(1),
+  .block_books .books_list > div > div div:nth-of-type(1) div:nth-of-type(2), .block_books .filter div > div:nth-of-type(1), .block_books form ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer nav, .block_books .books_list > div, .block_books .filter div > div:nth-of-type(1) button, header nav ul li:nth-of-type(1) ul, header nav ul {
+    display: flex;
+    flex-direction: column;
+  }
   .container {
     max-width: 480px;
     margin: auto;
@@ -21,6 +30,7 @@
   }
   header div .block_header {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 7px 0 22px 0;
@@ -40,11 +50,6 @@
   }
   header div .block_header > div > button:nth-child(1) {
     display: none;
-  }
-  header div .block_header > div > button:nth-child(4) {
-    align-self: flex-start;
-    background-color: #0060fc;
-    padding: 0.1px;
   }
   header div .block_header > div svg {
     display: none;
@@ -68,16 +73,12 @@
     margin: 10px 0;
   }
   header nav ul {
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
   header nav ul li:nth-of-type(1) {
     text-align: center;
   }
   header nav ul li:nth-of-type(1) ul {
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
   header nav ul li:nth-of-type(1) ul li {
@@ -105,13 +106,9 @@
     background: #0060FC;
   }
   .block_books form {
-    display: flex;
-    align-items: center;
     padding: 15px 0;
-    border-radius: 20px 0 0 20px;
   }
   .block_books form ul {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
@@ -180,8 +177,6 @@
     left: 129px;
   }
   .block_books .filter div > div:nth-of-type(1) {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin: 20px 0;
   }
@@ -193,10 +188,6 @@
     font-weight: 700;
     line-height: normal;
   }
-  .block_books .filter div > div:nth-of-type(1) button {
-    display: flex;
-    flex-direction: column;
-  }
   .block_books .filter div > div:nth-of-type(1) button svg {
     margin: 2px 0;
   }
@@ -204,8 +195,6 @@
     display: none;
   }
   .block_books .books_list > div {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 40px 0;
   }
@@ -231,7 +220,6 @@
   }
   .block_books .books_list > div > div div:nth-of-type(1) div:nth-of-type(1),
   .block_books .books_list > div > div div:nth-of-type(1) div:nth-of-type(2) {
-    display: flex;
     justify-content: right;
     gap: 0;
   }
@@ -287,8 +275,6 @@
     display: none;
   }
   footer nav {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     border-top: 1px solid #808080;
   }
@@ -316,7 +302,12 @@
     margin-top: 0;
   }
 }
-@media all and (min-width: 481px) {
+@media all and (min-width: 1920px) {
+  footer nav, .block_books .arrow, .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(1),
+  .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(2), .block_books .books_list > div, .block_books .filter > div ul, .block_books .filter > div, .block_books form ul, header nav ul, header div .block_header > div {
+    display: flex;
+    flex-direction: row;
+  }
   .cr_dp {
     max-width: 1920px;
     margin: auto;
@@ -330,12 +321,12 @@
   }
   header div .block_header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: end;
     padding: 3px 0;
   }
   header div .block_header > div {
-    display: flex;
     align-items: center;
     gap: 25px;
   }
@@ -351,9 +342,6 @@
     margin: 0;
     padding: 5px 20px;
     border-radius: 20px;
-  }
-  header div .block_header > div > button:nth-child(1) {
-    display: block;
   }
   header div .block_header > div > button:nth-child(2) {
     padding: 5px;
@@ -372,7 +360,6 @@
     border-top: 1px solid rgba(255, 255, 255, 0.6);
   }
   header nav ul {
-    display: flex;
     justify-content: space-between;
   }
   header nav ul li {
@@ -425,16 +412,14 @@
   .block_books form {
     position: fixed;
     top: 129px;
-    left: 710px;
+    left: 1060px;
     right: 0px;
-    display: flex;
-    align-items: center;
-    padding: 15px 0;
+    padding: 15px 0 15px 30px;
     background: #0060FC;
     border-radius: 20px 0 0 20px;
+    z-index: 10;
   }
   .block_books form ul {
-    display: flex;
     flex-wrap: nowrap;
   }
   .block_books form ul li {
@@ -499,9 +484,6 @@
   .block_books .filter {
     border-bottom: 1px solid #808080;
   }
-  .block_books .filter > div {
-    display: flex;
-  }
   .block_books .filter > div > div:nth-of-type(1) {
     flex: 30% 1 0;
   }
@@ -517,7 +499,6 @@
     display: none;
   }
   .block_books .filter > div ul {
-    display: flex;
     flex: 70% 1 0;
     justify-content: space-between;
   }
@@ -537,7 +518,6 @@
     font-weight: 600;
   }
   .block_books .books_list > div {
-    display: flex;
     justify-content: space-between;
     margin: 40px 0;
   }
@@ -557,7 +537,6 @@
   }
   .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(1),
   .block_books .books_list > div div > div:nth-of-type(1) div:nth-of-type(2) {
-    display: flex;
     justify-content: right;
     gap: 0;
   }
@@ -610,7 +589,6 @@
     line-height: normal;
   }
   .block_books .arrow {
-    display: flex;
     justify-content: space-between;
   }
   .block_books .arrow button {
@@ -631,9 +609,8 @@
     background: #0060FC;
   }
   footer nav {
-    display: flex;
-    flex-direction: row;
-    padding: 70px 0 30px 0;
+    align-items: flex-start;
+    padding-top: 70px;
   }
   footer nav > div:nth-of-type(1) {
     flex: 13% 1 0;
@@ -641,7 +618,7 @@
   }
   footer nav > div:nth-of-type(2) {
     flex: 14% 1 0;
-    padding: 0 70px;
+    padding: 0 70px 50px 70px;
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
   }

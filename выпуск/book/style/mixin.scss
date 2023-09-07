@@ -14,9 +14,10 @@
   border-radius: $br-rs;
 }
 
-@mixin block_flex() {
-  @extend %block-top-indent;
+@mixin block_flex_main($fx-dn, $jf-ct, $an-is) {
+  display: flex;
+  flex-direction:$fx-dn;
+  justify-content: $jf-ct;
+  align-items:$an-is ;
 }
-@mixin block_flex-cn() {
-  @extend%block_flex_cn;
-}
+
