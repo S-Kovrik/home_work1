@@ -9,10 +9,9 @@
       href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;400&family=Montserrat:wght@200;300;400;500;700;900&family=Roboto:ital,wght@0,300;0,500;1,700&family=Rubik:ital,wght@1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./reset-normalize/reset.css" />
-    <link rel="stylesheet" href="./reset-normalize/normalize.css" />
-
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="../reset-normalize/reset.css" />
+    <link rel="stylesheet" href="../reset-normalize/normalize.css" />
+    <link rel="stylesheet" href="../style/book.css" />
     <title>Книги</title>
   </head>
   <body>
@@ -23,12 +22,12 @@
             href="../main_page/main_page.html"
             target="_blank"
             title="главная страница"
-            ><img
+          >
+            <img
               src="./image/logo_header.svg"
               alt="Логотип"
               width="138"
               height="42"
-              aria-grabbed=""
           /></a>
           <div>
             <button>Бесплатный урок</button>
@@ -40,7 +39,7 @@
               <use xlink:href="./image/svg_sprites.svg#profile"></use>
             </svg>
           </div>
-          <button onclick="myFunctionHeader()">
+          <button class="open">
             <img
               src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iOTYuMDAwMDAwcHQiIGhlaWdodD0iOTYuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCA5Ni4wMDAwMDAgOTYuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCw5Ni4wMDAwMDApIHNjYWxlKDAuMTAwMDAwLC0wLjEwMDAwMCkiCmZpbGw9IiNGRkYiIHN0cm9rZT0ibm9uZSI+CjxwYXRoIGQ9Ik05NCA3MDUgYy00IC04IC00IC0yMiAwIC0zMCA1IC0xMyA1NCAtMTUgMzg4IC0xMyBsMzgzIDMgMCAyNSAwIDI1Ci0zODMgMyBjLTMzNCAyIC0zODMgMCAtMzg4IC0xM3oiLz4KPHBhdGggZD0iTTk0IDQ5NSBjLTQgLTggLTQgLTIyIDAgLTMwIDUgLTEzIDU0IC0xNSAzODggLTEzIGwzODMgMyAwIDI1IDAgMjUKLTM4MyAzIGMtMzM0IDIgLTM4MyAwIC0zODggLTEzeiIvPgo8cGF0aCBkPSJNOTQgMjg1IGMtNCAtOCAtNCAtMjIgMCAtMzAgNSAtMTMgNTQgLTE1IDM4OCAtMTMgbDM4MyAzIDAgMjUgMCAyNQotMzgzIDMgYy0zMzQgMiAtMzgzIDAgLTM4OCAtMTN6Ii8+CjwvZz4KPC9zdmc+Cg=="
               alt="Выпадающее меню"
@@ -50,13 +49,38 @@
           </button>
         </div>
       </div>
-      <nav id="mydropdown__nav">
-        <ul class="ir-cr_dp"
-          ><li>
-            Уроки<svg height="10" width="20">
+      <nav id="menu_nav" class="container cr_dp">
+        <div class="inner-container ir-cr_dp">
+          <button class="close">
+            <svg height="33" width="33">
+              <use xlink:href="./image/svg_sprites.svg#cancel"></use>
+            </svg>
+          </button>
+          <button>
+            <svg height="36" width="35">
+              <use
+                xlink:href="./image/svg_sprites.svg#notification_black"
+              ></use>
+            </svg>
+          </button>
+          <button>
+            Мой профиль
+            <svg height="40" width="40">
+              <use xlink:href="./image/svg_sprites.svg#profile"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="inner-container ir-cr_dp">
+          <li onclick="myFunctionHeader()">
+            Уроки<svg id="mydropdown__svg" height="8" width="13">
+              <use
+                xlink:href="./image/svg_sprites.svg#dropdown_lessons_black"
+              ></use>
+            </svg>
+            <svg height="10" width="20">
               <use xlink:href="./image/svg_sprites.svg#dropdown_lessons"></use>
             </svg>
-            <ul>
+            <ul id="mydropdown__sublist">
               <li>
                 <a
                   href="../my_lessons/index.html"
@@ -70,11 +94,39 @@
             </ul>
           </li>
           <li>Курсы</li>
-          <li><a href="../tv/index.html" target="_blank" title="страница телеканалы">  Телеканалы</a></li>
-          <li> Видео</li>
-          <li><a href="../book/index.html" target="_blank" title="страница книги">Книги</a></li>
-          <li><a href="../radio/index.html" target="_blank" title="страница радио">  Радио</a></li></ul
-        >
+          <li>
+            <a
+              href="../tv/index.html"
+              target="_blank"
+              title="страница с фильмами"
+            >
+              Телеканалы</a
+            >
+          </li>
+          <li>Видео</li>
+          <li>
+            <a href="../book/index.html" target="_blank" title="страница книги"
+              >Книги</a
+            >
+          </li>
+          <li>
+            <a
+              href="../radio/index.html"
+              target="_blank"
+              title="страница радио"
+            >
+              Радио</a
+            >
+          </li>
+        </ul>
+        <div>
+          <button>
+            Выйти из аккаунта
+            <svg height="40" width="40">
+              <use xlink:href="./image/svg_sprites.svg#profile"></use>
+            </svg>
+          </button>
+        </div>
       </nav>
     </header>
     <section class="block_books">
@@ -402,6 +454,11 @@
         </div>
       </nav>
     </footer>
-    <script src="../my_lessons/style/script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>

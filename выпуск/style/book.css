@@ -4,11 +4,11 @@
 
 @media all and (max-width: 480px) {
   .block_books .books_list > div > div div:nth-of-type(1) div:nth-of-type(1),
-  .block_books .books_list > div > div div:nth-of-type(1) div:nth-of-type(2), .block_books .filter div > div:nth-of-type(1), .block_books form ul {
+  .block_books .books_list > div > div div:nth-of-type(1) div:nth-of-type(2), .block_books .filter div > div:nth-of-type(1), .block_books form ul, header nav > div:nth-of-type(2) > button, header nav > div:nth-of-type(2), header nav div:nth-of-type(1) > button:last-child, header nav div:nth-of-type(1) {
     display: flex;
     flex-direction: row;
   }
-  footer nav, .block_books .books_list > div, .block_books .filter div > div:nth-of-type(1) button, header nav ul li:nth-of-type(1) ul, header nav ul {
+  footer nav, .block_books .books_list > div, .block_books .filter div > div:nth-of-type(1) button, header nav ul, header nav ul:nth-of-type(1) li:nth-of-type(1) {
     display: flex;
     flex-direction: column;
   }
@@ -26,16 +26,17 @@
     display: block;
   }
   header {
+    position: relative;
     background-color: #0060fc;
   }
-  header div .block_header {
+  header > div .block_header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 7px 0 22px 0;
   }
-  header div .block_header > div button {
+  header > div .block_header > div button {
     height: 27px;
     color: #fff;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
@@ -48,17 +49,70 @@
     padding: 3px;
     border-radius: 20px;
   }
-  header div .block_header > div > button:nth-child(1) {
+  header > div .block_header > div > button:nth-child(1) {
     display: none;
   }
-  header div .block_header > div svg {
-    display: none;
-  }
-  header nav {
+  header > div .block_header > div svg {
     display: none;
   }
   header nav {
+    padding: 20px 20px 30px;
     background: #fff;
+    width: 100%;
+  }
+  header nav div:nth-of-type(1) {
+    justify-content: space-between;
+  }
+  header nav div:nth-of-type(1) > button:last-child {
+    background-color: #0060FC;
+    margin: 0;
+    padding: 0 5px;
+    border-radius: 15px;
+    align-items: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  header nav div:nth-of-type(1) > button:last-child svg {
+    transform: scale(0.5);
+  }
+  header nav ul:nth-of-type(1) li:nth-of-type(1) {
+    align-items: center;
+    position: relative;
+  }
+  header nav ul:nth-of-type(1) li:nth-of-type(1) svg:nth-child(1) {
+    position: absolute;
+    top: 9px;
+    left: 68px;
+    transform: rotate(180deg);
+  }
+  header nav ul:nth-of-type(1) li:nth-of-type(1) svg:nth-child(1).svg_absolute {
+    left: 118px;
+    transform: rotate(0);
+  }
+  header nav ul:nth-of-type(1) li:nth-of-type(1) svg:nth-child(2) {
+    display: none;
+  }
+  header nav ul:nth-of-type(1) li:nth-of-type(1) ul:nth-of-type(1) {
+    display: none;
+  }
+  header nav ul:nth-of-type(1) li:nth-of-type(1) ul:nth-of-type(1) li,
+  header nav ul:nth-of-type(1) li:nth-of-type(1) ul:nth-of-type(1) a {
+    color: #000;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  header nav ul:nth-of-type(1) li:nth-of-type(1) ul.show {
+    display: block;
+  }
+  header nav ul:nth-of-type(1) {
+    margin: 20px auto;
   }
   header nav a {
     color: #000;
@@ -75,12 +129,6 @@
   header nav ul {
     align-items: center;
   }
-  header nav ul li:nth-of-type(1) {
-    text-align: center;
-  }
-  header nav ul li:nth-of-type(1) ul {
-    align-items: center;
-  }
   header nav ul li:nth-of-type(1) ul li {
     color: #000;
     font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
@@ -91,6 +139,31 @@
   }
   header nav ul li:nth-of-type(1) ul a {
     color: #000;
+  }
+  header nav > div:nth-of-type(2) {
+    justify-content: center;
+  }
+  header nav > div:nth-of-type(2) > button {
+    background-color: #0060FC;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 15px;
+    align-items: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif, "Geologica", sans-serif, "Roboto", sans-serif, "Rubik", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  header nav > div:nth-of-type(2) > button svg {
+    transform: scale(0.5);
+  }
+  header #menu_nav {
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    transition: 1s;
   }
   .block_books h1 {
     color: #000;
@@ -358,6 +431,7 @@
   header nav {
     display: block;
     border-top: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 5px 0;
   }
   header nav ul {
     justify-content: space-between;
@@ -394,6 +468,9 @@
   header nav ul li:nth-of-type(1):hover > ul li:nth-of-type(1) {
     width: 100px;
     border-bottom: 1px solid #fff;
+  }
+  header nav div:nth-of-type(1), header nav div:nth-of-type(2) {
+    display: none;
   }
   .block_books h1 {
     color: #000;
@@ -639,4 +716,4 @@
     text-align: left;
     padding: 5px 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=book.css.map */

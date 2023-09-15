@@ -30,7 +30,6 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "flex";
 }
 
-
 $(document).ready(function () {
   $(".open").on("click", function () {
     $("#menu_nav").css("top", "0");
@@ -40,3 +39,5 @@ $(document).ready(function () {
     $("#menu_nav").css("top", "-1000px");
   });
 });
+
+
