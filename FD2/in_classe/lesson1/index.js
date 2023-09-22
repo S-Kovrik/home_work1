@@ -11,7 +11,9 @@ const MIN_AGE = 1;
 let firstName;
 let lastName;
 let middleName;
-let age;
+// let age;
+let normalizedUserInput = "";
+
 do {
   firstName = prompt("Enter your first name");
 } while (
@@ -29,19 +31,26 @@ do {
 } while (!middleName);
 
 do {
-    // const userIput = prompt('enter your age')
-    // age = userIput ? Number(userIput) : NaN;
-  age = Number(prompt("Enter your age"));
-} while (!isFinite(age) || age < MIN_AGE || age > Max_AGE);
+  const userInput = prompt("enter your age");
+  userInput ? Number(userInput) : NaN;
 
-let fio = `${lastName} ${firstName} ${middleName} ${age}`;
+  normalizedUserInput = userInput.replace(/,/, ".");
+
+  // for (const char of userInput) {
+  //   if (char === ",") {
+  //     normalizedUserInput += ".";
+  //   } else {
+  //     normalizedUserInput += char;
+  //   }
+  // }
+
+  // age = Number(prompt("Enter your age"));
+} while (
+  !isFinite(normalizedUserInput) ||
+  normalizedUserInput < MIN_AGE ||
+  normalizedUserInput > MAX_AGE
+);
+
+let fio = `${lastName} ${firstName} ${middleName} ${normalizedUserInput}`;
+
 alert(fio);
-
-// let normalizedUserInput = '';
-// for (const char of usetInput){
-//     if (char === ','){
-//         normalizedUserInput += '.';
-//     } else{
-//         normalizedUserInput += char;
-//     }
-// }
