@@ -7,6 +7,7 @@
 // alert(fio);
 const MAX_AGE = 150;
 const MIN_AGE = 1;
+
 let firstName;
 let lastName;
 let middleName;
